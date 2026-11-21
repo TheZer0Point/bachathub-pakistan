@@ -874,15 +874,12 @@ export function HomeView({
                   <div className="font-display font-bold text-[13.5px] text-[#111B21] dark:text-[#E9EDEF] truncate">
                     {selectedCity} Bachat Community
                   </div>
-                  <span className="text-[11px] font-semibold text-[#00A884] whitespace-nowrap shrink-0">12:31</span>
+                  <span className="text-[11px] font-semibold text-[#00A884] whitespace-nowrap shrink-0">Live</span>
                 </div>
                 <div className="flex items-center justify-between gap-2 mt-0.5">
                   <div className="text-[12px] text-[#667781] dark:text-[#8696A0] truncate">
-                    {selectedArea}: Kababjees deal is real, wen...
+                    Tap to chat with shoppers in {selectedCity}
                   </div>
-                  <span className="min-w-[20px] h-[20px] px-1.5 rounded-full bg-[#00A884] text-white text-[10.5px] font-bold flex items-center justify-center shrink-0">
-                    12
-                  </span>
                 </div>
               </div>
             </button>
