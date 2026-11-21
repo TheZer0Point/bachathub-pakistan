@@ -278,7 +278,7 @@
    "category": "clothes",
    "cycleNumber": 2,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "brand-alkaram",
@@ -289,7 +289,7 @@
    "category": "clothes",
    "cycleNumber": 2,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "brand-zellbury",
@@ -553,7 +553,7 @@
    "category": "shoes",
    "cycleNumber": 2,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "brand-hushpuppies",
@@ -564,7 +564,7 @@
    "category": "shoes",
    "cycleNumber": 2,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "brand-insignia",
