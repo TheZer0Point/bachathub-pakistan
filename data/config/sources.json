@@ -877,7 +877,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "Quetta",
-   "active": true
+   "active": false
   },
   {
    "id": "rss-gnews-hyderabad",
@@ -886,7 +886,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "Hyderabad",
-   "active": true
+   "active": false
   },
   {
    "id": "rss-gnews-sialkot-gujranwala",
@@ -895,7 +895,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "Sialkot",
-   "active": true
+   "active": false
   },
   {
    "id": "rss-gnews-banks",
@@ -904,7 +904,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "rss-gnews-electronics",
@@ -913,7 +913,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "rss-gnews-grocery",
@@ -922,7 +922,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "rss-gnews-travel",
@@ -931,7 +931,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "rss-gnews-health",
@@ -940,7 +940,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "rss-bing-pk-sales",
@@ -949,7 +949,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "rss-bing-pk-banks",
@@ -958,7 +958,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "rss-bing-pk-food",
@@ -967,7 +967,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "rss-bing-pk-tech",
@@ -976,7 +976,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "rss-bing-pk-grocery",
@@ -985,7 +985,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "rss-reddit-pakistan",
