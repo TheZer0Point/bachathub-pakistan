@@ -1,5 +1,45 @@
 [
  {
+  "id": "al-bank-mcb-failing-202611212006",
+  "sourceId": "bank-mcb",
+  "kind": "failing",
+  "severity": "high",
+  "title": "Scraper: MCB deals & discounts failed 3 times in a row",
+  "description": "All fallback methods failed. Last error: html: no offers in page (JS site?); html: no offers in page (JS site?); browser: no offers. Last good data is kept for 72h. Source paused for 6h, then retried automatically. URL: https://www.mcb.com.pk/personal/cards/deal-discounts/",
+  "createdAt": "2026-11-21T20:06:08.368568Z",
+  "status": "open"
+ },
+ {
+  "id": "al-bank-sadapay-failing-202611212006",
+  "sourceId": "bank-sadapay",
+  "kind": "failing",
+  "severity": "high",
+  "title": "Scraper: SadaPay Offers & Perks failed 3 times in a row",
+  "description": "All fallback methods failed. Last error: html: no offers in page (JS site?); html: no offers in page (JS site?); browser: no offers. Last good data is kept for 72h. Source paused for 6h, then retried automatically. URL: https://www.sadapay.pk/",
+  "createdAt": "2026-11-21T20:06:08.368568Z",
+  "status": "open"
+ },
+ {
+  "id": "al-bank-nayapay-failing-202611212006",
+  "sourceId": "bank-nayapay",
+  "kind": "failing",
+  "severity": "high",
+  "title": "Scraper: NayaPay Card Offers failed 3 times in a row",
+  "description": "All fallback methods failed. Last error: html: no offers in page (JS site?); html: no offers in page (JS site?); browser: no offers. Last good data is kept for 72h. Source paused for 6h, then retried automatically. URL: https://www.nayapay.com/",
+  "createdAt": "2026-11-21T20:06:08.368568Z",
+  "status": "open"
+ },
+ {
+  "id": "al-bank-hbl-islamic-failing-202611212006",
+  "sourceId": "bank-hbl-islamic",
+  "kind": "failing",
+  "severity": "high",
+  "title": "Scraper: HBL Islamic Konnect discounts failed 3 times in a row",
+  "description": "All fallback methods failed. Last error: html: no offers in page (JS site?); html: no offers in page (JS site?); browser: no offers. Last good data is kept for 72h. Source paused for 6h, then retried automatically. URL: https://hbl.com/islamic/konnect-islamic-account/konnect-islamic-debit-card",
+  "createdAt": "2026-11-21T20:06:08.368568Z",
+  "status": "open"
+ },
+ {
   "id": "al-brand-metroshoes-failing-202611211710",
   "sourceId": "brand-metroshoes",
   "kind": "failing",
