@@ -1337,7 +1337,7 @@
    "type": "meta_ads",
    "cycleNumber": 2,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "meta-pk-clearance",
@@ -1346,7 +1346,7 @@
    "type": "meta_ads",
    "cycleNumber": 2,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "meta-pk-winter-sale",
@@ -1355,7 +1355,7 @@
    "type": "meta_ads",
    "cycleNumber": 2,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "meta-pk-restaurant",
@@ -1364,7 +1364,7 @@
    "type": "meta_ads",
    "cycleNumber": 2,
    "cityScope": "All Pakistan",
-   "active": true,
+   "active": false,
    "category": "food"
   }
  ]
