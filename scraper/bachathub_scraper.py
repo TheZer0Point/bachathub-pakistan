@@ -767,22 +767,30 @@ def osm_branches(src: Dict[str, Any], brand_sources: List[Dict[str, Any]]) -> Di
 # bank portals
 # ---------------------------------------------------------------------------
 BANKISH_RE = re.compile(r"^(?:bank|all |premier|platinum|gold|amex|visa|master|debit|credit|card|upto|up to|flat|\d{1,2}\s*%)", re.I)
+CITYLIST_RE = re.compile(r"^(?:nationwide|all pakistan|(?:[A-Z][a-zA-Z .]+(?:\s*[-,/&]\s*|$)){1,}$)")
+CITY_WORDS_RE = re.compile(r"\b(nationwide|karachi|lahore|islamabad|rawalpindi|multan|faisalabad|peshawar|hyderabad|quetta|sialkot|"
+                           r"gujranwala|bahawalpur|sahiwal|sukkur|abbottabad|online)\b", re.I)
 
 
 def bank_offers_from_text(text: str) -> List[Dict[str, Any]]:
-    """Each offer line keeps the merchant name from the line above when the line itself is only card/percent text."""
+    """Offer lines keep the merchant (and city) from the lines above, e.g. HBL tables: name / cities / discount."""
     offers = []
     seen = set()
-    merchant = ""
+    merchant, cities = "", ""
     for line in re.split(r"(?<=[.!])\s+|\n+|\s{3,}", text):
-        line = line.strip()
+        line = line.strip().strip("|").strip()
         has_pct = bool(re.search(r"\d{1,2}\s*%", line))
-        if not has_pct and 2 < len(line) < 60 and not line.lower().startswith(("terms", "all discounts", "note", "max cap")):
-            merchant = line
+        if not has_pct and 2 < len(line) < 70 and not line.lower().startswith(("terms", "all discounts", "note", "max cap", "brand", "discount")):
+            if CITY_WORDS_RE.search(line) and CITYLIST_RE.match(line):
+                cities = line
+            else:
+                merchant, cities = line, ""
             continue
-        if has_pct and merchant and BANKISH_RE.search(line) and merchant.lower() not in line.lower():
-            line = f"{merchant}: {line}"
-        if len(line) < 12 or len(line) > 220:
+        if has_pct and merchant and merchant.lower() not in line.lower():
+            starts_plain = BANKISH_RE.search(line) or not re.search(r"[A-Za-z]{3,}", re.sub(r"\b(off|up ?to|flat|discount)\b", "", line, flags=re.I))
+            if starts_plain:
+                line = f"{merchant}{f' ({cities})' if cities else ''}: {line}"
+        if len(line) < 8 or len(line) > 220:
             continue
         pct = max_pct(line) or (int(m.group(1)) if (m := re.search(r"(\d{1,2})\s*%", line)) and 5 <= int(m.group(1)) <= 75 else None)
         if not pct:
