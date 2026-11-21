@@ -613,7 +613,7 @@ export function dealFromLead(leadId: string): Deal | null {
     badgeTone: pct >= 40 ? 'orange' : 'green',
     priceNow: 0,
     priceWas: 0,
-    endsInLabel: 'Check the source link for dates',
+    endsInLabel: 'See dates',
     expiresAt: new Date(Date.now() + 7 * 86400000).toISOString(),
     checksPassed: 1,
     verificationSources: [

@@ -940,7 +940,7 @@ def build_deal(src: Dict[str, Any], brand: Dict[str, Any], result: Dict[str, Any
         "badgeTone": "orange" if pct >= 40 else "green",
         "priceNow": top["price"],
         "priceWas": top["was"],
-        "endsInLabel": "Live now · rechecked every 30 min",
+        "endsInLabel": "Live now",
         "endsUrgent": False,
         "expiresAt": (NOW + dt.timedelta(days=3)).isoformat().replace("+00:00", "Z"),
         "checksPassed": len(sources),
