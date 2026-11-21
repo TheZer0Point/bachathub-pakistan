@@ -1770,6 +1770,174 @@
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=2474858146337571",
    "updatedAt": "2026-11-21T20:25:00.624Z"
+  },
+  {
+   "id": "approved-lead-bank-7dfe44aea2",
+   "rank": 75,
+   "brandId": "hbl",
+   "brandName": "HBL",
+   "brandInitials": "HB",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "food",
+   "title": "Discounts up to 20% off at Brand outlets",
+   "subtitle": "Approved by admin · source: HBL Konnect & card discounts",
+   "discountBadge": "20% OFF",
+   "discountPercent": 20,
+   "badgeTone": "green",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T22:17:33.777Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "HBL Konnect & card discounts",
+     "detail": "https://www.hbl.com/personal/konnect/konnect-account/konnect-debit-card-package",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.hbl.com/personal/konnect/konnect-account/konnect-debit-card-package",
+   "updatedAt": "2026-11-21T22:17:33.777Z"
+  },
+  {
+   "id": "approved-lead-bank-06097cb1b7",
+   "rank": 76,
+   "brandId": "standard-chartered",
+   "brandName": "Standard Chartered",
+   "brandInitials": "ST",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "food",
+   "title": "Get a cashback of 5% on your grocery, dining and e-commerce transactions",
+   "subtitle": "Approved by admin · source: Standard Chartered PK Good Life",
+   "discountBadge": "5% OFF",
+   "discountPercent": 5,
+   "badgeTone": "green",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T22:17:35.576Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Standard Chartered PK Good Life",
+     "detail": "https://www.sc.com/pk/credit-cards/the-good-life-privileges/",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.sc.com/pk/credit-cards/the-good-life-privileges/",
+   "updatedAt": "2026-11-21T22:17:35.576Z"
+  },
+  {
+   "id": "approved-lead-bf77d7660d",
+   "rank": 77,
+   "brandId": "vicinity-vicinity-black-friday-before-gta6-up-to-80-off-",
+   "brandName": "Vicinity: VICINITY BLACK FRIDAY BEFORE GTA6. UP TO 80% OFF. ",
+   "brandInitials": "VI",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "clothes",
+   "title": "Vicinity: VICINITY BLACK FRIDAY BEFORE GTA6. UP TO 80% OFF. STARTS THIS FRIDAY. VIP SALE: 13TH NOV - 12:00PM CET. (ACCES",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "80% OFF",
+   "discountPercent": 80,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T22:17:37.257Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1828149664993587",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1828149664993587",
+   "updatedAt": "2026-11-21T22:17:37.257Z"
+  },
+  {
+   "id": "approved-lead-7a45371d57",
+   "rank": 78,
+   "brandId": "adidas-arabia-the-biggest-adidas-sale-of-the-year-is-live-",
+   "brandName": "adidas Arabia: The biggest adidas sale of the year is LIVE! ",
+   "brandInitials": "AD",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "promo",
+   "title": "adidas Arabia: The biggest adidas sale of the year is LIVE! Get 30-70% OFF this White Friday. Shop In-Store & Online. PL",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "70% OFF",
+   "discountPercent": 70,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T22:17:38.377Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1676589770541816",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1676589770541816",
+   "updatedAt": "2026-11-21T22:17:38.377Z"
   }
  ],
  "dealOverrides": {
@@ -2099,7 +2267,11 @@
   "lead-55c868dc4f": "approved",
   "lead-e5bcbe591d": "approved",
   "lead-2da6197972": "approved",
-  "lead-6093fb59fe": "approved"
+  "lead-6093fb59fe": "approved",
+  "lead-bank-7dfe44aea2": "approved",
+  "lead-bank-06097cb1b7": "approved",
+  "lead-bf77d7660d": "approved",
+  "lead-7a45371d57": "approved"
  },
  "resolvedAlerts": {},
  "broadcasts": [],
@@ -2109,6 +2281,6 @@
   "allowNewSignups": true,
   "allowGuestQuickAdd": false
  },
- "updatedAt": "2026-11-21T21:29:40.085Z",
+ "updatedAt": "2026-11-21T22:17:38.923Z",
  "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file."
 }
