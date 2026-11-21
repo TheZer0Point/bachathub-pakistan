@@ -1791,7 +1791,7 @@
   "auto-brand-telemart": {
    "title": "5% to 90% off · 685 items on sale",
    "discountBadge": "90% OFF",
-   "updatedAt": "2026-11-21T20:49:39.802Z"
+   "updatedAt": "2026-11-21T20:50:21.599Z"
   }
  },
  "manualBrands": [],
@@ -2109,6 +2109,6 @@
   "allowNewSignups": true,
   "allowGuestQuickAdd": false
  },
- "updatedAt": "2026-11-21T20:49:51.535Z",
+ "updatedAt": "2026-11-21T20:50:36.576Z",
  "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file."
 }
