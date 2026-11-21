@@ -1,0 +1,30 @@
+{
+  "name": "bachathub-super-admin-desktop",
+  "version": "1.0.0",
+  "description": "BachatHub Pakistan Super Admin for Windows (embedded admin server + GitHub sync + scraper alerts).",
+  "author": "BachatHub Pakistan",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win nsis --publish never"
+  },
+  "devDependencies": {
+    "electron": "^35.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "pk.bachathub.superadmin.desktop",
+    "productName": "BachatHub Super Admin",
+    "artifactName": "BachatHub-Admin-Setup-${version}.${ext}",
+    "directories": { "buildResources": "build", "output": "release" },
+    "files": ["main.cjs", "server.cjs", "tray.png", "web/**/*"],
+    "asar": true,
+    "win": { "target": "nsis", "icon": "build/icon.png" },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "BachatHub Admin"
+    }
+  }
+}

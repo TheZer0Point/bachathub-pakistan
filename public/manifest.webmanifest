@@ -1,0 +1,17 @@
+{
+  "name": "BachatHub Pakistan",
+  "short_name": "BachatHub",
+  "description": "Pakistan's verified consumer deals ecosystem — Designed & Developed by Sanwal Rizwan Dastgeer.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F0F2F5",
+  "theme_color": "#008069",
+  "icons": [
+    {
+      "src": "./src/assets/images/bachathub_app_logo_1795254020441.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

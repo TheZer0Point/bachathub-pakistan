@@ -1,0 +1,6 @@
+{
+  "name": "BachatHub Pakistan",
+  "description": "Pakistan's verified consumer deals, 4-source offer verification, fake sale radar, bank card savings calculator, WhatsApp-style community chat, and enterprise admin command center.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": []
+}

@@ -1,0 +1,111 @@
+name: Build apps (Android APK + Windows Admin)
+
+on:
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - "data/**"
+      - "scraper/**"
+      - "**.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-apps
+  cancel-in-progress: true
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+      - uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "21"
+      - name: Build customer web app (static GitHub data mode)
+        env:
+          VITE_STATIC_MODE: "true"
+          VITE_BASE: "./"
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+      - name: Create Android project
+        run: |
+          npm install --no-save @capacitor/core@7 @capacitor/cli@7 @capacitor/android@7
+          npx cap add android
+          npx cap sync android
+      - name: Use fixed signing key (so new APKs install over old ones)
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_DEBUG_KEYSTORE_B64 }}
+        run: |
+          mkdir -p ~/.android
+          if [ -n "$KEYSTORE_B64" ]; then echo "$KEYSTORE_B64" | base64 -d > ~/.android/debug.keystore; echo "fixed key used"; else echo "no fixed key secret, default debug key"; fi
+      - name: Build APK
+        working-directory: android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon
+          cp app/build/outputs/apk/debug/app-debug.apk ../BachatHub-Pakistan.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: apk
+          path: BachatHub-Pakistan.apk
+
+  windows-admin:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+      - name: Build admin web UI + bundle admin server
+        run: |
+          npm ci --no-audit --no-fund
+          npx vite build
+          npx esbuild server.ts --bundle --platform=node --target=node20 --format=cjs --outfile=admin-desktop/server.cjs --external:vite --log-level=warning
+          rm -rf admin-desktop/web && cp -r dist admin-desktop/web
+      - name: Build Windows installer
+        working-directory: admin-desktop
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: "false"
+        run: |
+          npm install --no-audit --no-fund
+          npx electron-builder --win nsis --publish never
+          ls release
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-admin
+          path: admin-desktop/release/*.exe
+
+  release:
+    needs: [android, windows-admin]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: out
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: apps-${{ github.run_number }}
+          name: "BachatHub apps build ${{ github.run_number }}"
+          make_latest: "true"
+          body: |
+            **BachatHub-Pakistan.apk** = customer app for Android (reads live deals from GitHub).
+            **BachatHub-Admin-Setup-*.exe** = Super Admin app for Windows (approve leads, edit deals, scraper alerts).
+          files: |
+            out/apk/*.apk
+            out/windows-admin/*.exe

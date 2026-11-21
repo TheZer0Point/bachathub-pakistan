@@ -1,0 +1,34 @@
+// Capacitor configuration for compiling BachatHub Pakistan into an Android Mobile & Tablet APK
+const config = {
+  appId: 'pk.bachathub.app',
+  appName: 'BachatHub Pakistan',
+  webDir: 'dist',
+  bundledWebRuntime: false,
+  server: {
+    androidScheme: 'https',
+    cleartext: false,
+  },
+  android: {
+    allowMixedContent: false,
+    backgroundColor: '#F5F6F7',
+    captureInput: true,
+    webContentsDebuggingEnabled: false,
+  },
+  plugins: {
+    SplashScreen: {
+      launchShowDuration: 1200,
+      backgroundColor: '#00A859',
+      showSpinner: false,
+    },
+    StatusBar: {
+      style: 'DARK',
+      backgroundColor: '#FFFFFF',
+    },
+    LocalNotifications: {
+      smallIcon: 'ic_stat_bachathub',
+      iconColor: '#00A859',
+    },
+  },
+};
+
+export default config;

@@ -1,0 +1,23 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+__pycache__/
+*.pyc
+android/
+.pytest_cache/
+data/.vault.master.key
+data/.server_runtime_secrets.enc.json
+
+# never publish private/local data in this PUBLIC repo
+data/vault/
+data/desktop/
+# Windows admin build outputs
+admin-desktop/node_modules/
+admin-desktop/server.cjs
+admin-desktop/web/
+admin-desktop/release/

@@ -1,0 +1,553 @@
+{
+ "cities": {
+  "Karachi": [
+   "Clifton & DHA",
+   "Tariq Road",
+   "Gulshan-e-Iqbal",
+   "Gulistan-e-Johar",
+   "Korangi",
+   "Shah Faisal Colony",
+   "North Nazimabad",
+   "PECHS",
+   "Saddar",
+   "Malir",
+   "Bahria Town Karachi",
+   "Scheme 33"
+  ],
+  "Lahore": [
+   "Gulberg",
+   "DHA Lahore",
+   "Johar Town",
+   "Model Town",
+   "Bahria Town",
+   "MM Alam Road",
+   "Anarkali & Mall Road",
+   "Wapda Town",
+   "Iqbal Town",
+   "Cantt",
+   "Shahdara"
+  ],
+  "Islamabad": [
+   "F-7 Markaz",
+   "F-10 Markaz",
+   "F-6 Super Market",
+   "Blue Area",
+   "G-11 Markaz",
+   "Centaurus",
+   "I-8 Markaz",
+   "DHA Islamabad",
+   "Bahria Enclave"
+  ],
+  "Rawalpindi": [
+   "Saddar",
+   "Bahria Town",
+   "Chaklala Scheme 3",
+   "Commercial Market",
+   "Satellite Town",
+   "Raja Bazaar",
+   "Chaklala Cantt"
+  ],
+  "Faisalabad": [
+   "D-Ground",
+   "Kohinoor City",
+   "Peoples Colony",
+   "Lyallpur Galleria",
+   "Clock Tower (8 Bazaars)",
+   "Madina Town",
+   "Satyana Road"
+  ],
+  "Multan": [
+   "Cantt",
+   "Gulgasht Colony",
+   "Bosan Road",
+   "Hussain Agahi",
+   "Model Town",
+   "DHA Multan",
+   "Shah Rukn-e-Alam",
+   "Vehari Chowk"
+  ],
+  "Lodhran": [
+   "Main City & Railway Road",
+   "Super Chowk",
+   "Basti Malook Road",
+   "Dunyapur",
+   "Kahror Pacca",
+   "Adam Wahan",
+   "Gellaywal",
+   "Qutabpur"
+  ],
+  "Bahawalpur": [
+   "Model Town A & B",
+   "Farid Gate",
+   "University Chowk",
+   "Circular Road",
+   "Satellite Town",
+   "DHA Bahawalpur",
+   "Yazman"
+  ],
+  "Rahim Yar Khan": [
+   "Model Town",
+   "Shahi Road",
+   "Abbasia Town",
+   "Satellite Town",
+   "Sadiqabad",
+   "Khanpur",
+   "Liaquatpur"
+  ],
+  "Bahawalnagar": [
+   "Main City",
+   "Model Town",
+   "Chishtian",
+   "Haroonabad",
+   "Hasilpur",
+   "Fort Abbas",
+   "Minchinabad"
+  ],
+  "Vehari": [
+   "Main City & Club Road",
+   "Burewala",
+   "Mailsi",
+   "People Colony",
+   "Luddan"
+  ],
+  "Khanewal": [
+   "Main City",
+   "Mian Channu",
+   "Kabirwala",
+   "Jahanian",
+   "Peoples Colony"
+  ],
+  "Dera Ghazi Khan": [
+   "Model Town",
+   "Block C & D",
+   "Jampur Road",
+   "Taunsa Sharif",
+   "Kot Chutta"
+  ],
+  "Muzaffargarh": [
+   "Main City",
+   "Kot Addu",
+   "Alipur",
+   "Jatoi",
+   "Sanawan"
+  ],
+  "Layyah": [
+   "Main City",
+   "Chaubara",
+   "Karor Lal Esan",
+   "Fatehpur"
+  ],
+  "Rajanpur": [
+   "Main City",
+   "Jampur",
+   "Rojhan",
+   "Fazilpur"
+  ],
+  "Gujranwala": [
+   "Satellite Town",
+   "Model Town",
+   "DC Road",
+   "Master City",
+   "Wazirabad",
+   "Kamoke"
+  ],
+  "Sialkot": [
+   "Cantt",
+   "Paris Road",
+   "Model Town",
+   "Daska",
+   "Sambrial",
+   "Pasrur"
+  ],
+  "Gujrat": [
+   "Main City",
+   "Bhimber Road",
+   "Lalamusa",
+   "Kharian",
+   "Jalalpur Jattan",
+   "Sarai Alamgir"
+  ],
+  "Sargodha": [
+   "University Road",
+   "Satellite Town",
+   "Club Road",
+   "Bhalwal",
+   "Sillanwali",
+   "Shahpur"
+  ],
+  "Sahiwal": [
+   "Farid Town",
+   "High Street",
+   "Jinnah Town",
+   "Chichawatni",
+   "Harappa"
+  ],
+  "Okara": [
+   "Main City",
+   "Depalpur",
+   "Renala Khurd",
+   "Cantt"
+  ],
+  "Pakpattan": [
+   "Main City",
+   "Arifwala",
+   "College Road"
+  ],
+  "Kasur": [
+   "Main City",
+   "Pattoki",
+   "Chunian",
+   "Kot Radha Kishan"
+  ],
+  "Sheikhupura": [
+   "Civil Lines",
+   "Housing Colony",
+   "Muridke",
+   "Ferozewala",
+   "Sharaqpur"
+  ],
+  "Nankana Sahib": [
+   "Main City",
+   "Sangla Hill",
+   "Shahkot"
+  ],
+  "Jhang": [
+   "Satellite Town",
+   "Saddar",
+   "Shorkot",
+   "Ahmadpur Sial"
+  ],
+  "Chiniot": [
+   "Main City",
+   "Lalian",
+   "Bhawana"
+  ],
+  "Toba Tek Singh": [
+   "Main City",
+   "Gojra",
+   "Kamalia",
+   "Pirmahal"
+  ],
+  "Jhelum": [
+   "Civil Lines",
+   "Cantt",
+   "Dina",
+   "Sohawa",
+   "Pind Dadan Khan"
+  ],
+  "Chakwal": [
+   "Main City",
+   "Talagang",
+   "Choa Saidan Shah",
+   "Kallar Kahar"
+  ],
+  "Attock": [
+   "Main City",
+   "Hasan Abdal",
+   "Fateh Jang",
+   "Pindi Gheb",
+   "Hazro"
+  ],
+  "Wah Cantt & Taxila": [
+   "Wah Cantt Mall",
+   "Basti",
+   "Lalarukh",
+   "Taxila Chowk"
+  ],
+  "Mianwali": [
+   "Main City",
+   "Isa Khel",
+   "Piplan",
+   "Kamar Mushani"
+  ],
+  "Bhakkar": [
+   "Main City",
+   "Darya Khan",
+   "Kallur Kot",
+   "Mankera"
+  ],
+  "Mandi Bahauddin": [
+   "Main City",
+   "Phalia",
+   "Malakwal"
+  ],
+  "Hafizabad": [
+   "Main City",
+   "Pindi Bhattian"
+  ],
+  "Narowal": [
+   "Main City",
+   "Shakargarh",
+   "Zafarwal"
+  ],
+  "Murree": [
+   "Mall Road",
+   "GPO Chowk",
+   "Bhurban",
+   "Patriata"
+  ],
+  "Hyderabad": [
+   "Latifabad",
+   "Qasimabad",
+   "Auto Bhan Road",
+   "Saddar",
+   "Hirabad",
+   "Kotri"
+  ],
+  "Sukkur": [
+   "Military Road",
+   "Minara Road",
+   "Shikarpur Road",
+   "Rohri"
+  ],
+  "Larkana": [
+   "Jinnah Bagh",
+   "Station Road",
+   "Ratodero",
+   "Dokri"
+  ],
+  "Nawabshah": [
+   "Chakra Bazaar",
+   "Housing Society",
+   "Sakrand",
+   "Qazi Ahmed"
+  ],
+  "Mirpurkhas": [
+   "Main City",
+   "Satellite Town",
+   "Digri",
+   "Kot Ghulam Muhammad"
+  ],
+  "Khairpur": [
+   "Main City",
+   "Gambat",
+   "Ranipur",
+   "Kot Diji"
+  ],
+  "Jacobabad": [
+   "Main City",
+   "Thul",
+   "Garhi Khairo"
+  ],
+  "Shikarpur": [
+   "Main City",
+   "Lakhi",
+   "Garhi Yasin"
+  ],
+  "Dadu": [
+   "Main City",
+   "Mehar",
+   "Johi",
+   "Sehwan"
+  ],
+  "Thatta": [
+   "Main City",
+   "Makli",
+   "Mirpur Sakro"
+  ],
+  "Badin": [
+   "Main City",
+   "Matli",
+   "Tando Bago",
+   "Talhar"
+  ],
+  "Tando Allahyar": [
+   "Main City",
+   "Chamber",
+   "Jhando Mari"
+  ],
+  "Tando Adam": [
+   "Main City",
+   "Shahdadpur",
+   "Sanghar"
+  ],
+  "Umerkot": [
+   "Main City",
+   "Kunri",
+   "Samaro"
+  ],
+  "Mithi": [
+   "Main City",
+   "Islamkot",
+   "Diplo"
+  ],
+  "Peshawar": [
+   "Hayatabad",
+   "University Road",
+   "Saddar",
+   "Cantt",
+   "Ring Road",
+   "Qissa Khwani"
+  ],
+  "Mardan": [
+   "Sheikh Maltoon Town",
+   "The Mall",
+   "Takht Bhai",
+   "Katlang"
+  ],
+  "Abbottabad": [
+   "Mansehra Road",
+   "Jinnahabad",
+   "Supply Bazaar",
+   "Mandian",
+   "Havelian"
+  ],
+  "Swat (Mingora)": [
+   "Mingora Main Bazaar",
+   "Saidu Sharif",
+   "Fizagat",
+   "Matta",
+   "Kalam"
+  ],
+  "Mansehra": [
+   "Main City",
+   "Balakot",
+   "Oghi",
+   "Shinkiari"
+  ],
+  "Haripur": [
+   "Main City",
+   "Khalabat",
+   "Ghazi",
+   "Hattar"
+  ],
+  "Swabi": [
+   "Main City",
+   "Topi",
+   "Lahor",
+   "Razar"
+  ],
+  "Nowshera": [
+   "Cantt",
+   "Pabbi",
+   "Jehangira",
+   "Akora Khattak"
+  ],
+  "Charsadda": [
+   "Main City",
+   "Tangi",
+   "Shabqadar"
+  ],
+  "Kohat": [
+   "Cantt",
+   "KDA Township",
+   "Hangu Road",
+   "Lachi"
+  ],
+  "Bannu": [
+   "Main City",
+   "Cantt",
+   "Domel"
+  ],
+  "Dera Ismail Khan": [
+   "Circular Road",
+   "Cantt",
+   "Paharpur",
+   "Kulachi"
+  ],
+  "Chitral": [
+   "Main Bazaar",
+   "Drosh",
+   "Booni"
+  ],
+  "Dir (Timergara)": [
+   "Timergara",
+   "Chakdara",
+   "Upper Dir"
+  ],
+  "Quetta": [
+   "Jinnah Road",
+   "Model Town",
+   "Satellite Town",
+   "Cantt",
+   "Zarghoon Road",
+   "Hanna"
+  ],
+  "Gwadar": [
+   "Marine Drive",
+   "Airport Road",
+   "Jiwani",
+   "Pasni"
+  ],
+  "Hub": [
+   "Main RCD Highway",
+   "Sakran",
+   "Gaddani"
+  ],
+  "Turbat": [
+   "Main City",
+   "Absor",
+   "Tump"
+  ],
+  "Khuzdar": [
+   "Main City",
+   "Wadh",
+   "Naal"
+  ],
+  "Chaman": [
+   "Main City",
+   "Mall Road"
+  ],
+  "Sibi": [
+   "Main City",
+   "Dhadar",
+   "Harnai"
+  ],
+  "Zhob": [
+   "Main City",
+   "Qila Saifullah",
+   "Loralai"
+  ],
+  "Mirpur (AJK)": [
+   "Allama Iqbal Road",
+   "Sector F-1 & F-2",
+   "Dadyal",
+   "Chaksawari"
+  ],
+  "Muzaffarabad": [
+   "Main City",
+   "Chattar",
+   "Chehla Bandi",
+   "Neelum Road"
+  ],
+  "Kotli": [
+   "Main City",
+   "Sehnsa",
+   "Khuiratta"
+  ],
+  "Rawalakot": [
+   "Main City",
+   "Banjosa",
+   "Hajira"
+  ],
+  "Gilgit": [
+   "Jutial",
+   "Main Bazaar",
+   "Danyor",
+   "Hunza (Karimabad)"
+  ],
+  "Skardu": [
+   "Main Bazaar",
+   "Yadgar Chowk",
+   "Shigar",
+   "Khaplu"
+  ]
+ },
+ "communitySettings": {
+  "blockPhoneNumbers": true,
+  "blockLinks": true,
+  "blockVideos": true,
+  "maxImageSizeKb": 512,
+  "maxMessagesBeforeFreeze": 30,
+  "freezeDurationMinutes": 30,
+  "slowModeSeconds": 15,
+  "autoHideReportsThreshold": 5,
+  "bannedWords": [
+   "scamlink",
+   "whatsapp me",
+   "dm for price",
+   "inbox me",
+   "free bitcoin"
+  ]
+ }
+}

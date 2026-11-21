@@ -1,0 +1,20 @@
+{
+  "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file.",
+  "manualDeals": [],
+  "dealOverrides": {},
+  "manualBrands": [],
+  "brandOverrides": {},
+  "manualFakeAlerts": [],
+  "hiddenFakeAlertIds": [],
+  "manualBankCards": [],
+  "decisions": {},
+  "resolvedAlerts": {},
+  "broadcasts": [],
+  "platformFlags": {
+    "maintenanceMode": false,
+    "maintenanceBannerText": "",
+    "allowNewSignups": false,
+    "allowGuestQuickAdd": false
+  },
+  "updatedAt": null
+}
