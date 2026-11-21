@@ -1938,6 +1938,216 @@
    "fakeReports": 0,
    "dealUrl": "https://www.sc.com/pk/credit-cards/the-good-life-privileges/",
    "updatedAt": "2026-11-21T22:17:35.576Z"
+  },
+  {
+   "id": "approved-lead-487ccc03e7",
+   "rank": 79,
+   "brandId": "sandiesstylecloset-connected-page-with-bandify-elevating-yo",
+   "brandName": "Sandiesstylecloset Connected Page with Bandify: Elevating yo",
+   "brandInitials": "SA",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "clothes",
+   "title": "Sandiesstylecloset Connected Page with Bandify: Elevating your outfit could be as easy as changing your Apple Watch band",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "60% OFF",
+   "discountPercent": 60,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T22:17:50.568Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=2552673861912298",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=2552673861912298",
+   "updatedAt": "2026-11-21T22:17:50.568Z"
+  },
+  {
+   "id": "approved-lead-cacd4384bf",
+   "rank": 80,
+   "brandId": "sierra-darien-our-black-friday-sale-is-here-up-to-60-of",
+   "brandName": "Sierra Darien: → Our Black Friday Sale is here: up to 60% of",
+   "brandInitials": "SI",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "promo",
+   "title": "Sierra Darien: → Our Black Friday Sale is here: up to 60% off the pieces we love most. → Spend over $500 and receive a l",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "60% OFF",
+   "discountPercent": 60,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T22:17:51.456Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1103078115830865",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1103078115830865",
+   "updatedAt": "2026-11-21T22:17:51.456Z"
+  },
+  {
+   "id": "approved-lead-757490d546",
+   "rank": 81,
+   "brandId": "cozmetica-white-friday-sale",
+   "brandName": "Cozmetica: White Friday Sale",
+   "brandInitials": "CO",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "promo",
+   "title": "Cozmetica: White Friday Sale - Live Now COZMETICA.PK Flat 45% Off Official Store Shop Now See more System status Ad Libr",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "45% OFF",
+   "discountPercent": 45,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T22:17:52.232Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1120410287263469",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1120410287263469",
+   "updatedAt": "2026-11-21T22:17:52.232Z"
+  },
+  {
+   "id": "approved-lead-2aff339dcf",
+   "rank": 82,
+   "brandId": "kulud-pharmacy-ads-the-biggest-sale-of-the-year-at-kulud-",
+   "brandName": "Kulud Pharmacy Ads: ✨ The Biggest Sale of the Year at Kulud ",
+   "brandInitials": "KU",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "health",
+   "title": "Kulud Pharmacy Ads: ✨ The Biggest Sale of the Year at Kulud Pharmacies White Friday deals are here: 🔥 Up to 80% OFF onl",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "80% OFF",
+   "discountPercent": 80,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T22:17:53.096Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=2293419147893256",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=2293419147893256",
+   "updatedAt": "2026-11-21T22:17:53.096Z"
+  },
+  {
+   "id": "approved-lead-a0cde38a64",
+   "rank": 83,
+   "brandId": "lacemade-black-friday-sale-ends-in-a-few-days-time-is-",
+   "brandName": "Lacemade: BLACK FRIDAY SALE — ENDS IN A FEW DAYS. 🖤 Time is ",
+   "brandInitials": "LA",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "clothes",
+   "title": "Lacemade: BLACK FRIDAY SALE — ENDS IN A FEW DAYS. 🖤 Time is running out to shop our biggest event of the season. Signat",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "25% OFF",
+   "discountPercent": 25,
+   "badgeTone": "green",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T22:17:54.072Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1697720905395058",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1697720905395058",
+   "updatedAt": "2026-11-21T22:17:54.072Z"
   }
  ],
  "dealOverrides": {
@@ -2271,7 +2481,12 @@
   "lead-bank-7dfe44aea2": "approved",
   "lead-bank-06097cb1b7": "approved",
   "lead-bf77d7660d": "approved",
-  "lead-7a45371d57": "approved"
+  "lead-7a45371d57": "approved",
+  "lead-757490d546": "approved",
+  "lead-cacd4384bf": "approved",
+  "lead-2aff339dcf": "approved",
+  "lead-487ccc03e7": "approved",
+  "lead-a0cde38a64": "approved"
  },
  "resolvedAlerts": {},
  "broadcasts": [],
@@ -2281,6 +2496,6 @@
   "allowNewSignups": true,
   "allowGuestQuickAdd": false
  },
- "updatedAt": "2026-11-21T22:17:45.332Z",
+ "updatedAt": "2026-11-21T22:17:55.110Z",
  "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file."
 }
