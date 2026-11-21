@@ -518,6 +518,29 @@ def branding_from_html(base: str, html: str) -> Dict[str, Any]:
     return out
 
 
+CLAIM_RE = re.compile(r"((?:flat|up\s*to|upto|get|enjoy|avail)?\s*(\d{1,2})\s*%\s*off(?:\s+on\s+(?:all\s+|entire\s+|selected\s+)?[A-Za-z][A-Za-z &'-]{1,28})?)", re.I)
+CLAIM_SKIP_RE = re.compile(r"first order|subscribe|newsletter|sign ?up|download|app\b|code|coupon|voucher|card|bank|wallet|jazzcash|easypaisa", re.I)
+
+
+def site_claim(home_html: str) -> Optional[Dict[str, Any]]:
+    """The offer the brand itself writes at the top of its homepage (announcement bar / hero text)."""
+    if not home_html:
+        return None
+    soup = BeautifulSoup(home_html, "html.parser")
+    for t in soup(["script", "style", "noscript", "template"]):
+        t.decompose()
+    text = re.sub(r"\s+", " ", soup.get_text(" "))[:20000]
+    for m in CLAIM_RE.finditer(text):
+        pct = int(m.group(2))
+        around = text[max(0, m.start() - 12): m.end() + 25]
+        if not 5 <= pct <= 90 or CLAIM_SKIP_RE.search(around) or re.search(r"code|coupon|voucher|card", text[max(0, m.start() - 35): m.start()], re.I):
+            continue
+        claim = re.sub(r"\s+", " ", m.group(1)).strip(" -–")
+        claim = re.sub(r"\s+(shop|buy|now|and|the|with|for)$", "", claim, flags=re.I)
+        return {"pct": pct, "text": claim[:48]}
+    return None
+
+
 def scrape_brand(src: Dict[str, Any], heavy: bool) -> Dict[str, Any]:
     """Tries every strategy in order; returns result dict or raises FetchError."""
     errors: List[str] = []
@@ -536,14 +559,14 @@ def scrape_brand(src: Dict[str, Any], heavy: bool) -> Dict[str, Any]:
         try:
             items, snapshot, sale_url = strategy_shopify(base)
             return {"base": base, "method": "shopify_json", "items": items, "snapshot": snapshot, "saleUrl": sale_url,
-                    "branding": branding, "structured": True}
+                    "branding": branding, "structured": True, "siteClaim": site_claim(home_html)}
         except FetchError as e:
             errors.append(f"shopify {e}")
         # 2) WooCommerce Store API
         try:
             items = strategy_woocommerce(base)
             return {"base": base, "method": "woocommerce_api", "items": items, "snapshot": {},
-                    "branding": branding, "structured": True}
+                    "branding": branding, "structured": True, "siteClaim": site_claim(home_html)}
         except FetchError as e:
             errors.append(f"woo {e}")
         # 3) HTML sale pages: JSON-LD, del/now pairs, % off text
@@ -557,7 +580,8 @@ def scrape_brand(src: Dict[str, Any], heavy: bool) -> Dict[str, Any]:
             items = items_from_html(base, html)
             if items:
                 return {"base": base, "method": f"html_structured{path or '/'}", "items": items, "snapshot": {},
-                        "branding": branding or branding_from_html(base, html), "structured": True}
+                        "branding": branding or branding_from_html(base, html), "structured": True,
+                        "siteClaim": site_claim(home_html)}
             pct = max_pct(clean_text(html)[:200_000])
             if pct and (best_text_pct is None or pct > best_text_pct[0]):
                 best_text_pct = (pct, base + path)
@@ -594,7 +618,7 @@ def scrape_brand(src: Dict[str, Any], heavy: bool) -> Dict[str, Any]:
                         items.append(it)
                 if items:
                     return {"base": base, "method": "wayback_24h", "items": items, "snapshot": {},
-                            "branding": branding, "structured": True}
+                            "branding": branding, "structured": True, "siteClaim": site_claim(home_html)}
         if best_text_pct or branding:
             return {"base": base, "method": "html_text", "items": [], "snapshot": {}, "branding": branding,
                     "structured": False, "text_pct": best_text_pct}
@@ -685,16 +709,78 @@ def leads_from_entries(src: Dict[str, Any], entries: List[Dict[str, str]], known
 # ---------------------------------------------------------------------------
 # Meta Ad Library (public page, headless browser)
 # ---------------------------------------------------------------------------
+META_MAX_AGE_DAYS = 30
+MONTHS = {m: i + 1 for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"])}
+
+
+def parse_ad_date(txt: str) -> Optional[dt.date]:
+    """'Started running on 12 Nov 2026' or 'Started running on Nov 12, 2026'."""
+    m = re.search(r"Started running on\s+(\d{1,2})\s+([A-Za-z]{3})[a-z]*,?\s+(\d{4})", txt) or None
+    if m:
+        d, mon, y = m.group(1), m.group(2), m.group(3)
+    else:
+        m = re.search(r"Started running on\s+([A-Za-z]{3})[a-z]*\s+(\d{1,2}),?\s+(\d{4})", txt)
+        if not m:
+            return None
+        mon, d, y = m.group(1), m.group(2), m.group(3)
+    try:
+        return dt.date(int(y), MONTHS[mon.lower()], int(d))
+    except Exception:
+        return None
+
+
+def parse_ad_blocks(text: str) -> List[Dict[str, Any]]:
+    """Ad Library page text -> [{libId, page, text, started}] (public page, no login)."""
+    ads = []
+    for b in re.split(r"Library ID", text)[1:60]:
+        body = re.sub(r"[\u200b\s]+", " ", b).strip()
+        lib = re.match(r":?\s*(\d{6,})", body)
+        m = re.search(r"See (?:ad|summary) details\s*(.+?)\s*Sponsored\s*(.+)", body)
+        page, ad_text = (m.group(1)[:60].strip(), m.group(2)) if m else ("", re.sub(r"^.*?Platforms", "", body))
+        ad_text = re.sub(r"This ad has multiple versions|Open Dropdown|See ad details|Active\b", " ", ad_text)
+        ad_text = re.sub(r"\s+(?:In)?active\s*$", "", re.sub(r"\s+", " ", ad_text), flags=re.I).strip()
+        ads.append({"libId": lib.group(1) if lib else "", "page": page, "text": ad_text,
+                    "started": parse_ad_date(body)})
+    return ads
+
+
+def ad_is_recent(ad: Dict[str, Any]) -> bool:
+    return ad["started"] is None or (NOW.date() - ad["started"]).days <= META_MAX_AGE_DAYS
+
+
+def _page_matches(page: str, brand_name: str) -> bool:
+    a = re.sub(r"[^a-z0-9]", "", page.lower())
+    b = re.sub(r"[^a-z0-9]", "", re.sub(r"\b(pakistan|pk|official|store)\b", "", brand_name.split(" (")[0].lower()))
+    return bool(a and b and (b in a or a in b))
+
+
 def meta_ads_for(brand_name: str) -> Dict[str, Any]:
+    """Only ads run by the brand's OWN page, started in the last 30 days."""
     q = quote_plus(brand_name.split(" (")[0])
     url = (f"https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK"
            f"&q={q}&search_type=keyword_unordered&media_type=all")
     text, _ = BROWSER.get_text_and_html(url, wait_ms=6000)
-    if re.search(r"log in|login to continue|checkpoint", text[:3000], re.I) and "Library ID" not in text:
-        raise FetchError("login wall")
-    ads = len(re.findall(r"Library ID", text))
-    pct = max_pct(text)
-    return {"activeAds": ads, "maxPct": pct, "url": url}
+    if "Library ID" not in text:
+        if re.search(r"log in|login to continue|checkpoint", text[:3000], re.I):
+            raise FetchError("login wall")
+        return {"activeAds": 0, "maxPct": None, "url": url}
+    own = [a for a in parse_ad_blocks(text) if _page_matches(a["page"], brand_name) and ad_is_recent(a)]
+    pcts = [(max_pct(a["text"]) or 0, a) for a in own]
+    best = max(pcts, key=lambda x: (x[0], x[1]["started"] or dt.date.min))[1] if pcts else None
+    flat = None
+    for a in own:
+        m = re.search(r"flat\s*(\d{1,2})\s*%\s*off(?:\s*on)?\s*(?:every\s*thing|everything|all|entire|whole)", a["text"], re.I)
+        if m:
+            flat = (int(m.group(1)), a)
+            break
+    out = {"activeAds": len(own), "maxPct": max([p for p, _ in pcts] or [0]) or None, "url": url}
+    if best:
+        out["latestAd"] = {"text": best["text"][:200], "started": best["started"].isoformat() if best["started"] else "",
+                           "link": f"https://www.facebook.com/ads/library/?id={best['libId']}" if best["libId"] else url}
+    if flat:
+        out["flatClaim"] = {"pct": flat[0], "text": flat[1]["text"][:200],
+                            "link": f"https://www.facebook.com/ads/library/?id={flat[1]['libId']}" if flat[1]["libId"] else url}
+    return out
 
 
 # ---------------------------------------------------------------------------
@@ -704,18 +790,23 @@ def meta_keyword_leads(src: Dict[str, Any], known_brands: List[Dict[str, Any]]) 
     text, _ = BROWSER.get_text_and_html(src["url"], wait_ms=6500)
     if "Library ID" not in text:
         raise FetchError("no ads visible (login wall or empty)")
-    blocks = [b for b in re.split(r"Library ID", text)[1:40]]
+    ads = parse_ad_blocks(text)
+    log(f"meta {src['id']}: {len(ads)} ads, {sum(1 for a in ads if a['started'])} with date, "
+        f"{sum(1 for a in ads if not ad_is_recent(a))} older than {META_MAX_AGE_DAYS} days skipped")
+    best_per_page: Dict[str, Dict[str, Any]] = {}
+    for a in ads:
+        if not ad_is_recent(a):
+            continue
+        key = re.sub(r"[^a-z0-9]", "", a["page"].lower()) or a["libId"]
+        old = best_per_page.get(key)
+        if not old or (max_pct(a["text"]) or 0) > (max_pct(old["text"]) or 0):
+            best_per_page[key] = a
     entries = []
-    for b in blocks:
-        body = re.sub(r"[\u200b\s]+", " ", b).strip()
-        lib = re.match(r":?\s*(\d{6,})", body)
-        m = re.search(r"See (?:ad|summary) details\s*(.+?)\s*Sponsored\s*(.+)", body)
-        page, ad_text = (m.group(1)[:60], m.group(2)) if m else ("", re.sub(r"^.*?Platforms", "", body))
-        ad_text = re.sub(r"This ad has multiple versions|Open Dropdown|See ad details", " ", ad_text)
-        ad_text = re.sub(r"\s+", " ", ad_text).strip()
-        link = f"https://www.facebook.com/ads/library/?id={lib.group(1)}" if lib else src["url"]
-        title = (f"{page}: " if page else "") + ad_text[:140]
-        entries.append({"title": title, "summary": ad_text[:500], "link": link, "published": ""})
+    for a in best_per_page.values():
+        link = f"https://www.facebook.com/ads/library/?id={a['libId']}" if a["libId"] else src["url"]
+        when = f" (ad started {a['started'].strftime('%d %b %Y')})" if a["started"] else ""
+        entries.append({"title": (f"{a['page']}: " if a["page"] else "") + a["text"][:140],
+                        "summary": a["text"][:460] + when, "link": link, "published": ""})
     found = leads_from_entries(src, entries, known_brands)
     for l in found:
         l["sourceName"] = "Meta Ad Library"
@@ -741,7 +832,7 @@ def osm_branches(src: Dict[str, Any], brand_sources: List[Dict[str, Any]]) -> Di
     last = ""
     for mirror in OVERPASS_MIRRORS:
         try:
-            r = SESSION.post(mirror, data={"data": q}, timeout=90, headers={"User-Agent": UAS[3]})
+            r = SESSION.post(mirror, data={"data": q}, timeout=45, headers={"User-Agent": UAS[3]})
             if r.status_code != 200:
                 last = f"HTTP {r.status_code}"
                 continue
@@ -932,11 +1023,31 @@ def build_deal(src: Dict[str, Any], brand: Dict[str, Any], result: Dict[str, Any
     if checks.get("google"):
         sources.append({"source": "google_search", "label": "Google / Bing news",
                         "detail": checks["google"][:140], "verified": True, "checkedAgo": "last 14 days"})
-    if checks.get("meta"):
-        sources.append({"source": "meta_ads", "label": "Meta Ad Library",
-                        "detail": f"{checks['meta']['activeAds']} active ads in Pakistan", "verified": True,
+    if checks.get("meta") and checks["meta"].get("activeAds"):
+        m = checks["meta"]
+        detail = m.get("detail") or f"{m['activeAds']} active ads from the brand's own page (last 30 days)"
+        if not m.get("detail") and m.get("latestAd"):
+            la = m["latestAd"]
+            detail += f" · latest: \"{la['text'][:90]}\"" + (f" (started {la['started']})" if la.get("started") else "")
+        sources.append({"source": "meta_ads", "label": "Meta Ad Library", "detail": detail[:220], "verified": True,
                         "checkedAgo": "last heavy check"})
     pct = top["pct"]
+    low = pcts[0]
+    median = pcts[len(pcts) // 2]
+    claim = result.get("siteClaim")
+    range_txt = f"{low}% to {pct}%" if low < pct else f"{pct}%"
+    n_txt = f"{len(items)}{'+' if len(items) >= 740 else ''} item{'s' if len(items) != 1 else ''}"
+    if claim:  # brand's own headline offer first (what the customer sees on the site)
+        claim_txt = claim["text"][0].upper() + claim["text"][1:]
+        title = f"{claim_txt} · site: {range_txt} off"
+        badge = f"{claim['pct']}% OFF"
+        main_pct = claim["pct"]
+    else:
+        title = f"{range_txt} off · {n_txt} on sale"
+        badge = f"{low}-{pct}% OFF" if low < pct else f"{pct}% OFF"
+        main_pct = pct
+    sources[0]["detail"] = (f"{n_txt} on sale, {range_txt} off (most items ~{median}% off), read from {host} ({result['method']})"
+                            + (f". Homepage says: \"{claim['text']}\"" if claim else ""))
     return {
         "id": f"auto-{src['id']}",
         "rank": 999,
@@ -947,11 +1058,13 @@ def build_deal(src: Dict[str, Any], brand: Dict[str, Any], result: Dict[str, Any
         "brandLogoUrl": brand.get("logoUrl"),
         "brandVerified": bool(brand.get("verified")),
         "category": src.get("category", "promo"),
-        "title": f"Up to {pct}% off · {len(items)}{'+' if len(items) >= 740 else ''} item{'s' if len(items) != 1 else ''} on sale",
-        "subtitle": f"{top['title'][:60]}: Rs. {top['price']:,} (was Rs. {top['was']:,})",
-        "discountBadge": f"Up to {pct}% OFF",
-        "discountPercent": pct,
-        "badgeTone": "orange" if pct >= 40 else "green",
+        "title": title,
+        "subtitle": f"Most items ~{median}% off · best: {top['title'][:40]} Rs. {top['price']:,} (was Rs. {top['was']:,})",
+        "discountBadge": badge,
+        "discountMinPercent": low,
+        "discountMaxPercent": pct,
+        "discountPercent": main_pct,
+        "badgeTone": "orange" if main_pct >= 40 else "green",
         "priceNow": top["price"],
         "priceWas": top["was"],
         "endsInLabel": "Live now",
@@ -983,8 +1096,8 @@ def detect_price_raised(src: Dict[str, Any], brand: Dict[str, Any], snapshot: Di
     path = HISTORY / f"{src['id']}.json"
     hist: Dict[str, List[List[Any]]] = read_json(path, {})
     alerts = []
-    cutoff = (NOW - dt.timedelta(days=45)).strftime("%Y-%m-%d")
-    look = (NOW - dt.timedelta(days=30)).strftime("%Y-%m-%d")
+    cutoff = (NOW - dt.timedelta(days=50)).strftime("%Y-%m-%d")
+    look = (NOW - dt.timedelta(days=45)).strftime("%Y-%m-%d")
     for handle, (price, was) in list(snapshot.items())[:1500]:
         rows = [r for r in hist.get(handle, []) if r[0] >= cutoff]
         normal_prices = [r[1] for r in rows if r[0] >= look and r[0] < TODAY and r[2] <= r[1]]
@@ -1003,7 +1116,7 @@ def detect_price_raised(src: Dict[str, Any], brand: Dict[str, Any], snapshot: Di
                     "alertType": "price_raised",
                     "badgeLabel": "Price raised first",
                     "normalPrice": normal,
-                    "normalDaysLabel": "last 30 days",
+                    "normalDaysLabel": "last 6 weeks (archive.org + our checks)",
                     "raisedPrice": was,
                     "raisedDaysLabel": "shown as 'was' price",
                     "salePrice": price,
@@ -1312,11 +1425,35 @@ def main() -> int:
             elif not heavy:
                 old_meta = [v for v in (prev_deals.get(f"auto-{sid}") or {}).get("verificationSources", []) if v.get("source") == "meta_ads"]
                 if old_meta:
-                    meta = {"activeAds": int(re.sub(r"\D", "", old_meta[0]["detail"]) or 0)}
+                    n = re.match(r"\s*(\d+)", old_meta[0]["detail"])
+                    meta = {"activeAds": int(n.group(1)) if n else 0, "detail": old_meta[0]["detail"]}
             brand_fakes = []
             if result.get("snapshot"):
                 brand_tmp = build_brand(src, prev_brands.get(sid), result, 0, meta)
                 brand_fakes = detect_price_raised(src, brand_tmp, result["snapshot"])
+            if meta and meta.get("flatClaim") and len(result.get("items") or []) >= 20:
+                fc = meta["flatClaim"]
+                items_ = result["items"]
+                at_claim = sum(1 for i in items_ if i["pct"] >= fc["pct"] - 3)
+                share = round(at_claim / len(items_) * 100)
+                if share < 50:
+                    tmp = build_brand(src, prev_brands.get(sid), result, 0, meta)
+                    median = sorted(i["pct"] for i in items_)[len(items_) // 2]
+                    brand_fakes.append({
+                        "id": f"fa-{sid}-flat{fc['pct']}", "rank": 0, "brandName": tmp["name"],
+                        "brandInitials": tmp["initials"], "brandColor": tmp["color"],
+                        "category": src.get("category", "promo"),
+                        "title": f"{tmp['name']}: ad says flat {fc['pct']}% off on everything",
+                        "summary": (f"Their Facebook ad says flat {fc['pct']}% off on everything, but on their website only "
+                                    f"{share}% of sale items ({at_claim} of {len(items_)}) have {fc['pct']}% or more off. "
+                                    f"Most items are around {median}% off."),
+                        "alertType": "misleading", "badgeLabel": "Ad claim not true",
+                        "normalPrice": 0, "normalDaysLabel": "", "raisedPrice": 0, "raisedDaysLabel": "",
+                        "salePrice": 0, "saleComparisonNote": f"Typical real discount: {median}%",
+                        "realDiscountPct": median, "peopleReported": 0, "receiptsCount": 0,
+                        "repeatOffenseLabel": "Checked automatically: Meta ad vs website prices",
+                        "cities": ["All Pakistan"], "createdAt": NOW_ISO, "productUrl": fc["link"],
+                    })
             for f in brand_fakes:
                 new_fakes[f["id"]] = prev_fakes.get(f["id"], f)
             brand = build_brand(src, prev_brands.get(sid), result, len(brand_fakes), meta)
@@ -1396,6 +1533,33 @@ def main() -> int:
         if cid not in new_banks and cid in expected_bank_ids and hours_since(c.get("updatedAt")) < 24 * 7:
             new_banks[cid] = c
 
+    # ---- Wayback: old prices -> history only (never shown as current). Every run, 3 brands, each brand weekly.
+    #      Gives fake-sale detection real "before the sale" prices from 2 and 6 weeks ago.
+    wb_state = status.setdefault("waybackHistory", {})
+    done = 0
+    for src in brand_sources:
+        st = status["sources"].get(src["id"], {})
+        if done >= 3 or time_left() < 150 or st.get("method") != "shopify_json":
+            continue
+        if hours_since(wb_state.get(src["id"])) < 24 * 7:
+            continue
+        base = st.get("note_base") or base_variants(src["url"])[0]
+        wb_state[src["id"]] = NOW_ISO
+        done += 1
+        path = HISTORY / f"{src['id']}.json"
+        hist = read_json(path, {})
+        added = 0
+        for days in (14, 42):
+            for handle, (day, price, was) in wayback_history_rows(base, days_ago=days).items():
+                rows = hist.setdefault(handle, [])
+                if not any(r[0] == day for r in rows):
+                    rows.append([day, price, was])
+                    hist[handle] = sorted(rows)[-60:]
+                    added += 1
+        if added:
+            write_json(path, hist, indent=None)
+        log(f"wayback history for {src['id']}: {added} old prices added")
+
     # ---- heavy-run extras: Meta Ad Library keyword search, OpenStreetMap branches, Wayback price history
     osm_cache: Dict[str, Any] = read_json(PUBLIC / "osm_branches.json", {"updatedAt": None, "branches": {}})
     if heavy and BROWSER.ok:
@@ -1415,8 +1579,9 @@ def main() -> int:
         cursor = int(status.get("osmCursor", 0)) % max(1, len(osm_all))
         osm_batch = (osm_all[cursor:] + osm_all[:cursor])[:4]
         status["osmCursor"] = (cursor + 4) % max(1, len(osm_all))
+        osm_fails = 0
         for src in osm_batch:
-            if health.quarantined(src["id"]) or time_left() < 150:
+            if health.quarantined(src["id"]) or time_left() < 150 or osm_fails >= 2:
                 continue
             try:
                 got = osm_branches(src, brand_sources)
@@ -1428,34 +1593,12 @@ def main() -> int:
                 health.ok(src, "overpass", sum(len(v) for v in got.values()))
                 osm_ok = True
             except FetchError as e:
+                osm_fails += 1  # Overpass busy: stop for this run, keep old shop list, try next heavy run
                 health.fail(src, str(e))
             time.sleep(2)
         if osm_ok:
             osm_cache = {"updatedAt": NOW_ISO, "branches": {k: v[:120] for k, v in merged_osm.items() if v}}
             write_json(PUBLIC / "osm_branches.json", osm_cache, indent=None)
-        # Wayback: old prices -> history only (never shown as current deals). Max 4 brands per heavy run, weekly each.
-        wb_state = status.setdefault("waybackHistory", {})
-        done = 0
-        for src in brand_sources:
-            st = status["sources"].get(src["id"], {})
-            if done >= 4 or time_left() < 200 or st.get("method") != "shopify_json":
-                continue
-            if hours_since(wb_state.get(src["id"])) < 24 * 7:
-                continue
-            base = st.get("note_base") or base_variants(src["url"])[0]
-            old_rows = wayback_history_rows(base, days_ago=30)
-            wb_state[src["id"]] = NOW_ISO
-            done += 1
-            if old_rows:
-                path = HISTORY / f"{src['id']}.json"
-                hist = read_json(path, {})
-                for handle, (day, price, was) in old_rows.items():
-                    rows = hist.setdefault(handle, [])
-                    if not any(r[0] == day for r in rows):
-                        rows.insert(0, [day, price, was])
-                        hist[handle] = sorted(rows)[-60:]
-                write_json(path, hist, indent=None)
-                log(f"wayback history added for {src['id']}: {len(old_rows)} products")
     # attach real shop locations to brands
     for bid, lst in (osm_cache.get("branches") or {}).items():
         if bid in new_brands:
@@ -1474,6 +1617,11 @@ def main() -> int:
     # ---- pending leads (admin approves in Windows app); drop decided ones, keep 14 days
     decisions = curated.get("decisions", {})
     pending_map = {p["id"]: p for p in old_pending if hours_since(p.get("foundAt")) < 24 * 14}
+    # Meta ads: a fresh Ad Library check replaces older Meta leads (drops expired/old-season ads)
+    meta_checked = {s_["id"] for s_ in sources if s_["type"] == "meta_search"
+                    and (health.sources.get(s_["id"]) or {}).get("lastOk") == NOW_ISO}
+    if meta_checked:
+        pending_map = {k: v for k, v in pending_map.items() if v.get("sourceId") not in meta_checked}
     for l in leads:
         if l["id"] not in pending_map:
             pending_map[l["id"]] = l

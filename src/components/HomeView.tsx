@@ -88,6 +88,7 @@ export function HomeView({
   onCopyPromo,
   liteMode,
 }: HomeViewProps) {
+  const bankMaxPct = Math.max(0, ...bankCards.map((c) => Math.max(c.diningDiscountPct || 0, c.fashionDiscountPct || 0, c.groceryDiscountPct || 0, c.healthDiscountPct || 0)));
   const [filter, setFilter] = useState<HomeFilter>('all');
   const [heroIdx, setHeroIdx] = useState(0);
   const [selectedDealId, setSelectedDealId] = useState<string>(deals[0]?.id || 'deal-khaadi-winter');
@@ -238,9 +239,11 @@ export function HomeView({
           <h3 className="font-display font-bold text-[15.5px] sm:text-[16.5px] text-[#111B21] dark:text-[#E9EDEF] truncate">
             Bank card deals
           </h3>
-          <span className="text-[11.5px] font-semibold text-[#008069] dark:text-[#25D366] whitespace-nowrap shrink-0">
-            · Up to 40% OFF
-          </span>
+          {bankMaxPct > 0 && (
+            <span className="text-[11.5px] font-semibold text-[#008069] dark:text-[#25D366] whitespace-nowrap shrink-0">
+              · Up to {bankMaxPct}% OFF
+            </span>
+          )}
         </div>
         <button
           type="button"
