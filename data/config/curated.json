@@ -1797,7 +1797,8 @@
   },
   "brand-alkaram": {
    "brandingScrapedAt": "2026-11-21T20:22:05.775Z",
-   "brandSecondaryColor": "#19A85B"
+   "brandSecondaryColor": "#19A85B",
+   "verified": false
   },
   "brand-asimjofa": {
    "brandingScrapedAt": "2026-11-21T20:22:06.090Z",
@@ -2103,6 +2104,6 @@
   "allowNewSignups": true,
   "allowGuestQuickAdd": false
  },
- "updatedAt": "2026-11-21T20:28:20.894Z",
+ "updatedAt": "2026-11-21T20:28:35.911Z",
  "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file."
 }
