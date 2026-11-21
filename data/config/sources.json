@@ -139,7 +139,7 @@
    "type": "bank",
    "cycleNumber": 1,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "bank-sadapay",
@@ -148,7 +148,7 @@
    "type": "bank",
    "cycleNumber": 1,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "bank-nayapay",
@@ -157,7 +157,7 @@
    "type": "bank",
    "cycleNumber": 1,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "brand-khaadi",
@@ -168,7 +168,7 @@
    "category": "clothes",
    "cycleNumber": 2,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "brand-sapphire",
@@ -179,7 +179,7 @@
    "category": "clothes",
    "cycleNumber": 2,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "brand-junaid-jamshed",
@@ -190,7 +190,7 @@
    "category": "clothes",
    "cycleNumber": 2,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "brand-gulahmed",
@@ -201,7 +201,7 @@
    "category": "clothes",
    "cycleNumber": 2,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "brand-limelight",
@@ -212,7 +212,7 @@
    "category": "clothes",
    "cycleNumber": 2,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "brand-sanasafinaz",
@@ -223,7 +223,7 @@
    "category": "clothes",
    "cycleNumber": 2,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "brand-bonanza",
