@@ -480,7 +480,7 @@ export function BrandPageView({
               </div>
               <div className="text-right shrink-0">
                 <div className="font-display font-bold text-[13.5px] text-[#111827] dark:text-white font-mono-num">
-                  {br.distanceKm} km
+                  {br.distanceKm ? `${br.distanceKm} km` : br.city || br.area}
                 </div>
                 <span
                   className={`inline-block mt-0.5 px-2 py-0.5 rounded-md text-[11px] font-bold ${

@@ -965,7 +965,7 @@ def build_deal(src: Dict[str, Any], brand: Dict[str, Any], result: Dict[str, Any
         "areas": [],
         "nearestShopName": host,
         "nearestDistanceKm": 0,
-        "cashAccepted": True,
+        "cashAccepted": False,  # not verified from the store data
         "realVotes": 0,
         "fakeReports": 0,
         "dealUrl": result.get("saleUrl") or result["base"],

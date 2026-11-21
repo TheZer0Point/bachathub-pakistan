@@ -107,7 +107,7 @@ export function HomeView({
         const hay = `${d.title} ${d.brandName} ${d.subtitle} ${d.category} ${d.bankCardRequired || ''} ${d.promoCode || ''}`.toLowerCase();
         if (!hay.includes(q)) return false;
       }
-      if (filter === 'near' && d.nearestDistanceKm > 4.0) return false;
+      if (filter === 'near' && (d.channel === 'online' || d.nearestDistanceKm > 4.0)) return false;
       if (filter === 'cash' && !d.cashAccepted) return false;
       if (filter === 'ending' && !d.endsUrgent && !d.endsInLabel.includes('2 days') && !d.endsInLabel.includes('tonight')) return false;
       return true;
@@ -539,7 +539,7 @@ export function HomeView({
                             {br.name}
                           </div>
                           <div className="text-[11.5px] text-[#667781] dark:text-[#8696A0]">
-                            {br.distanceKm} km · {br.saleOn ? 'Sale on' : 'No sale'}
+                            {br.distanceKm ? `${br.distanceKm} km` : br.city || br.area} · {br.saleOn ? 'Sale on' : 'No sale'}
                           </div>
                         </div>
                       </button>

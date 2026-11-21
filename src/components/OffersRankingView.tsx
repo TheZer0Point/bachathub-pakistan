@@ -59,7 +59,7 @@ export function OffersRankingView({
       if (selectedCategory !== 'all' && d.category !== selectedCategory) return false;
       if (q && !`${d.title} ${d.brandName} ${d.subtitle} ${d.promoCode || ''}`.toLowerCase().includes(q)) return false;
       if (endingSoon && !d.endsUrgent && !d.endsInLabel.includes('2 days') && !d.endsInLabel.includes('3 days')) return false;
-      if (nearestOnly && d.nearestDistanceKm > 4.0) return false;
+      if (nearestOnly && (d.channel === 'online' || d.nearestDistanceKm > 4.0)) return false;
       if (cashOnly && !d.cashAccepted) return false;
       if (subFilter && d.subCategory && d.subCategory.toLowerCase() !== subFilter.toLowerCase()) return false;
       return true;
