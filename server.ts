@@ -19,7 +19,7 @@ import {
   verifySessionToken,
 } from './src/server/cryptoVault.ts';
 import { DESKTOP_MODE, StoredUserRecord, vault } from './src/server/githubStore.ts';
-import { dealFromLead, pullFromGithub, startPublicSync, syncStatus } from './src/server/publicSync.ts';
+import { dealFromLead, dispatchScraper, pullFromGithub, startPublicSync, syncStatus } from './src/server/publicSync.ts';
 import { connectFirebaseAdmin, disconnectFirebaseAdmin, fakeAlertFromSubmission, firebaseStatus } from './src/server/firebaseAdmin.ts';
 import { PAKISTAN_CITIES } from './src/server/seedData.ts';
 import { Brand, CategoryId, CommunityMessage, Deal, FeedbackItem, Submission } from './src/types.ts';
@@ -1207,30 +1207,12 @@ async function startServer() {
   app.post('/api/admin/scraper/run-all-gates', requireAdmin, async (_req, res) => {
     if (DESKTOP_MODE) {
       // Real action instead of a simulated sweep: start a full (heavy) scraper run on GitHub Actions.
-      const gh = vault.getEffectiveGithubConfig();
-      if (!gh.configured) {
-        return res.status(503).json({ error: 'Add your GitHub token in "600-Way Scraper & Vault" → System Setup first.' });
-      }
-      const r = await fetch(
-        `https://api.github.com/repos/${encodeURIComponent(gh.owner)}/${encodeURIComponent(gh.repo)}/actions/workflows/staggered_sync.yml/dispatches`,
-        {
-          method: 'POST',
-          headers: {
-            Authorization: `Bearer ${gh.token}`,
-            Accept: 'application/vnd.github+json',
-            'Content-Type': 'application/json',
-            'User-Agent': 'BachatHub-SuperAdmin',
-          },
-          body: JSON.stringify({ ref: gh.branch || 'main', inputs: { cycle: 'all' } }),
-        },
-      ).catch(() => null);
-      if (!r || !r.ok) {
-        return res.status(502).json({ error: `Could not start the GitHub scraper (HTTP ${r ? r.status : 'network'}).` });
-      }
-      vault.addAuditLog('Super Admin', 'Started full scraper run on GitHub', `${gh.owner}/${gh.repo}`);
+      const r = await dispatchScraper('all');
+      if (!r.ok) return res.status(502).json({ error: r.message });
+      vault.addAuditLog('Super Admin', 'Full scraper run', r.message);
       return res.json({
         ok: true,
-        summary: { totalGates: vault.scraperGates.length, recoveredCount: 0, monthKey: '', message: 'Full scraper run started on GitHub Actions (about 20 minutes).' },
+        summary: { totalGates: vault.scraperGates.length, recoveredCount: 0, monthKey: '', message: r.message },
         scraperGates: vault.scraperGates,
         monthlyHistory: vault.monthlyHistory,
         scraperCycles: vault.scraperCycles,
@@ -1525,6 +1507,16 @@ async function startServer() {
       });
     }
 
+    if (DESKTOP_MODE) {
+      // one run at a time: repeated clicks do not queue extra runs
+      const r = await dispatchScraper(String(num));
+      if (!r.ok) return res.status(502).json({ error: r.message });
+      cycle.lastRunAt = new Date().toISOString();
+      cycle.status = 'running';
+      cycle.lastSummary = r.message;
+      vault.addAuditLog('Super Admin', `Scraper cycle ${num}`, r.message);
+      return res.json({ ok: true, dispatched: true, message: r.message, cycle, scraperCycles: vault.scraperCycles });
+    }
     const workflowFile = 'staggered_sync.yml';
     const dispatchUrl = `https://api.github.com/repos/${encodeURIComponent(gh.owner)}/${encodeURIComponent(gh.repo)}/actions/workflows/${workflowFile}/dispatches`;
 

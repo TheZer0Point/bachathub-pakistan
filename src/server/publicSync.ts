@@ -591,6 +591,7 @@ export async function pullFromGithub(): Promise<{ ok: boolean; message: string }
     state.lastPullAt = nowIso();
     state.lastError = '';
     notifyNewAlerts();
+    void scraperWatchdog().catch(() => {});
     if (curatedHash(state.curated) !== state.pushedCuratedHash) await pushIfChanged(true);
     return { ok: true, message: `Pulled ${state.scraped.deals.length} deals, ${state.pending.length} pending leads, ${state.alerts.length} alerts` };
   } catch (e) {
@@ -599,6 +600,49 @@ export async function pullFromGithub(): Promise<{ ok: boolean; message: string }
   } finally {
     state.busy = false;
   }
+}
+
+// ---------------------------------------------------------------- scraper run control
+async function ghApi(pathName: string, init?: RequestInit) {
+  const { owner, repo, token } = gh();
+  return fetch(`${GH_API}/repos/${owner}/${repo}${pathName}`, {
+    ...init,
+    headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json', 'User-Agent': 'BachatHub-Admin' },
+  });
+}
+
+/** True when a scraper run is already queued or running on GitHub. */
+export async function scraperBusy(): Promise<boolean> {
+  if (!gh().token) return false;
+  for (const st of ['in_progress', 'queued']) {
+    const r = await ghApi(`/actions/workflows/staggered_sync.yml/runs?status=${st}&per_page=1`).catch(() => null);
+    if (r && r.ok && ((await r.json()) as { total_count?: number }).total_count) return true;
+  }
+  return false;
+}
+
+/** Starts a scraper run unless one is already running. */
+export async function dispatchScraper(cycle: string): Promise<{ ok: boolean; message: string }> {
+  if (!gh().token) return { ok: false, message: 'Add your GitHub token first.' };
+  if (await scraperBusy()) return { ok: true, message: 'A scraper run is already running on GitHub - no second run started.' };
+  const r = await ghApi('/actions/workflows/staggered_sync.yml/dispatches', {
+    method: 'POST',
+    body: JSON.stringify({ ref: gh().branch || 'main', inputs: { cycle } }),
+  }).catch(() => null);
+  if (!r || !r.ok) return { ok: false, message: `Could not start the GitHub scraper (HTTP ${r ? r.status : 'network'}).` };
+  return { ok: true, message: cycle === 'all' || cycle === '4' ? 'Full scraper run started (about 20 minutes).' : 'Scraper run started (about 5 minutes).' };
+}
+
+// Backup timer: GitHub's own 30-minute schedule can be late or skipped, so while this admin app
+// is open it starts a run when the last one is older than 45 minutes.
+let lastWatchdogDispatch = 0;
+async function scraperWatchdog() {
+  const last = Date.parse(String(state.status.lastRunAt || ''));
+  if (!Number.isFinite(last) || Date.now() - last < 45 * 60 * 1000) return;
+  if (Date.now() - lastWatchdogDispatch < 40 * 60 * 1000) return;
+  lastWatchdogDispatch = Date.now();
+  const r = await dispatchScraper('');
+  if (r.ok) vault.addAuditLog('Scraper watchdog', 'Started a scraper run (GitHub schedule was late)', r.message);
 }
 
 export function syncStatus() {

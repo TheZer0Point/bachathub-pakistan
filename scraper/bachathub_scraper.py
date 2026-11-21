@@ -1391,8 +1391,9 @@ def main() -> int:
             else:
                 health.fail(src, str(e))
                 counts["failed"] += 1
+    expected_bank_ids = {bank_card_from_offers(s, [], "")["id"] for s in sources if s["type"] == "bank"}
     for cid, c in prev_banks.items():
-        if cid not in new_banks and hours_since(c.get("updatedAt")) < 24 * 7:
+        if cid not in new_banks and cid in expected_bank_ids and hours_since(c.get("updatedAt")) < 24 * 7:
             new_banks[cid] = c
 
     # ---- heavy-run extras: Meta Ad Library keyword search, OpenStreetMap branches, Wayback price history
@@ -1478,6 +1479,20 @@ def main() -> int:
             pending_map[l["id"]] = l
     pending = [p for p in pending_map.values() if p["id"] not in decisions]
     pending.sort(key=lambda p: p.get("foundAt", ""), reverse=True)
+    seen_keys: set = set()
+    unique = []
+    for p in pending:  # newest first: drop older copies of the same offer
+        title_key = (p.get("sourceId"), re.sub(r"\W+", "", str(p.get("title", "")).lower())[:80])
+        url = str(p.get("url") or "")
+        generic = (not url) or "ads/library/?active" in url or "search.rss" in url or "/rss/search" in url
+        url_key = None if generic else ("url", url)
+        if title_key in seen_keys or (url_key and url_key in seen_keys):
+            continue
+        seen_keys.add(title_key)
+        if url_key:
+            seen_keys.add(url_key)
+        unique.append(p)
+    pending = unique
     pending = pending[:300]
     risky = [p for p in leads if p.get("riskyHost")]
     if risky:
