@@ -2229,6 +2229,6 @@
   "allowNewSignups": false,
   "allowGuestQuickAdd": false
  },
- "updatedAt": "2026-11-21T20:25:20.822Z",
+ "updatedAt": "2026-11-21T20:25:22.612Z",
  "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file."
 }
