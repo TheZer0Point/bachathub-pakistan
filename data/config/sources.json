@@ -71,7 +71,7 @@
    "type": "bank",
    "cycleNumber": 1,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "bank-scb",
@@ -80,7 +80,7 @@
    "type": "bank",
    "cycleNumber": 1,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "bank-faysal",
