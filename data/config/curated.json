@@ -1,5 +1,511 @@
 {
- "manualDeals": [],
+ "manualDeals": [
+  {
+   "id": "approved-lead-bank-522c801bda",
+   "rank": 41,
+   "brandId": "hbl",
+   "brandName": "HBL",
+   "brandInitials": "HB",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "food",
+   "title": "14th Street Pizza (Karachi-Lahore-Islamabad-Faisalabad-Multan): 25% off",
+   "subtitle": "Approved by admin · source: HBL Konnect & card discounts",
+   "discountBadge": "25% OFF",
+   "discountPercent": 25,
+   "badgeTone": "green",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:08.508Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "HBL Konnect & card discounts",
+     "detail": "https://www.hbl.com/personal/konnect/konnect-account/konnect-debit-card-package",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.hbl.com/personal/konnect/konnect-account/konnect-debit-card-package",
+   "updatedAt": "2026-11-21T20:24:08.508Z"
+  },
+  {
+   "id": "approved-lead-bank-5d74a9741d",
+   "rank": 42,
+   "brandId": "standard-chartered",
+   "brandName": "Standard Chartered",
+   "brandInitials": "ST",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "food",
+   "title": "Avail up to 50% off on dining, retail, & lifestyle merchants",
+   "subtitle": "Approved by admin · source: Standard Chartered PK Good Life",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:09.993Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Standard Chartered PK Good Life",
+     "detail": "https://www.sc.com/pk/credit-cards/the-good-life-privileges/",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.sc.com/pk/credit-cards/the-good-life-privileges/",
+   "updatedAt": "2026-11-21T20:24:09.993Z"
+  },
+  {
+   "id": "approved-lead-brand-priceoye-fd4033f5ca",
+   "rank": 43,
+   "brandId": "brand-priceoye",
+   "brandName": "PriceOye",
+   "brandInitials": "Pr",
+   "brandColor": "#BE123C",
+   "brandLogoUrl": "https://static.priceoye.pk/favicon/apple-icon-180x180.png",
+   "brandVerified": true,
+   "category": "mobiles",
+   "title": "PriceOye website mentions up to 79% off",
+   "subtitle": "Approved by admin · source: PriceOye",
+   "discountBadge": "79% OFF",
+   "discountPercent": 79,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:11.481Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "PriceOye",
+     "detail": "https://priceoye.pk",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://priceoye.pk",
+   "updatedAt": "2026-11-21T20:24:11.481Z"
+  },
+  {
+   "id": "approved-lead-ebf9bbb77c",
+   "rank": 44,
+   "brandId": "mojari-the-sale-you-ve-been-waiting-for-is-live-step-int",
+   "brandName": "Mojari: 🔥 The Sale You've Been Waiting For Is LIVE! Step int",
+   "brandInitials": "MO",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "shoes",
+   "title": "Mojari: 🔥 The Sale You've Been Waiting For Is LIVE! Step into tradition with stunning Mojari styles at unbeatable price",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:12.322Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=3497902083725224",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=3497902083725224",
+   "updatedAt": "2026-11-21T20:24:12.323Z"
+  },
+  {
+   "id": "approved-lead-8ecebe4b9c",
+   "rank": 45,
+   "brandId": "unze-london-pakistan-biggest-sale-of-the-year-blessed-fr",
+   "brandName": "Unze London (Pakistan): Biggest Sale of the Year! Blessed Fr",
+   "brandInitials": "UN",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "promo",
+   "title": "Unze London (Pakistan): Biggest Sale of the Year! Blessed Friday Sale – Flat 50% OFF on Everything! The sale you've been",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:13.026Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1867043501408489",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1867043501408489",
+   "updatedAt": "2026-11-21T20:24:13.026Z"
+  },
+  {
+   "id": "approved-lead-a70b0eea1b",
+   "rank": 46,
+   "brandId": "the-bare-essence-azadi-sale",
+   "brandName": "The Bare Essence: 🇵🇰🚨 Azadi Sale",
+   "brandInitials": "TH",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "promo",
+   "title": "The Bare Essence: 🇵🇰🚨 Azadi Sale - FLAT 30% OFF for a limited time 🤩 Your Eid favorites at the best prices of the se",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "30% OFF",
+   "discountPercent": 30,
+   "badgeTone": "green",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:14.408Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1034662875726191",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1034662875726191",
+   "updatedAt": "2026-11-21T20:24:14.409Z"
+  },
+  {
+   "id": "approved-lead-0b70b31d25",
+   "rank": 47,
+   "brandId": "aspire-beddings-wrap-your-room-in-luxury-th",
+   "brandName": "Aspire Beddings: 𝐅𝐥𝐚𝐭 𝟕𝟎% 𝐎𝐅𝐅 ❗❗ Wrap your room in luxury th",
+   "brandInitials": "AS",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "promo",
+   "title": "Aspire Beddings: 𝐅𝐥𝐚𝐭 𝟕𝟎% 𝐎𝐅𝐅 ❗❗ Wrap your room in luxury this winter with Aspire Bedding’s 7 Pc Comforter Sets",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "70% OFF",
+   "discountPercent": 70,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:15.208Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=25942832058647848",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=25942832058647848",
+   "updatedAt": "2026-11-21T20:24:15.208Z"
+  },
+  {
+   "id": "approved-lead-1faafd5f0e",
+   "rank": 48,
+   "brandId": "wax-dnm-biggest-shoe-sale-of-the-year-step-up-your-sty",
+   "brandName": "WAX DNM: 🔥 BIGGEST SHOE SALE OF THE YEAR! 🔥 Step Up Your Sty",
+   "brandInitials": "WA",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "shoes",
+   "title": "WAX DNM: 🔥 BIGGEST SHOE SALE OF THE YEAR! 🔥 Step Up Your Style with WAX DNM! 👟✨ 🚀 Flat 50% OFF on ALL SHOES! 💥 Limi",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:17.609Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=2243562403047705",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=2243562403047705",
+   "updatedAt": "2026-11-21T20:24:17.609Z"
+  },
+  {
+   "id": "approved-lead-3eb9bc1c29",
+   "rank": 49,
+   "brandId": "flourish-undergarments-your-comfort-upgrade-starts-now-fin",
+   "brandName": "Flourish Undergarments: Your Comfort Upgrade Starts Now! Fin",
+   "brandInitials": "FL",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "clothes",
+   "title": "Flourish Undergarments: Your Comfort Upgrade Starts Now! Find everything you need in high-quality undergarments, nightwe",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "15% OFF",
+   "discountPercent": 15,
+   "badgeTone": "green",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:18.224Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=907228601628043",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=907228601628043",
+   "updatedAt": "2026-11-21T20:24:18.224Z"
+  },
+  {
+   "id": "approved-lead-d1a288772b",
+   "rank": 50,
+   "brandId": "octagontraders-pk-cod-delivery-pakistan-wide-ramadan",
+   "brandName": "OctagonTraders.pk: ✅ COD DELIVERY PAKISTAN-WIDE 🇵🇰 ✅ RAMADAN",
+   "brandInitials": "OC",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "promo",
+   "title": "OctagonTraders.pk: ✅ COD DELIVERY PAKISTAN-WIDE 🇵🇰 ✅ RAMADAN SALE — FLAT 50% OFF ❄️🔥 ✅ COMPLETE PAINTING DEAL FOR ART",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:19.465Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=2012435926293594",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=2012435926293594",
+   "updatedAt": "2026-11-21T20:24:19.465Z"
+  },
+  {
+   "id": "approved-lead-caf4b6445a",
+   "rank": 51,
+   "brandId": "mova-shoes-blessed-friday-sale-2024-flat-50-off-starts",
+   "brandName": "Mova Shoes: 🚨 Blessed Friday Sale 2024 – Flat 50% OFF Starts",
+   "brandInitials": "MO",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "shoes",
+   "title": "Mova Shoes: 🚨 Blessed Friday Sale 2024 – Flat 50% OFF Starts 29th Nov – Online & In-Store. ✅ Pakistan's #1 Medicated Sh",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:20.128Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1405300327889504",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1405300327889504",
+   "updatedAt": "2026-11-21T20:24:20.128Z"
+  },
+  {
+   "id": "approved-lead-297cf0e04b",
+   "rank": 52,
+   "brandId": "silai-karhai-enjoy-up-to-50-",
+   "brandName": "Silai Karhai: 𝗠𝗜𝗗 𝗦𝗨𝗠𝗠𝗘𝗥 𝗦𝗔𝗟𝗘 𝗜𝗦 𝗟𝗜𝗩𝗘 𝗡𝗢𝗪! • Enjoy up to 50%",
+   "brandInitials": "SI",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "promo",
+   "title": "Silai Karhai: 𝗠𝗜𝗗 𝗦𝗨𝗠𝗠𝗘𝗥 𝗦𝗔𝗟𝗘 𝗜𝗦 𝗟𝗜𝗩𝗘 𝗡𝗢𝗪! • Enjoy up to 50% OFF on the stunning Maheen 3PC Breezy",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:20.745Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1975515903098385",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1975515903098385",
+   "updatedAt": "2026-11-21T20:24:20.745Z"
+  }
+ ],
  "dealOverrides": {
   "auto-brand-unze": {
    "brandLogoUrl": "https://www.google.com/s2/favicons?domain=unze.com.pk&sz=128"
@@ -276,7 +782,20 @@
  "manualFakeAlerts": [],
  "hiddenFakeAlertIds": [],
  "manualBankCards": [],
- "decisions": {},
+ "decisions": {
+  "lead-bank-522c801bda": "approved",
+  "lead-bank-5d74a9741d": "approved",
+  "lead-ebf9bbb77c": "approved",
+  "lead-brand-priceoye-fd4033f5ca": "approved",
+  "lead-8ecebe4b9c": "approved",
+  "lead-a70b0eea1b": "approved",
+  "lead-0b70b31d25": "approved",
+  "lead-1faafd5f0e": "approved",
+  "lead-3eb9bc1c29": "approved",
+  "lead-d1a288772b": "approved",
+  "lead-caf4b6445a": "approved",
+  "lead-297cf0e04b": "approved"
+ },
  "resolvedAlerts": {},
  "broadcasts": [],
  "platformFlags": {
@@ -285,6 +804,6 @@
   "allowNewSignups": false,
   "allowGuestQuickAdd": false
  },
- "updatedAt": "2026-11-21T20:22:20.739Z",
+ "updatedAt": "2026-11-21T20:24:20.799Z",
  "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file."
 }
