@@ -14,6 +14,7 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import { vault, DESKTOP_MODE } from './githubStore.ts';
+import { pullFirebase, pushFirebase } from './firebaseAdmin.ts';
 import type {
   BankCard,
   Brand,
@@ -69,6 +70,7 @@ const state = {
   alerts: [] as Loose[],
   sourcesRaw: { sources: [] as Loose[] } as Loose,
   staticCfg: {} as Loose,
+  votes: {} as Loose,
   curated: structuredClone(EMPTY_CURATED) as Curated,
   snap: { deals: new Map<string, string>(), dealOrder: [] as string[], brands: new Map<string, string>(), fakes: new Map<string, string>() },
   pushedCuratedHash: '',
@@ -233,6 +235,11 @@ function mergeAll(c: Curated, forPublic: boolean) {
 
 function buildBootstrap(c: Curated) {
   const m = mergeAll(c, true);
+  // same as apply_votes() in the scraper: customer votes counted from Firebase
+  const v = state.votes || {};
+  m.deals = m.deals.map((d) => (v.deals?.[d.id] ? { ...d, realVotes: v.deals[d.id].real, fakeReports: v.deals[d.id].fake } : d));
+  m.brands = m.brands.map((b) => (v.brands?.[b.id] ? { ...b, likes: v.brands[b.id].like, dislikes: v.brands[b.id].dislike } : b));
+  m.fakeAlerts = m.fakeAlerts.map((f) => (v.fakes?.[f.id] ? { ...f, peopleReported: v.fakes[f.id].confirm, receiptsCount: v.fakes[f.id].receipt } : f));
   const last = state.status.lastRunAt as string | undefined;
   return {
     cities: state.staticCfg.cities || {},
@@ -484,6 +491,7 @@ const curatedHash = (c: Curated) => hash({ ...c, updatedAt: null });
 // ---------------------------------------------------------------- public API
 export async function pushIfChanged(force = false): Promise<{ pushed: boolean; message: string }> {
   if (!state.pulled) return { pushed: false, message: 'Not pulled yet' };
+  await pushFirebase().catch(() => {});
   const c = collectEdits();
   const ch = curatedHash(c);
   const src = collectSources();
@@ -537,7 +545,7 @@ export async function pullFromGithub(): Promise<{ ok: boolean; message: string }
   state.busy = true;
   try {
     if (state.pulled) await pushIfChanged();
-    const [scraped, pending, status, alerts, sources, curated, staticCfg] = await Promise.all([
+    const [scraped, pending, status, alerts, sources, curated, staticCfg, votes] = await Promise.all([
       getFile('data/public/scraped.json'),
       getFile('data/public/pending.json'),
       getFile('data/public/status.json'),
@@ -545,6 +553,7 @@ export async function pullFromGithub(): Promise<{ ok: boolean; message: string }
       getFile('data/config/sources.json'),
       getFile('data/config/curated.json'),
       getFile('data/config/static.json'),
+      getFile('data/public/votes.json'),
     ]);
     if (!sources && !scraped) {
       state.lastError = 'Could not reach the GitHub repo (offline?). Showing last data.';
@@ -561,6 +570,7 @@ export async function pullFromGithub(): Promise<{ ok: boolean; message: string }
     state.status = parse<Loose>(status, {});
     state.alerts = parse<Loose[]>(alerts, []);
     state.staticCfg = parse<Loose>(staticCfg, state.staticCfg);
+    state.votes = parse<Loose>(votes, state.votes);
     const remoteSources = parse<Loose>(sources, state.sourcesRaw);
     if (!state.pulled || hash(remoteSources) !== state.pushedSourcesHash) {
       state.sourcesRaw = remoteSources;
@@ -576,6 +586,7 @@ export async function pullFromGithub(): Promise<{ ok: boolean; message: string }
       state.pushedCuratedHash = curatedHash(remote);
     }
     applyToVault();
+    await pullFirebase();
     state.pulled = true;
     state.lastPullAt = nowIso();
     state.lastError = '';

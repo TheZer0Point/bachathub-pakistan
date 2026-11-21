@@ -27,7 +27,7 @@ import { FavoritesFunView } from './components/FavoritesFunView';
 import { HomeView } from './components/HomeView';
 import { OffersRankingView } from './components/OffersRankingView';
 import { YouSettingsView } from './components/YouSettingsView';
-import { apiRequest, resetDeviceId, setAuthToken } from './lib/api';
+import { apiRequest, IS_STATIC_MODE as STATIC_MODE_FLAG, resetDeviceId, setAuthToken } from './lib/api';
 import { loadEncryptedDeviceData, saveEncryptedDeviceData } from './lib/deviceVault';
 import {
   BankCard,
@@ -712,7 +712,7 @@ export default function App() {
                   body: payload,
                 });
                 setFakeAlerts(res.fakeAlerts);
-                showToast('Fake sale published to Fake Alert Radar!');
+                showToast(STATIC_MODE_FLAG ? 'Report sent! Admin will verify it before it goes live.' : 'Fake sale published to Fake Alert Radar!');
               }}
             />
           )}

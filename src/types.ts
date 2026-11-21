@@ -428,6 +428,10 @@ export interface FeedbackItem {
 }
 
 export interface AdminSystemSettingsPublic {
+  firebaseConnected?: boolean;
+  firebaseEmail?: string;
+  firebaseVerified?: boolean;
+  firebaseError?: string;
   recoveryEmail: string;
   maskedRecoveryEmail: string;
   encryptionKeySource: 'env' | 'auto_generated';

@@ -1094,6 +1094,65 @@ def push_github_issue(alerts: List[Dict[str, Any]]) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Firebase votes (public read): real/fake votes, brand likes, fake-alert confirmations
+# ---------------------------------------------------------------------------
+FIREBASE_PROJECT = "bachathub-pakistan"
+FIREBASE_API_KEY = "AIzaSyBRy4h0gLaApR9VzyJEa7G1f8cXpMpbhxM"  # public web key; access is controlled by firestore.rules
+
+
+def firestore_list(collection_name: str, max_docs: int = 20000) -> List[Dict[str, Any]]:
+    out: List[Dict[str, Any]] = []
+    token = ""
+    base = f"https://firestore.googleapis.com/v1/projects/{FIREBASE_PROJECT}/databases/(default)/documents/{collection_name}"
+    while len(out) < max_docs:
+        params = {"pageSize": 300, "key": FIREBASE_API_KEY}
+        if token:
+            params["pageToken"] = token
+        r = SESSION.get(base, params=params, timeout=30)
+        if r.status_code != 200:
+            raise FetchError(f"firestore {collection_name} HTTP {r.status_code}")
+        j = r.json()
+        for d in j.get("documents", []):
+            out.append({k: list(v.values())[0] for k, v in (d.get("fields") or {}).items()})
+        token = j.get("nextPageToken", "")
+        if not token:
+            break
+    return out
+
+
+def tally_votes() -> Dict[str, Any]:
+    tallies: Dict[str, Any] = {"deals": {}, "brands": {}, "fakes": {}, "at": NOW_ISO}
+    for row in firestore_list("dealVotes"):
+        t = tallies["deals"].setdefault(row.get("dealId", ""), {"real": 0, "fake": 0})
+        if row.get("value") in t:
+            t[row["value"]] += 1
+    for row in firestore_list("brandReactions"):
+        t = tallies["brands"].setdefault(row.get("brandId", ""), {"like": 0, "dislike": 0})
+        if row.get("value") in t:
+            t[row["value"]] += 1
+    for row in firestore_list("fakeVotes"):
+        t = tallies["fakes"].setdefault(row.get("alertId", ""), {"confirm": 0, "receipt": 0})
+        if row.get("value") in t:
+            t[row["value"]] += 1
+    return tallies
+
+
+def apply_votes(boot: Dict[str, Any], votes: Dict[str, Any]) -> None:
+    for d in boot.get("deals", []):
+        t = votes.get("deals", {}).get(d.get("id"))
+        if t:
+            d["realVotes"], d["fakeReports"] = t["real"], t["fake"]
+    for b in boot.get("brands", []):
+        t = votes.get("brands", {}).get(b.get("id"))
+        if t:
+            b["likes"], b["dislikes"] = t["like"], t["dislike"]
+    for f in boot.get("fakeAlerts", []):
+        t = votes.get("fakes", {}).get(f.get("id"))
+        if t:
+            f["peopleReported"], f["receiptsCount"] = t["confirm"], t["receipt"]
+
+
+# ---------------------------------------------------------------------------
 # merge with admin-curated data -> bootstrap.json  (same logic in src/server/publicSync.ts)
 # ---------------------------------------------------------------------------
 def apply_overrides(items: List[Dict[str, Any]], overrides: Dict[str, Any]) -> List[Dict[str, Any]]:
@@ -1126,7 +1185,7 @@ def merge_public(scraped: Dict[str, Any], curated: Dict[str, Any], static: Dict[
     for i, f in enumerate(fakes):
         f["rank"] = i + 1
     last = status.get("lastRunAt") or NOW_ISO
-    return {
+    result = {
         "cities": static.get("cities", {}),
         "selectedCity": "Karachi",
         "deals": deals,
@@ -1145,6 +1204,8 @@ def merge_public(scraped: Dict[str, Any], curated: Dict[str, Any], static: Dict[
         "staticMode": True,
         "updatedAt": NOW_ISO,
     }
+    apply_votes(result, read_json(PUBLIC / "votes.json", {}))
+    return result
 
 
 # ---------------------------------------------------------------------------
@@ -1459,6 +1520,10 @@ def main() -> int:
     seen = set()
     alerts = [a for a in alerts if not (a["id"] in seen or seen.add(a["id"]))][:200]
 
+    try:
+        write_json(PUBLIC / "votes.json", tally_votes(), indent=None)
+    except (FetchError, requests.RequestException, ValueError) as e:
+        log(f"votes not updated this run: {e}")
     write_json(PUBLIC / "scraped.json", scraped, indent=None)
     write_json(PUBLIC / "pending.json", pending)
     write_json(PUBLIC / "status.json", status)

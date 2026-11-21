@@ -20,6 +20,7 @@ import {
 } from './src/server/cryptoVault.ts';
 import { DESKTOP_MODE, StoredUserRecord, vault } from './src/server/githubStore.ts';
 import { dealFromLead, pullFromGithub, startPublicSync, syncStatus } from './src/server/publicSync.ts';
+import { connectFirebaseAdmin, disconnectFirebaseAdmin, fakeAlertFromSubmission, firebaseStatus } from './src/server/firebaseAdmin.ts';
 import { PAKISTAN_CITIES } from './src/server/seedData.ts';
 import { Brand, CategoryId, CommunityMessage, Deal, FeedbackItem, Submission } from './src/types.ts';
 
@@ -909,7 +910,7 @@ async function startServer() {
       supportTickets: vault.supportTickets,
       users: usersList,
       vaultShards: vault.getVaultShardTelemetry(),
-      systemSettings: vault.getAdminSystemSettingsPublic(),
+      systemSettings: { ...vault.getAdminSystemSettingsPublic(), ...firebaseStatus() },
       githubSync: {
         configured: vault.getEffectiveGithubConfig().configured,
         lastSyncAt: vault.adminSecurity.lastGithubSyncAt,
@@ -1288,6 +1289,11 @@ async function startServer() {
     sub.status = decision;
     sub.adminNote = adminNote ? String(adminNote).slice(0, 200) : undefined;
 
+    // Desktop: an approved customer fake-sale report becomes a Fake Alert (from the customer's numbers)
+    if (DESKTOP_MODE && decision === 'approved' && sub.id.startsWith('fs_')) {
+      const fa = fakeAlertFromSubmission(sub.id);
+      if (fa && !vault.fakeAlerts.some((f) => f.id === fa.id)) vault.fakeAlerts.unshift(fa);
+    }
     // Desktop: approving a scraper lead publishes it as a live deal (synced to GitHub by publicSync)
     if (DESKTOP_MODE && decision === 'approved' && sub.id.startsWith('lead-')) {
       const leadDeal = dealFromLead(sub.id);
@@ -1620,6 +1626,23 @@ async function startServer() {
   });
 
   // Admin: Trigger Smart Encrypted GitHub Repository Sync
+  // Admin: connect the Firebase admin login (chat, votes, reports, support live data)
+  app.post('/api/admin/firebase/connect', requireAdmin, async (req, res) => {
+    try {
+      const { email, password } = req.body as { email?: string; password?: string };
+      const st = await connectFirebaseAdmin(String(email || ''), String(password || ''));
+      vault.addAuditLog('Super Admin', 'Connected Firebase admin', st.firebaseEmail);
+      if (st.firebaseVerified) void pullFromGithub();
+      res.json({ ok: true, ...st });
+    } catch (e) {
+      res.status(400).json({ error: e instanceof Error ? e.message : 'Firebase connect failed' });
+    }
+  });
+  app.post('/api/admin/firebase/disconnect', requireAdmin, (_req, res) => {
+    disconnectFirebaseAdmin();
+    res.json({ ok: true, ...firebaseStatus() });
+  });
+
   app.post('/api/admin/vault/sync', requireAdmin, async (_req, res) => {
     if (DESKTOP_MODE) {
       // Windows admin: publish admin edits + pull fresh scraper data from the public repo

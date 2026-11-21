@@ -252,6 +252,9 @@ export function AdminDashboardView({
   }, [isAdmin, loadOverview]);
 
   const [claimedSeen, setClaimedSeen] = useState(false);
+  const [fbEmail, setFbEmail] = useState('z.point2018@gmail.com');
+  const [fbPass, setFbPass] = useState('');
+  const [fbBusy, setFbBusy] = useState(false);
   const handleAdminSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setAuthError(null);
@@ -2067,6 +2070,57 @@ export function AdminDashboardView({
                         placeholder="e.g. bachathub-pakistan-vault"
                         className="w-full h-10 px-3 rounded-xl border border-[#DCE3E8] dark:border-[#24323B] bg-[#F8FAFC] dark:bg-[#1A252C]"
                       />
+                    </div>
+                    <div className="md:col-span-2 p-3 rounded-xl border border-[#FDE68A] bg-[#FFFBEB] dark:bg-[#2A2410] dark:border-[#5B4A12] space-y-2">
+                      <div className="font-bold text-[#111827] dark:text-white">
+                        Firebase admin login (community chat, votes, customer reports &amp; support chat)
+                      </div>
+                      <div className="text-[11.5px] text-[#64748B]">
+                        {data.systemSettings.firebaseConnected
+                          ? data.systemSettings.firebaseVerified
+                            ? `Connected as ${data.systemSettings.firebaseEmail}. Customer chat, reports and support appear in this admin automatically.`
+                            : `Almost done: open the verification email sent to ${data.systemSettings.firebaseEmail}, click the link, then press Sync.`
+                          : 'Use your admin email and choose a password (first time it creates the Firebase admin login and sends a verification email).'}
+                        {data.systemSettings.firebaseError ? ` — ${data.systemSettings.firebaseError}` : ''}
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        <input
+                          value={fbEmail}
+                          onChange={(e) => setFbEmail(e.target.value)}
+                          placeholder="admin email"
+                          className="flex-1 min-w-[180px] h-10 px-3 rounded-xl border border-[#DCE3E8] dark:border-[#24323B] bg-white dark:bg-[#1A252C]"
+                        />
+                        <input
+                          type="password"
+                          value={fbPass}
+                          onChange={(e) => setFbPass(e.target.value)}
+                          placeholder="Firebase admin password (min 6)"
+                          className="flex-1 min-w-[180px] h-10 px-3 rounded-xl border border-[#DCE3E8] dark:border-[#24323B] bg-white dark:bg-[#1A252C]"
+                        />
+                        <button
+                          type="button"
+                          disabled={fbBusy}
+                          onClick={async () => {
+                            setFbBusy(true);
+                            try {
+                              const r = await apiRequest<{ firebaseVerified: boolean }>('/api/admin/firebase/connect', {
+                                method: 'POST',
+                                body: { email: fbEmail, password: fbPass },
+                              });
+                              setFbPass('');
+                              onToast(r.firebaseVerified ? 'Firebase connected.' : 'Verification email sent. Click the link in your Gmail, then press Sync.');
+                              await loadOverview();
+                            } catch (err) {
+                              onToast(err instanceof Error ? err.message : 'Firebase connect failed');
+                            } finally {
+                              setFbBusy(false);
+                            }
+                          }}
+                          className="h-10 px-4 rounded-xl bg-[#F59E0B] text-white font-bold disabled:opacity-60"
+                        >
+                          {fbBusy ? 'Connecting...' : data.systemSettings.firebaseConnected ? 'Reconnect' : 'Connect Firebase'}
+                        </button>
+                      </div>
                     </div>
                     <div className="space-y-1">
                       <label className="font-bold text-[#111827] dark:text-white">

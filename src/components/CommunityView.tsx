@@ -23,7 +23,7 @@ import {
   X,
 } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
-import { apiRequest } from '../lib/api';
+import { apiRequest, IS_STATIC_MODE } from '../lib/api';
 import { CommunityMessage, CommunitySettings, Deal, PublicUser } from '../types';
 import { BrandAvatar, VerificationTicks } from './BrandAvatar';
 
@@ -77,6 +77,17 @@ export function CommunityView({
     apiRequest<{ messages: CommunityMessage[] }>(`/api/community/${encodeURIComponent(city)}`)
       .then((res) => setMessages(res.messages))
       .catch(() => {});
+    if (!IS_STATIC_MODE) return;
+    // Live chat: new messages from other shoppers appear without refreshing
+    let stop: (() => void) | null = null;
+    let cancelled = false;
+    void import('../lib/firebaseBackend').then((fb) => {
+      if (!cancelled) stop = fb.subscribeCommunity(city, (list) => setMessages(list));
+    });
+    return () => {
+      cancelled = true;
+      stop?.();
+    };
   }, [city]);
 
   const filteredMessages = messages.filter((m) => {
@@ -326,7 +337,7 @@ export function CommunityView({
             <h1 className="font-display font-bold text-[15.5px] text-[#111827] dark:text-white truncate leading-tight">
               {city} Bachat Community
             </h1>
-            <p className="text-[12px] text-[#64748B] dark:text-[#94A3B8]">Community chat jald aa raha hai (coming soon)</p>
+            <p className="text-[12px] text-[#64748B] dark:text-[#94A3B8]">Live city chat · {messages.length} recent messages</p>
           </div>
         </div>
 

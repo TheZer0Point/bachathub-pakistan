@@ -427,16 +427,19 @@ async function handleStaticApiRequest<T>(
 
   if (pathname === '/api/bootstrap' && method === 'GET') {
     const data = await fetchStaticBootstrap(params.get('city') || undefined);
+    void import('./firebaseBackend').then((fb) => fb.rememberCatalog(data)).catch(() => {});
     return data as unknown as T;
   }
 
-  if (pathname === '/api/community' && method === 'GET') {
-    return { messages: [] } as unknown as T;
-  }
-
-  if (pathname === '/api/support/my-tickets' && method === 'GET') {
-    return { tickets: [] } as unknown as T;
-  }
+  // Live features (chat, votes, reports, submissions, feedback, support) run on Firebase.
+  const live = await import('./firebaseBackend');
+  const liveResult = await live.handleLiveRequest(
+    pathname,
+    method,
+    (options.body && typeof options.body === 'object' ? options.body : {}) as Record<string, unknown>,
+    getOrCreateStaticUser().nickname || 'Shopper',
+  );
+  if (liveResult !== undefined) return liveResult as T;
 
   if (pathname === '/api/analytics/event' && method === 'POST') {
     return { ok: true } as unknown as T;

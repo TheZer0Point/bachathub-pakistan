@@ -10,7 +10,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
-import { apiRequest } from '../lib/api';
+import { apiRequest, IS_STATIC_MODE } from '../lib/api';
 import { PublicUser, SupportTicket } from '../types';
 import { AppLogo } from './AppLogo';
 
@@ -91,6 +91,20 @@ export function CustomerSupportView({ user, selectedCity, onBack, onToast }: Cus
   useEffect(() => {
     void loadTickets();
   }, [loadTickets]);
+
+  useEffect(() => {
+    if (!IS_STATIC_MODE) return;
+    // Live support chat: admin replies appear instantly
+    let stop: (() => void) | null = null;
+    let cancelled = false;
+    void import('../lib/firebaseBackend').then((fb) => {
+      if (!cancelled) stop = fb.subscribeTickets((t) => setTickets(t));
+    });
+    return () => {
+      cancelled = true;
+      stop?.();
+    };
+  }, []);
 
   const activeTicket = tickets.find((t) => t.id === activeTicketId) || null;
 
