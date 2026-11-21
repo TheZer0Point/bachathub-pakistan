@@ -118,7 +118,8 @@ async function startServer() {
   app.get('/api/bootstrap', (req: AuthRequest, res) => {
     const city = typeof req.query.city === 'string' && req.query.city in PAKISTAN_CITIES ? req.query.city : 'Karachi';
     const isAdmin = req.session?.role === 'admin';
-    const currentUser = isAdmin ? null : resolveDeviceUser(req, city);
+    // Desktop admin app: never create shopper profiles for the admin's own window
+    const currentUser = isAdmin || DESKTOP_MODE ? null : resolveDeviceUser(req, city);
 
     res.json({
       cities: PAKISTAN_CITIES,
@@ -870,7 +871,7 @@ async function startServer() {
   // 8. SUPER ADMIN DESKTOP COMMAND CENTER (100% ADMIN-ONLY ROUTES)
   // =========================================================================
   app.get('/api/admin/overview', requireAdmin, (_req, res) => {
-    const usersList = Array.from(vault.users.values()).map((u) => ({
+    const usersList = (DESKTOP_MODE ? [] : Array.from(vault.users.values())).map((u) => ({
       ...vault.toPublicUser(u),
       recentMessagesCount: u.recentMessageTimestamps?.length || 0,
     }));
@@ -880,7 +881,7 @@ async function startServer() {
       stats: {
         totalDeals: vault.deals.length,
         verified4of4: vault.deals.filter((d) => d.checksPassed === 4).length,
-        fakeBlocked: vault.fakeAlerts.length + 68,
+        fakeBlocked: vault.fakeAlerts.length,
         registeredBrands: vault.brands.length,
         verifiedBrands: vault.brands.filter((b) => b.verified).length,
         totalUsers: usersList.length,
@@ -1202,7 +1203,38 @@ async function startServer() {
   });
 
   // Admin: Run Full 105-Gate Resilience Sweep & 12-Month Encrypted Archive Checkpoint
-  app.post('/api/admin/scraper/run-all-gates', requireAdmin, (_req, res) => {
+  app.post('/api/admin/scraper/run-all-gates', requireAdmin, async (_req, res) => {
+    if (DESKTOP_MODE) {
+      // Real action instead of a simulated sweep: start a full (heavy) scraper run on GitHub Actions.
+      const gh = vault.getEffectiveGithubConfig();
+      if (!gh.configured) {
+        return res.status(503).json({ error: 'Add your GitHub token in "600-Way Scraper & Vault" → System Setup first.' });
+      }
+      const r = await fetch(
+        `https://api.github.com/repos/${encodeURIComponent(gh.owner)}/${encodeURIComponent(gh.repo)}/actions/workflows/staggered_sync.yml/dispatches`,
+        {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${gh.token}`,
+            Accept: 'application/vnd.github+json',
+            'Content-Type': 'application/json',
+            'User-Agent': 'BachatHub-SuperAdmin',
+          },
+          body: JSON.stringify({ ref: gh.branch || 'main', inputs: { cycle: 'all' } }),
+        },
+      ).catch(() => null);
+      if (!r || !r.ok) {
+        return res.status(502).json({ error: `Could not start the GitHub scraper (HTTP ${r ? r.status : 'network'}).` });
+      }
+      vault.addAuditLog('Super Admin', 'Started full scraper run on GitHub', `${gh.owner}/${gh.repo}`);
+      return res.json({
+        ok: true,
+        summary: { totalGates: vault.scraperGates.length, recoveredCount: 0, monthKey: '', message: 'Full scraper run started on GitHub Actions (about 20 minutes).' },
+        scraperGates: vault.scraperGates,
+        monthlyHistory: vault.monthlyHistory,
+        scraperCycles: vault.scraperCycles,
+      });
+    }
     const summary = vault.run105GateDiagnosticSweep();
     vault.addAuditLog(
       'Super Admin',
@@ -1438,7 +1470,8 @@ async function startServer() {
     };
     if (!title || !body) return res.status(400).json({ error: 'Title and message body are required.' });
     const cityLabel = String(targetCity || 'All Pakistan');
-    const estimatedReach = cityLabel === 'All Pakistan' ? 18420 : 3200 + Math.floor(Math.random() * 2400);
+    // Desktop/GitHub mode has no visitor tracking, so reach is unknown (0) instead of an invented number
+    const estimatedReach = DESKTOP_MODE ? 0 : cityLabel === 'All Pakistan' ? 18420 : 3200 + Math.floor(Math.random() * 2400);
     const bc = {
       id: `bc-${Date.now().toString(36)}`,
       title: String(title).trim().slice(0, 80),

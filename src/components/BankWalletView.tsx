@@ -161,7 +161,7 @@ export function BankWalletView({
                       <div>
                         <div className="text-[10.5px] text-white/75">Top Dining Discount</div>
                         <div className="font-display font-black text-[28px] leading-none font-mono-num">
-                          {card.diningDiscountPct}% OFF
+                          {card.diningDiscountPct ? `${card.diningDiscountPct}% OFF` : '—'}
                         </div>
                       </div>
                       <div className="text-right">
@@ -178,15 +178,15 @@ export function BankWalletView({
                     <div className="grid grid-cols-3 gap-2 text-center">
                       <div className="rounded-xl bg-[#F8FAFC] dark:bg-[#1A252C] py-2 px-1">
                         <div className="text-[10.5px] text-[#64748B]">Fashion</div>
-                        <div className="font-mono-num font-bold text-sm text-[#111827] dark:text-white">{card.fashionDiscountPct}%</div>
+                        <div className="font-mono-num font-bold text-sm text-[#111827] dark:text-white">{card.fashionDiscountPct ? `${card.fashionDiscountPct}%` : '—'}</div>
                       </div>
                       <div className="rounded-xl bg-[#F8FAFC] dark:bg-[#1A252C] py-2 px-1">
                         <div className="text-[10.5px] text-[#64748B]">Grocery</div>
-                        <div className="font-mono-num font-bold text-sm text-[#111827] dark:text-white">{card.groceryDiscountPct}%</div>
+                        <div className="font-mono-num font-bold text-sm text-[#111827] dark:text-white">{card.groceryDiscountPct ? `${card.groceryDiscountPct}%` : '—'}</div>
                       </div>
                       <div className="rounded-xl bg-[#F8FAFC] dark:bg-[#1A252C] py-2 px-1">
                         <div className="text-[10.5px] text-[#64748B]">Health</div>
-                        <div className="font-mono-num font-bold text-sm text-[#111827] dark:text-white">{card.healthDiscountPct}%</div>
+                        <div className="font-mono-num font-bold text-sm text-[#111827] dark:text-white">{card.healthDiscountPct ? `${card.healthDiscountPct}%` : '—'}</div>
                       </div>
                     </div>
 
@@ -295,9 +295,9 @@ export function BankWalletView({
 
           <div className="divide-y divide-[#EEF2F5] dark:divide-[#1E2B33]">
             {[
-              { label: 'Dining Discount', a: `${cardA.diningDiscountPct}%`, b: `${cardB.diningDiscountPct}%`, winA: cardA.diningDiscountPct >= cardB.diningDiscountPct },
-              { label: 'Fashion Discount', a: `${cardA.fashionDiscountPct}%`, b: `${cardB.fashionDiscountPct}%`, winA: cardA.fashionDiscountPct >= cardB.fashionDiscountPct },
-              { label: 'Health / Lab Discount', a: `${cardA.healthDiscountPct}%`, b: `${cardB.healthDiscountPct}%`, winA: cardA.healthDiscountPct >= cardB.healthDiscountPct },
+              { label: 'Dining Discount', a: cardA.diningDiscountPct ? `${cardA.diningDiscountPct}%` : '—', b: cardB.diningDiscountPct ? `${cardB.diningDiscountPct}%` : '—', winA: cardA.diningDiscountPct >= cardB.diningDiscountPct },
+              { label: 'Fashion Discount', a: cardA.fashionDiscountPct ? `${cardA.fashionDiscountPct}%` : '—', b: cardB.fashionDiscountPct ? `${cardB.fashionDiscountPct}%` : '—', winA: cardA.fashionDiscountPct >= cardB.fashionDiscountPct },
+              { label: 'Health / Lab Discount', a: cardA.healthDiscountPct ? `${cardA.healthDiscountPct}%` : '—', b: cardB.healthDiscountPct ? `${cardB.healthDiscountPct}%` : '—', winA: cardA.healthDiscountPct >= cardB.healthDiscountPct },
               { label: 'Max Per-Bill Cap', a: (cardA.maxCapRs ? `Rs. ${cardA.maxCapRs.toLocaleString()}` : 'See bank site'), b: (cardB.maxCapRs ? `Rs. ${cardB.maxCapRs.toLocaleString()}` : 'See bank site'), winA: cardA.maxCapRs >= cardB.maxCapRs },
               { label: 'Annual Fee', a: (cardA.annualFeeRs ? `Rs. ${cardA.annualFeeRs.toLocaleString()}` : 'See bank site'), b: (cardB.annualFeeRs ? `Rs. ${cardB.annualFeeRs.toLocaleString()}` : 'See bank site'), winA: cardA.annualFeeRs <= cardB.annualFeeRs },
               { label: 'Est. Annual Net Gain', a: cardA.estimatedAnnualSavingsRs ? `Rs. ${(cardA.estimatedAnnualSavingsRs - cardA.annualFeeRs).toLocaleString()}` : '—', b: cardB.estimatedAnnualSavingsRs ? `Rs. ${(cardB.estimatedAnnualSavingsRs - cardB.annualFeeRs).toLocaleString()}` : '—', winA: cardA.estimatedAnnualSavingsRs - cardA.annualFeeRs >= cardB.estimatedAnnualSavingsRs - cardB.annualFeeRs },

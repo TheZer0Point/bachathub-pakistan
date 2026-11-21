@@ -654,6 +654,14 @@ class EncryptedGithubVaultStore {
     };
     this.loadRuntimeSecrets();
 
+    if (DESKTOP_MODE) {
+      // GitHub-only setup: customers use the static site, so there is no visitor tracking.
+      // Show only real numbers: no demo heatmap/charts/history, no invented gate recoveries.
+      this.analytics = { ...this.analytics, heatmap: [], categoryViews: {}, trafficSources: [], dailySavingsTrend: [] };
+      this.monthlyHistory = [];
+      this.scraperGates = this.scraperGates.map((g) => ({ ...g, status: 'armed', recoveriesCount: 0, lastTriggeredAt: null }));
+    }
+
     // Instant zero-latency brand logo & secondary palette enrichment on boot
     if (this.brands.length > 0 || this.deals.length > 0) {
       const enriched = ensureDefaultBranding(this.brands, this.deals);
@@ -864,6 +872,10 @@ class EncryptedGithubVaultStore {
       .sort();
 
     if (files.length === 0) {
+      if (DESKTOP_MODE) {
+        this.monthlyHistory = [];
+        return;
+      }
       const seeded = buildInitial12MonthHistory();
       this.monthlyHistory = seeded;
       for (const rec of seeded) {
