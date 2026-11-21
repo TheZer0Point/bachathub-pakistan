@@ -1,92 +1,8 @@
 {
  "manualDeals": [
   {
-   "id": "approved-lead-bank-522c801bda",
-   "rank": 41,
-   "brandId": "hbl",
-   "brandName": "HBL",
-   "brandInitials": "HB",
-   "brandColor": "#008069",
-   "brandVerified": false,
-   "category": "food",
-   "title": "14th Street Pizza (Karachi-Lahore-Islamabad-Faisalabad-Multan): 25% off",
-   "subtitle": "Approved by admin · source: HBL Konnect & card discounts",
-   "discountBadge": "25% OFF",
-   "discountPercent": 25,
-   "badgeTone": "green",
-   "priceNow": 0,
-   "priceWas": 0,
-   "endsInLabel": "See dates",
-   "expiresAt": "2026-11-28T20:24:08.508Z",
-   "checksPassed": 1,
-   "verificationSources": [
-    {
-     "source": "google_search",
-     "label": "HBL Konnect & card discounts",
-     "detail": "https://www.hbl.com/personal/konnect/konnect-account/konnect-debit-card-package",
-     "verified": true,
-     "checkedAgo": "2026-11-21"
-    }
-   ],
-   "channel": "online",
-   "shopsCountLabel": "See source",
-   "cities": [
-    "All Pakistan"
-   ],
-   "areas": [],
-   "nearestShopName": "",
-   "nearestDistanceKm": 0,
-   "cashAccepted": false,
-   "realVotes": 0,
-   "fakeReports": 0,
-   "dealUrl": "https://www.hbl.com/personal/konnect/konnect-account/konnect-debit-card-package",
-   "updatedAt": "2026-11-21T20:24:08.508Z"
-  },
-  {
-   "id": "approved-lead-bank-5d74a9741d",
-   "rank": 42,
-   "brandId": "standard-chartered",
-   "brandName": "Standard Chartered",
-   "brandInitials": "ST",
-   "brandColor": "#008069",
-   "brandVerified": false,
-   "category": "food",
-   "title": "Avail up to 50% off on dining, retail, & lifestyle merchants",
-   "subtitle": "Approved by admin · source: Standard Chartered PK Good Life",
-   "discountBadge": "50% OFF",
-   "discountPercent": 50,
-   "badgeTone": "orange",
-   "priceNow": 0,
-   "priceWas": 0,
-   "endsInLabel": "See dates",
-   "expiresAt": "2026-11-28T20:24:09.993Z",
-   "checksPassed": 1,
-   "verificationSources": [
-    {
-     "source": "google_search",
-     "label": "Standard Chartered PK Good Life",
-     "detail": "https://www.sc.com/pk/credit-cards/the-good-life-privileges/",
-     "verified": true,
-     "checkedAgo": "2026-11-21"
-    }
-   ],
-   "channel": "online",
-   "shopsCountLabel": "See source",
-   "cities": [
-    "All Pakistan"
-   ],
-   "areas": [],
-   "nearestShopName": "",
-   "nearestDistanceKm": 0,
-   "cashAccepted": false,
-   "realVotes": 0,
-   "fakeReports": 0,
-   "dealUrl": "https://www.sc.com/pk/credit-cards/the-good-life-privileges/",
-   "updatedAt": "2026-11-21T20:24:09.993Z"
-  },
-  {
    "id": "approved-lead-brand-priceoye-fd4033f5ca",
-   "rank": 43,
+   "rank": 6,
    "brandId": "brand-priceoye",
    "brandName": "PriceOye",
    "brandInitials": "Pr",
@@ -128,8 +44,92 @@
    "updatedAt": "2026-11-21T20:24:11.481Z"
   },
   {
+   "id": "approved-lead-0b70b31d25",
+   "rank": 14,
+   "brandId": "aspire-beddings-wrap-your-room-in-luxury-th",
+   "brandName": "Aspire Beddings: 𝐅𝐥𝐚𝐭 𝟕𝟎% 𝐎𝐅𝐅 ❗❗ Wrap your room in luxury th",
+   "brandInitials": "AS",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "promo",
+   "title": "Aspire Beddings: 𝐅𝐥𝐚𝐭 𝟕𝟎% 𝐎𝐅𝐅 ❗❗ Wrap your room in luxury this winter with Aspire Bedding’s 7 Pc Comforter Sets",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "70% OFF",
+   "discountPercent": 70,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:15.208Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=25942832058647848",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=25942832058647848",
+   "updatedAt": "2026-11-21T20:24:15.208Z"
+  },
+  {
+   "id": "approved-lead-bank-5d74a9741d",
+   "rank": 28,
+   "brandId": "standard-chartered",
+   "brandName": "Standard Chartered",
+   "brandInitials": "ST",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "food",
+   "title": "Avail up to 50% off on dining, retail, & lifestyle merchants",
+   "subtitle": "Approved by admin · source: Standard Chartered PK Good Life",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:09.993Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Standard Chartered PK Good Life",
+     "detail": "https://www.sc.com/pk/credit-cards/the-good-life-privileges/",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.sc.com/pk/credit-cards/the-good-life-privileges/",
+   "updatedAt": "2026-11-21T20:24:09.993Z"
+  },
+  {
    "id": "approved-lead-ebf9bbb77c",
-   "rank": 44,
+   "rank": 29,
    "brandId": "mojari-the-sale-you-ve-been-waiting-for-is-live-step-int",
    "brandName": "Mojari: 🔥 The Sale You've Been Waiting For Is LIVE! Step int",
    "brandInitials": "MO",
@@ -171,7 +171,7 @@
   },
   {
    "id": "approved-lead-8ecebe4b9c",
-   "rank": 45,
+   "rank": 30,
    "brandId": "unze-london-pakistan-biggest-sale-of-the-year-blessed-fr",
    "brandName": "Unze London (Pakistan): Biggest Sale of the Year! Blessed Fr",
    "brandInitials": "UN",
@@ -212,92 +212,8 @@
    "updatedAt": "2026-11-21T20:24:13.026Z"
   },
   {
-   "id": "approved-lead-a70b0eea1b",
-   "rank": 46,
-   "brandId": "the-bare-essence-azadi-sale",
-   "brandName": "The Bare Essence: 🇵🇰🚨 Azadi Sale",
-   "brandInitials": "TH",
-   "brandColor": "#008069",
-   "brandVerified": false,
-   "category": "promo",
-   "title": "The Bare Essence: 🇵🇰🚨 Azadi Sale - FLAT 30% OFF for a limited time 🤩 Your Eid favorites at the best prices of the se",
-   "subtitle": "Approved by admin · source: Meta Ad Library",
-   "discountBadge": "30% OFF",
-   "discountPercent": 30,
-   "badgeTone": "green",
-   "priceNow": 0,
-   "priceWas": 0,
-   "endsInLabel": "See dates",
-   "expiresAt": "2026-11-28T20:24:14.408Z",
-   "checksPassed": 1,
-   "verificationSources": [
-    {
-     "source": "google_search",
-     "label": "Meta Ad Library",
-     "detail": "https://www.facebook.com/ads/library/?id=1034662875726191",
-     "verified": true,
-     "checkedAgo": "2026-11-21"
-    }
-   ],
-   "channel": "online",
-   "shopsCountLabel": "See source",
-   "cities": [
-    "All Pakistan"
-   ],
-   "areas": [],
-   "nearestShopName": "",
-   "nearestDistanceKm": 0,
-   "cashAccepted": false,
-   "realVotes": 0,
-   "fakeReports": 0,
-   "dealUrl": "https://www.facebook.com/ads/library/?id=1034662875726191",
-   "updatedAt": "2026-11-21T20:24:14.409Z"
-  },
-  {
-   "id": "approved-lead-0b70b31d25",
-   "rank": 47,
-   "brandId": "aspire-beddings-wrap-your-room-in-luxury-th",
-   "brandName": "Aspire Beddings: 𝐅𝐥𝐚𝐭 𝟕𝟎% 𝐎𝐅𝐅 ❗❗ Wrap your room in luxury th",
-   "brandInitials": "AS",
-   "brandColor": "#008069",
-   "brandVerified": false,
-   "category": "promo",
-   "title": "Aspire Beddings: 𝐅𝐥𝐚𝐭 𝟕𝟎% 𝐎𝐅𝐅 ❗❗ Wrap your room in luxury this winter with Aspire Bedding’s 7 Pc Comforter Sets",
-   "subtitle": "Approved by admin · source: Meta Ad Library",
-   "discountBadge": "70% OFF",
-   "discountPercent": 70,
-   "badgeTone": "orange",
-   "priceNow": 0,
-   "priceWas": 0,
-   "endsInLabel": "See dates",
-   "expiresAt": "2026-11-28T20:24:15.208Z",
-   "checksPassed": 1,
-   "verificationSources": [
-    {
-     "source": "google_search",
-     "label": "Meta Ad Library",
-     "detail": "https://www.facebook.com/ads/library/?id=25942832058647848",
-     "verified": true,
-     "checkedAgo": "2026-11-21"
-    }
-   ],
-   "channel": "online",
-   "shopsCountLabel": "See source",
-   "cities": [
-    "All Pakistan"
-   ],
-   "areas": [],
-   "nearestShopName": "",
-   "nearestDistanceKm": 0,
-   "cashAccepted": false,
-   "realVotes": 0,
-   "fakeReports": 0,
-   "dealUrl": "https://www.facebook.com/ads/library/?id=25942832058647848",
-   "updatedAt": "2026-11-21T20:24:15.208Z"
-  },
-  {
    "id": "approved-lead-1faafd5f0e",
-   "rank": 48,
+   "rank": 31,
    "brandId": "wax-dnm-biggest-shoe-sale-of-the-year-step-up-your-sty",
    "brandName": "WAX DNM: 🔥 BIGGEST SHOE SALE OF THE YEAR! 🔥 Step Up Your Sty",
    "brandInitials": "WA",
@@ -338,50 +254,8 @@
    "updatedAt": "2026-11-21T20:24:17.609Z"
   },
   {
-   "id": "approved-lead-3eb9bc1c29",
-   "rank": 49,
-   "brandId": "flourish-undergarments-your-comfort-upgrade-starts-now-fin",
-   "brandName": "Flourish Undergarments: Your Comfort Upgrade Starts Now! Fin",
-   "brandInitials": "FL",
-   "brandColor": "#008069",
-   "brandVerified": false,
-   "category": "clothes",
-   "title": "Flourish Undergarments: Your Comfort Upgrade Starts Now! Find everything you need in high-quality undergarments, nightwe",
-   "subtitle": "Approved by admin · source: Meta Ad Library",
-   "discountBadge": "15% OFF",
-   "discountPercent": 15,
-   "badgeTone": "green",
-   "priceNow": 0,
-   "priceWas": 0,
-   "endsInLabel": "See dates",
-   "expiresAt": "2026-11-28T20:24:18.224Z",
-   "checksPassed": 1,
-   "verificationSources": [
-    {
-     "source": "google_search",
-     "label": "Meta Ad Library",
-     "detail": "https://www.facebook.com/ads/library/?id=907228601628043",
-     "verified": true,
-     "checkedAgo": "2026-11-21"
-    }
-   ],
-   "channel": "online",
-   "shopsCountLabel": "See source",
-   "cities": [
-    "All Pakistan"
-   ],
-   "areas": [],
-   "nearestShopName": "",
-   "nearestDistanceKm": 0,
-   "cashAccepted": false,
-   "realVotes": 0,
-   "fakeReports": 0,
-   "dealUrl": "https://www.facebook.com/ads/library/?id=907228601628043",
-   "updatedAt": "2026-11-21T20:24:18.224Z"
-  },
-  {
    "id": "approved-lead-d1a288772b",
-   "rank": 50,
+   "rank": 32,
    "brandId": "octagontraders-pk-cod-delivery-pakistan-wide-ramadan",
    "brandName": "OctagonTraders.pk: ✅ COD DELIVERY PAKISTAN-WIDE 🇵🇰 ✅ RAMADAN",
    "brandInitials": "OC",
@@ -423,7 +297,7 @@
   },
   {
    "id": "approved-lead-caf4b6445a",
-   "rank": 51,
+   "rank": 33,
    "brandId": "mova-shoes-blessed-friday-sale-2024-flat-50-off-starts",
    "brandName": "Mova Shoes: 🚨 Blessed Friday Sale 2024 – Flat 50% OFF Starts",
    "brandInitials": "MO",
@@ -465,7 +339,7 @@
   },
   {
    "id": "approved-lead-297cf0e04b",
-   "rank": 52,
+   "rank": 34,
    "brandId": "silai-karhai-enjoy-up-to-50-",
    "brandName": "Silai Karhai: 𝗠𝗜𝗗 𝗦𝗨𝗠𝗠𝗘𝗥 𝗦𝗔𝗟𝗘 𝗜𝗦 𝗟𝗜𝗩𝗘 𝗡𝗢𝗪! • Enjoy up to 50%",
    "brandInitials": "SI",
@@ -504,6 +378,594 @@
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1975515903098385",
    "updatedAt": "2026-11-21T20:24:20.745Z"
+  },
+  {
+   "id": "approved-lead-a70b0eea1b",
+   "rank": 45,
+   "brandId": "the-bare-essence-azadi-sale",
+   "brandName": "The Bare Essence: 🇵🇰🚨 Azadi Sale",
+   "brandInitials": "TH",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "promo",
+   "title": "The Bare Essence: 🇵🇰🚨 Azadi Sale - FLAT 30% OFF for a limited time 🤩 Your Eid favorites at the best prices of the se",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "30% OFF",
+   "discountPercent": 30,
+   "badgeTone": "green",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:14.408Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1034662875726191",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1034662875726191",
+   "updatedAt": "2026-11-21T20:24:14.409Z"
+  },
+  {
+   "id": "approved-lead-bank-522c801bda",
+   "rank": 48,
+   "brandId": "hbl",
+   "brandName": "HBL",
+   "brandInitials": "HB",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "food",
+   "title": "14th Street Pizza (Karachi-Lahore-Islamabad-Faisalabad-Multan): 25% off",
+   "subtitle": "Approved by admin · source: HBL Konnect & card discounts",
+   "discountBadge": "25% OFF",
+   "discountPercent": 25,
+   "badgeTone": "green",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:08.508Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "HBL Konnect & card discounts",
+     "detail": "https://www.hbl.com/personal/konnect/konnect-account/konnect-debit-card-package",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.hbl.com/personal/konnect/konnect-account/konnect-debit-card-package",
+   "updatedAt": "2026-11-21T20:24:08.508Z"
+  },
+  {
+   "id": "approved-lead-3eb9bc1c29",
+   "rank": 51,
+   "brandId": "flourish-undergarments-your-comfort-upgrade-starts-now-fin",
+   "brandName": "Flourish Undergarments: Your Comfort Upgrade Starts Now! Fin",
+   "brandInitials": "FL",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "clothes",
+   "title": "Flourish Undergarments: Your Comfort Upgrade Starts Now! Find everything you need in high-quality undergarments, nightwe",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "15% OFF",
+   "discountPercent": 15,
+   "badgeTone": "green",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:18.224Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=907228601628043",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=907228601628043",
+   "updatedAt": "2026-11-21T20:24:18.224Z"
+  },
+  {
+   "id": "approved-lead-dfa96c0e5f",
+   "rank": 53,
+   "brandId": "bin-ilyas-summer-savings-are-on-get-flat-25-50-off-on-",
+   "brandName": "BIN ILYAS: SUMMER SAVINGS ARE ON! Get FLAT 25% & 50% OFF on ",
+   "brandInitials": "BI",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "clothes",
+   "title": "BIN ILYAS: SUMMER SAVINGS ARE ON! Get FLAT 25% & 50% OFF on your favourite Bin Ilyas summer styles. Don’t wait—your perf",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:27.201Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1465414085642520",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1465414085642520",
+   "updatedAt": "2026-11-21T20:24:27.201Z"
+  },
+  {
+   "id": "approved-lead-021d6ae005",
+   "rank": 54,
+   "brandId": "js-bank-your-food-cravings-deserve-a-little-extra-love-",
+   "brandName": "JS Bank: Your food cravings deserve a little extra love! 🍔☕🍩",
+   "brandInitials": "JS",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "food",
+   "title": "JS Bank: Your food cravings deserve a little extra love! 🍔☕🍩 From coffee breaks to your favorite bites, enjoy up to 50",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:28.456Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1673059434246006",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1673059434246006",
+   "updatedAt": "2026-11-21T20:24:28.456Z"
+  },
+  {
+   "id": "approved-lead-de6ed4061a",
+   "rank": 55,
+   "brandId": "js-bank-why-wait-for-the-weekend-to-treat-yourself-enjo",
+   "brandName": "JS Bank: Why wait for the weekend to treat yourself? 🍽️ Enjo",
+   "brandInitials": "JS",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "food",
+   "title": "JS Bank: Why wait for the weekend to treat yourself? 🍽️ Enjoy up to 50% off at selected dining spots with your JS Card.",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:29.081Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1843244580196620",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1843244580196620",
+   "updatedAt": "2026-11-21T20:24:29.081Z"
+  },
+  {
+   "id": "approved-lead-49fcbf34c0",
+   "rank": 56,
+   "brandId": "js-bank-from-middle-eastern-delights-to-hearty-traditional-",
+   "brandName": "JS Bank: From Middle Eastern delights to hearty traditional ",
+   "brandInitials": "JS",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "promo",
+   "title": "JS Bank: From Middle Eastern delights to hearty traditional favorites and Mediterranean flavors, there’s something for e",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:29.744Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1863149511510057",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1863149511510057",
+   "updatedAt": "2026-11-21T20:24:29.744Z"
+  },
+  {
+   "id": "approved-lead-af8bc9bed6",
+   "rank": 57,
+   "brandId": "js-bank-enjoy-more-for-less-get-up-to-50-off-at-fresh-",
+   "brandName": "JS Bank: Enjoy more for less! ✨ Get up to 50% off at Fresh &",
+   "brandInitials": "JS",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "promo",
+   "title": "JS Bank: Enjoy more for less! ✨ Get up to 50% off at Fresh & More By Bangash with JS Bank Cards. More savings on the thi",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:30.528Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=953913844126908",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=953913844126908",
+   "updatedAt": "2026-11-21T20:24:30.528Z"
+  },
+  {
+   "id": "approved-lead-957a321885",
+   "rank": 58,
+   "brandId": "garden-grill-up-to-50-off-7-days-a-week-enjoy-exclusi",
+   "brandName": "Garden Grill: Up to 50% OFF, 7 days a week! 💳✨ Enjoy exclusi",
+   "brandInitials": "GA",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "promo",
+   "title": "Garden Grill: Up to 50% OFF, 7 days a week! 💳✨ Enjoy exclusive savings with selected BOP Cards at Garden Grill. 🍽️ 📞 ",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:31.225Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1191104459990921",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1191104459990921",
+   "updatedAt": "2026-11-21T20:24:31.225Z"
+  },
+  {
+   "id": "approved-lead-fec5d80841",
+   "rank": 59,
+   "brandId": "trifit-trifit-meezan-bank-premium-fitness-now-up-to-50-",
+   "brandName": "TriFit: TriFit × Meezan Bank Premium fitness, now up to 50% ",
+   "brandInitials": "TR",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "health",
+   "title": "TriFit: TriFit × Meezan Bank Premium fitness, now up to 50% more affordable. Meezan Bank Visa Infinite Debit and Masterc",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:32.776Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=2918125115229623",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=2918125115229623",
+   "updatedAt": "2026-11-21T20:24:32.776Z"
+  },
+  {
+   "id": "approved-lead-2eae10b889",
+   "rank": 60,
+   "brandId": "arcadian-cafe",
+   "brandName": "Arcadian Cafe",
+   "brandInitials": "AR",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "food",
+   "title": "Arcadian Cafe - Vertical: Get up to 50% OFF on Ala Carte and Hi-Tea Buffet at Arcadian Cafe with UBL, MCB, Bank Alfalah,",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:33.416Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1592361008424530",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1592361008424530",
+   "updatedAt": "2026-11-21T20:24:33.416Z"
+  },
+  {
+   "id": "approved-lead-14f3902105",
+   "rank": 61,
+   "brandId": "premo-by-xander-s-up-to-50-off-with-selected-bank-discount",
+   "brandName": "Premo by Xander's: Up to 50% off with selected bank discount",
+   "brandInitials": "PR",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "promo",
+   "title": "Premo by Xander's: Up to 50% off with selected bank discounts.We’d call that the perfect excuse to finally try those new",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:34.233Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1383626847067872",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1383626847067872",
+   "updatedAt": "2026-11-21T20:24:34.233Z"
+  },
+  {
+   "id": "approved-lead-5c683d9b7a",
+   "rank": 62,
+   "brandId": "js-bank-good-food-great-workouts-and-exclusive-savings-",
+   "brandName": "JS Bank: Good food, great workouts, and exclusive savings! 💳",
+   "brandInitials": "JS",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "food",
+   "title": "JS Bank: Good food, great workouts, and exclusive savings! 💳 Enjoy up to 50% off at selected food spots and a gym with ",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:34.728Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=2536299810170581",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=2536299810170581",
+   "updatedAt": "2026-11-21T20:24:34.728Z"
+  },
+  {
+   "id": "approved-lead-fd352ee4ff",
+   "rank": 63,
+   "brandId": "cafe-e-street-enjoy-up-to-50-off-with-your-bank-cards-",
+   "brandName": "Cafe E Street: Enjoy Up To 50% OFF With Your Bank Cards! 💳✨ ",
+   "brandInitials": "CA",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "food",
+   "title": "Cafe E Street: Enjoy Up To 50% OFF With Your Bank Cards! 💳✨ Treat yourself to your favorite meals while saving big! Sim",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T20:24:35.312Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1700551874771628",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1700551874771628",
+   "updatedAt": "2026-11-21T20:24:35.312Z"
   }
  ],
  "dealOverrides": {
@@ -794,7 +1256,18 @@
   "lead-3eb9bc1c29": "approved",
   "lead-d1a288772b": "approved",
   "lead-caf4b6445a": "approved",
-  "lead-297cf0e04b": "approved"
+  "lead-297cf0e04b": "approved",
+  "lead-dfa96c0e5f": "approved",
+  "lead-49fcbf34c0": "approved",
+  "lead-de6ed4061a": "approved",
+  "lead-021d6ae005": "approved",
+  "lead-af8bc9bed6": "approved",
+  "lead-957a321885": "approved",
+  "lead-fec5d80841": "approved",
+  "lead-2eae10b889": "approved",
+  "lead-14f3902105": "approved",
+  "lead-5c683d9b7a": "approved",
+  "lead-fd352ee4ff": "approved"
  },
  "resolvedAlerts": {},
  "broadcasts": [],
@@ -804,6 +1277,6 @@
   "allowNewSignups": false,
   "allowGuestQuickAdd": false
  },
- "updatedAt": "2026-11-21T20:24:20.799Z",
+ "updatedAt": "2026-11-21T20:24:35.806Z",
  "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file."
 }
