@@ -1,5 +1,15 @@
 [
  {
+  "id": "al-bank-soneri-failing-202611211512",
+  "sourceId": "bank-soneri",
+  "kind": "failing",
+  "severity": "high",
+  "title": "Scraper: Soneri Bank Card Discounts failed 3 times in a row",
+  "description": "All fallback methods failed. Last error: html HTTP 403; html: no offers in page (JS site?). Last good data is kept for 72h. Source paused for 6h, then retried automatically. URL: https://www.soneribank.com/personal-banking/cards/discounts/",
+  "createdAt": "2026-11-21T15:12:30.067143Z",
+  "status": "open"
+ },
+ {
   "id": "al-meta-pk-buffet-failing-202611211424",
   "sourceId": "meta-pk-buffet",
   "kind": "failing",
