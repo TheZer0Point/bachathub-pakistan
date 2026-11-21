@@ -1054,7 +1054,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "rss-phoneworld",
@@ -1063,7 +1063,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "rss-techjuice",
@@ -1072,7 +1072,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "rss-dawn-biz",
@@ -1081,7 +1081,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "rss-tribune-life",
@@ -1090,7 +1090,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "rss-ary-biz",
@@ -1099,7 +1099,7 @@
    "type": "rss_social",
    "cycleNumber": 3,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false
   },
   {
    "id": "osm-karachi",
@@ -1109,7 +1109,7 @@
    "bbox": "24.80,67.00,24.94,67.12",
    "cycleNumber": 3,
    "cityScope": "Karachi",
-   "active": true
+   "active": false
   },
   {
    "id": "osm-lahore",
@@ -1119,7 +1119,7 @@
    "bbox": "31.46,74.26,31.56,74.38",
    "cycleNumber": 3,
    "cityScope": "Lahore",
-   "active": true
+   "active": false
   },
   {
    "id": "osm-islamabad",
@@ -1129,7 +1129,7 @@
    "bbox": "33.66,73.01,33.74,73.11",
    "cycleNumber": 3,
    "cityScope": "Islamabad",
-   "active": true
+   "active": false
   },
   {
    "id": "osm-rawalpindi",
@@ -1139,7 +1139,7 @@
    "bbox": "33.56,73.03,33.63,73.10",
    "cycleNumber": 3,
    "cityScope": "Rawalpindi",
-   "active": true
+   "active": false
   },
   {
    "id": "osm-multan",
@@ -1149,7 +1149,7 @@
    "bbox": "30.16,71.43,30.23,71.52",
    "cycleNumber": 3,
    "cityScope": "Multan",
-   "active": true
+   "active": false
   },
   {
    "id": "osm-lodhran",
@@ -1159,7 +1159,7 @@
    "bbox": "29.51,71.59,29.57,71.67",
    "cycleNumber": 3,
    "cityScope": "Lodhran",
-   "active": true
+   "active": false
   },
   {
    "id": "osm-bahawalpur",
@@ -1169,7 +1169,7 @@
    "bbox": "29.36,71.65,29.42,71.72",
    "cycleNumber": 3,
    "cityScope": "Bahawalpur",
-   "active": true
+   "active": false
   },
   {
    "id": "osm-faisalabad",
@@ -1179,7 +1179,7 @@
    "bbox": "31.39,73.05,31.45,73.13",
    "cycleNumber": 3,
    "cityScope": "Faisalabad",
-   "active": true
+   "active": false
   },
   {
    "id": "osm-peshawar",
@@ -1189,7 +1189,7 @@
    "bbox": "33.98,71.48,34.03,71.57",
    "cycleNumber": 3,
    "cityScope": "Peshawar",
-   "active": true
+   "active": false
   },
   {
    "id": "osm-quetta",
@@ -1199,7 +1199,7 @@
    "bbox": "30.16,66.97,30.22,67.04",
    "cycleNumber": 3,
    "cityScope": "Quetta",
-   "active": true
+   "active": false
   },
   {
    "id": "osm-hyderabad",
