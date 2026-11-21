@@ -1791,6 +1791,16 @@ async function startServer() {
 
   // Admin: Scrape & Refresh All Brand Logos & Official Branding Colors (Zero-AI)
   app.post('/api/admin/brands/scrape-branding', requireAdmin, async (_req, res) => {
+    if (DESKTOP_MODE) {
+      // Logos/colors are read by the GitHub scraper on every run; editing them here would freeze them.
+      return res.json({
+        ok: true,
+        report: { totalBrands: vault.brands.length, htmlScraped: 0, faviconMatched: 0, scrapedAt: new Date().toISOString(),
+          message: 'Brand logos are refreshed automatically by the GitHub scraper every 30 minutes.' },
+        brands: vault.brands,
+        deals: vault.deals,
+      });
+    }
     const report = await vault.refreshAllBrandBranding();
     vault.addAuditLog(
       'Super Admin',

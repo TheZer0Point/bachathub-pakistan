@@ -370,11 +370,23 @@ function applyToVault() {
 }
 
 // ---------------------------------------------------------------- admin edits -> curated
+// Fields that change by themselves (timestamps, auto branding) are never treated as admin edits.
+const VOLATILE_KEYS = new Set(['rank', 'updatedAt', 'brandingScrapedAt', 'logoSource', 'brandSecondaryColor', 'lastScrapedAt']);
+
+function cleanOverrides(map: Record<string, Loose>): Record<string, Loose> {
+  const out: Record<string, Loose> = {};
+  for (const [id, ov] of Object.entries(map || {})) {
+    const kept = Object.fromEntries(Object.entries(ov || {}).filter(([k]) => !VOLATILE_KEYS.has(k)));
+    if (Object.keys(kept).length) out[id] = kept;
+  }
+  return out;
+}
+
 function changedKeys(prevJson: string, cur: Loose): Loose {
   const prev = JSON.parse(prevJson) as Loose;
   const out: Loose = {};
   for (const k of new Set([...Object.keys(prev), ...Object.keys(cur)])) {
-    if (k === 'rank') continue;
+    if (VOLATILE_KEYS.has(k)) continue;
     if (JSON.stringify(prev[k]) !== JSON.stringify(cur[k])) out[k] = cur[k];
   }
   return out;
@@ -558,6 +570,9 @@ export async function pullFromGithub(): Promise<{ ok: boolean; message: string }
       const local = readLocal<Curated | null>(LOCAL_CURATED, null);
       const remote = { ...EMPTY_CURATED, ...parse<Partial<Curated>>(curated, {}) } as Curated;
       state.curated = local && (local.updatedAt || '') >= (remote.updatedAt || '') ? { ...EMPTY_CURATED, ...local } : remote;
+      // remove any old auto-branding "edits" so the scraper can keep logos fresh
+      state.curated.dealOverrides = cleanOverrides(state.curated.dealOverrides);
+      state.curated.brandOverrides = cleanOverrides(state.curated.brandOverrides);
       state.pushedCuratedHash = curatedHash(remote);
     }
     applyToVault();
