@@ -2148,6 +2148,90 @@
    "fakeReports": 0,
    "dealUrl": "https://www.sc.com/pk/credit-cards/the-good-life-privileges/",
    "updatedAt": "2026-11-21T22:17:35.576Z"
+  },
+  {
+   "id": "approved-lead-3c45c14313",
+   "rank": 84,
+   "brandId": "piss-missile-balls-there-are-boring-golf-gifts-and-then-th",
+   "brandName": "Piss Missile Balls: There are boring golf gifts, and then th",
+   "brandInitials": "PI",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "promo",
+   "title": "Piss Missile Balls: There are boring golf gifts, and then there is opening a box full of Piss Missile gear. Black Friday",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "20% OFF",
+   "discountPercent": 20,
+   "badgeTone": "green",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T22:18:18.480Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1652256763115384",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1652256763115384",
+   "updatedAt": "2026-11-21T22:18:18.480Z"
+  },
+  {
+   "id": "approved-lead-e3167fd3cb",
+   "rank": 85,
+   "brandId": "chic-le-frique-black-friday-sale-is-officially-on-take-up-",
+   "brandName": "Chic Le Frique: Black Friday Sale is officially on. Take up ",
+   "brandInitials": "CH",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "promo",
+   "title": "Chic Le Frique: Black Friday Sale is officially on. Take up to 50% off our most-loved styles and elevate your wardrobe f",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T22:18:19.744Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1175597585136806",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1175597585136806",
+   "updatedAt": "2026-11-21T22:18:19.744Z"
   }
  ],
  "dealOverrides": {
@@ -2486,7 +2570,9 @@
   "lead-cacd4384bf": "approved",
   "lead-2aff339dcf": "approved",
   "lead-487ccc03e7": "approved",
-  "lead-a0cde38a64": "approved"
+  "lead-a0cde38a64": "approved",
+  "lead-3c45c14313": "approved",
+  "lead-e3167fd3cb": "approved"
  },
  "resolvedAlerts": {},
  "broadcasts": [],
@@ -2496,6 +2582,6 @@
   "allowNewSignups": true,
   "allowGuestQuickAdd": false
  },
- "updatedAt": "2026-11-21T22:18:09.850Z",
+ "updatedAt": "2026-11-21T22:18:21.424Z",
  "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file."
 }
