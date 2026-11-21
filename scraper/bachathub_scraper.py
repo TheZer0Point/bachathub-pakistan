@@ -50,7 +50,7 @@ TODAY = NOW.strftime("%Y-%m-%d")
 KEEP_LAST_GOOD_HOURS = 72
 QUARANTINE_AFTER_FAILS = 3
 QUARANTINE_HOURS = 6
-RUN_BUDGET_SECONDS = 17 * 60
+RUN_BUDGET_SECONDS = 20 * 60
 RUN_STARTED = time.monotonic()
 
 UAS = [
@@ -68,7 +68,7 @@ SUSPICIOUS_TLD_RE = re.compile(r"\.(?:xyz|top|buzz|click|club|loan|online|site|i
 
 CATEGORY_KEYWORDS = {
     "food": ["restaurant", "dining", "food", "buffet", "pizza", "burger", "cafe", "bbq", "biryani", "karahi"],
-    "clothes": ["lawn", "kurta", "fashion", "apparel", "clothing", "unstitched", "pret", "suit"],
+    "clothes": ["lawn", "kurta", "fashion", "apparel", "clothing", "unstitched", "pret", "suit", "accessories", "jewel", "watch", "bags", "fabric"],
     "shoes": ["shoe", "footwear", "sneaker", "sandal", "chappal"],
     "grocery": ["grocery", "mart", "supermarket", "superstore", "cash & carry"],
     "mobiles": ["mobile", "smartphone", "phone", "laptop", "electronics"],
@@ -721,7 +721,8 @@ def meta_keyword_leads(src: Dict[str, Any], known_brands: List[Dict[str, Any]]) 
 # ---------------------------------------------------------------------------
 # OpenStreetMap (Overpass, 3 mirrors): real shop locations of tracked brands -> brand branches
 # ---------------------------------------------------------------------------
-OVERPASS_MIRRORS = ["https://overpass-api.de/api/interpreter", "https://overpass.kumi.systems/api/interpreter",
+OVERPASS_MIRRORS = ["https://overpass-api.de/api/interpreter", "https://overpass.private.coffee/api/interpreter",
+                    "https://overpass.kumi.systems/api/interpreter",
                     "https://maps.mail.ru/osm/tools/overpass/api/interpreter"]
 
 
@@ -736,7 +737,7 @@ def osm_branches(src: Dict[str, Any], brand_sources: List[Dict[str, Any]]) -> Di
     last = ""
     for mirror in OVERPASS_MIRRORS:
         try:
-            r = SESSION.post(mirror, data={"data": q}, timeout=70, headers={"User-Agent": UAS[3]})
+            r = SESSION.post(mirror, data={"data": q}, timeout=90, headers={"User-Agent": UAS[3]})
             if r.status_code != 200:
                 last = f"HTTP {r.status_code}"
                 continue
@@ -765,11 +766,22 @@ def osm_branches(src: Dict[str, Any], brand_sources: List[Dict[str, Any]]) -> Di
 # ---------------------------------------------------------------------------
 # bank portals
 # ---------------------------------------------------------------------------
+BANKISH_RE = re.compile(r"^(?:bank|all |premier|platinum|gold|amex|visa|master|debit|credit|card|upto|up to|flat|\d{1,2}\s*%)", re.I)
+
+
 def bank_offers_from_text(text: str) -> List[Dict[str, Any]]:
+    """Each offer line keeps the merchant name from the line above when the line itself is only card/percent text."""
     offers = []
     seen = set()
+    merchant = ""
     for line in re.split(r"(?<=[.!])\s+|\n+|\s{3,}", text):
         line = line.strip()
+        has_pct = bool(re.search(r"\d{1,2}\s*%", line))
+        if not has_pct and 2 < len(line) < 60 and not line.lower().startswith(("terms", "all discounts", "note", "max cap")):
+            merchant = line
+            continue
+        if has_pct and merchant and BANKISH_RE.search(line) and merchant.lower() not in line.lower():
+            line = f"{merchant}: {line}"
         if len(line) < 12 or len(line) > 220:
             continue
         pct = max_pct(line) or (int(m.group(1)) if (m := re.search(r"(\d{1,2})\s*%", line)) and 5 <= int(m.group(1)) <= 75 else None)
@@ -833,7 +845,7 @@ def bank_card_from_offers(src: Dict[str, Any], offers: List[Dict[str, Any]], pag
         "fashionDiscountPct": best("clothes") or best("shoes"),
         "groceryDiscountPct": best("grocery"),
         "healthDiscountPct": best("health"),
-        "maxCapRs": (lambda m: to_int_price(m.group(1)) if m else 0)(CAP_RE.search(page_text)),
+        "maxCapRs": max([to_int_price(c) for c in CAP_RE.findall(page_text)] or [0]),
         "annualFeeRs": (lambda m: to_int_price(m.group(1)) if m else 0)(FEE_RE.search(page_text)),
         "estimatedAnnualSavingsRs": 0,
         "partnerHighlights": [o["text"][:110] for o in sorted(offers, key=lambda o: -o["pct"])[:6]],
@@ -1027,7 +1039,7 @@ class Health:
                   "consecutiveFails": fails, "lastCheck": NOW_ISO})
         if fails == QUARANTINE_AFTER_FAILS:
             s["quarantinedUntil"] = (NOW + dt.timedelta(hours=QUARANTINE_HOURS)).isoformat().replace("+00:00", "Z")
-            sev = "high" if src["type"] in ("brand_site", "bank") else "medium"
+            sev = "high" if src["type"] in ("brand_site", "bank") else "low" if src["type"] in ("reddit", "osm_local", "meta_search") else "medium"
             self.alert(src, "failing", sev, f"Scraper: {src['name']} failed {fails} times in a row",
                        f"All fallback methods failed. Last error: {err[:200]}. Last good data is kept for "
                        f"{KEEP_LAST_GOOD_HOURS}h. Source paused for {QUARANTINE_HOURS}h, then retried automatically. "
@@ -1283,13 +1295,20 @@ def main() -> int:
             except FetchError as e:
                 health.fail(src, str(e))
     if heavy:
-        merged_osm: Dict[str, List[Dict[str, Any]]] = {}
+        merged_osm: Dict[str, List[Dict[str, Any]]] = {k: list(v) for k, v in (osm_cache.get("branches") or {}).items()}
         osm_ok = False
-        for src in [s for s in sources if s["type"] == "osm_local"]:
+        osm_all = [s for s in sources if s["type"] == "osm_local"]
+        cursor = int(status.get("osmCursor", 0)) % max(1, len(osm_all))
+        osm_batch = (osm_all[cursor:] + osm_all[:cursor])[:4]
+        status["osmCursor"] = (cursor + 4) % max(1, len(osm_all))
+        for src in osm_batch:
             if health.quarantined(src["id"]) or time_left() < 150:
                 continue
             try:
                 got = osm_branches(src, brand_sources)
+                city = src.get("cityScope", "")
+                for bid in list(merged_osm):
+                    merged_osm[bid] = [b for b in merged_osm[bid] if b.get("city") != city]
                 for bid, lst in got.items():
                     merged_osm.setdefault(bid, []).extend(lst)
                 health.ok(src, "overpass", sum(len(v) for v in got.values()))
@@ -1298,7 +1317,7 @@ def main() -> int:
                 health.fail(src, str(e))
             time.sleep(2)
         if osm_ok:
-            osm_cache = {"updatedAt": NOW_ISO, "branches": {k: v[:60] for k, v in merged_osm.items()}}
+            osm_cache = {"updatedAt": NOW_ISO, "branches": {k: v[:120] for k, v in merged_osm.items() if v}}
             write_json(PUBLIC / "osm_branches.json", osm_cache, indent=None)
         # Wayback: old prices -> history only (never shown as current deals). Max 4 brands per heavy run, weekly each.
         wb_state = status.setdefault("waybackHistory", {})
@@ -1344,6 +1363,13 @@ def main() -> int:
         try:
             res = scrape_bank(src, heavy)
             card = bank_card_from_offers(src, res["offers"], res.get("text", ""))
+            old = new_banks.get(card["id"])
+            if old:  # same bank from several pages: keep best real numbers, combine highlights
+                for k in ("diningDiscountPct", "fashionDiscountPct", "groceryDiscountPct", "healthDiscountPct", "maxCapRs", "annualFeeRs"):
+                    card[k] = max(int(old.get(k) or 0), int(card.get(k) or 0))
+                card["partnerHighlights"] = (old.get("partnerHighlights", []) + card["partnerHighlights"])[:8]
+                if old.get("tier") != "Debit / Wallet":
+                    card["tier"] = old["tier"]
             new_banks[card["id"]] = card
             for o in res["offers"][:15]:
                 leads.append({"id": f"lead-bank-{short_hash(src['id'] + o['text'])}", "kind": "bank_offer",
