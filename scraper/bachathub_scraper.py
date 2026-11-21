@@ -373,6 +373,7 @@ def norm_item(title: str, url: str, price: int, was: int, image: str = "") -> Op
     pct = round((was - price) / was * 100)
     if pct < 5 or pct > 90:
         return None
+    title = re.sub(r"\s+", " ", htmllib.unescape(str(title or ""))).strip() or "Sale item"
     return {"title": title[:120], "url": url, "price": price, "was": was, "pct": pct, "image": image}
 
 
@@ -702,9 +703,19 @@ def meta_keyword_leads(src: Dict[str, Any], known_brands: List[Dict[str, Any]]) 
     blocks = [b for b in re.split(r"Library ID", text)[1:40]]
     entries = []
     for b in blocks:
-        body = re.sub(r"\s+", " ", b)[:600]
-        entries.append({"title": body[:160], "summary": body, "link": src["url"], "published": ""})
-    return leads_from_entries(src, entries, known_brands)
+        body = re.sub(r"[\u200b\s]+", " ", b).strip()
+        lib = re.match(r":?\s*(\d{6,})", body)
+        m = re.search(r"See (?:ad|summary) details\s*(.+?)\s*Sponsored\s*(.+)", body)
+        page, ad_text = (m.group(1)[:60], m.group(2)) if m else ("", re.sub(r"^.*?Platforms", "", body))
+        ad_text = re.sub(r"This ad has multiple versions|Open Dropdown|See ad details", " ", ad_text)
+        ad_text = re.sub(r"\s+", " ", ad_text).strip()
+        link = f"https://www.facebook.com/ads/library/?id={lib.group(1)}" if lib else src["url"]
+        title = (f"{page}: " if page else "") + ad_text[:140]
+        entries.append({"title": title, "summary": ad_text[:500], "link": link, "published": ""})
+    found = leads_from_entries(src, entries, known_brands)
+    for l in found:
+        l["sourceName"] = "Meta Ad Library"
+    return found
 
 
 # ---------------------------------------------------------------------------
@@ -910,7 +921,7 @@ def build_deal(src: Dict[str, Any], brand: Dict[str, Any], result: Dict[str, Any
         "brandLogoUrl": brand.get("logoUrl"),
         "brandVerified": bool(brand.get("verified")),
         "category": src.get("category", "promo"),
-        "title": f"Up to {pct}% off · {len(items)} item{'s' if len(items) != 1 else ''} on sale",
+        "title": f"Up to {pct}% off · {len(items)}{'+' if len(items) >= 740 else ''} item{'s' if len(items) != 1 else ''} on sale",
         "subtitle": f"{top['title'][:60]}: Rs. {top['price']:,} (was Rs. {top['was']:,})",
         "discountBadge": f"Up to {pct}% OFF",
         "discountPercent": pct,
