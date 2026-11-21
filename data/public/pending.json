@@ -1,33 +1,33 @@
 [
  {
-  "id": "lead-bank-7dfe44aea2",
+  "id": "lead-bank-522c801bda",
   "kind": "bank_offer",
   "sourceId": "bank-hbl",
   "sourceName": "HBL Konnect & card discounts",
   "brandName": "HBL",
   "brandId": null,
   "category": "food",
-  "title": "Discounts up to 20% off at Brand outlets",
+  "title": "14th Street Pizza (Karachi-Lahore-Islamabad-Faisalabad-Multan): 25% off",
   "detail": "HBL card offer",
   "url": "https://www.hbl.com/personal/konnect/konnect-account/konnect-debit-card-package",
-  "discountPercent": 20,
+  "discountPercent": 25,
   "riskyHost": false,
-  "foundAt": "2026-11-21T16:41:36.679525Z"
+  "foundAt": "2026-11-21T17:10:28.176175Z"
  },
  {
-  "id": "lead-bank-06097cb1b7",
+  "id": "lead-bank-5d74a9741d",
   "kind": "bank_offer",
   "sourceId": "bank-scb",
   "sourceName": "Standard Chartered PK Good Life",
   "brandName": "Standard Chartered",
   "brandId": null,
   "category": "food",
-  "title": "Get a cashback of 5% on your grocery, dining and e-commerce transactions",
+  "title": "Avail up to 50% off on dining, retail, & lifestyle merchants",
   "detail": "Standard Chartered card offer",
   "url": "https://www.sc.com/pk/credit-cards/the-good-life-privileges/",
-  "discountPercent": 5,
+  "discountPercent": 50,
   "riskyHost": false,
-  "foundAt": "2026-11-21T16:41:36.679525Z"
+  "foundAt": "2026-11-21T17:10:28.176175Z"
  },
  {
   "id": "lead-brand-priceoye-fd4033f5ca",

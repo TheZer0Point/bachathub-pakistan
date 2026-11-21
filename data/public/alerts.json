@@ -1,5 +1,15 @@
 [
  {
+  "id": "al-brand-metroshoes-failing-202611211710",
+  "sourceId": "brand-metroshoes",
+  "kind": "failing",
+  "severity": "high",
+  "title": "Scraper: Metro Shoes failed 3 times in a row",
+  "description": "All fallback methods failed. Last error: html/sale HTTP 402; html/collections/sale HTTP 402; html/sales HTTP 402; html/offers HTTP 402; html/ HTTP 402; home SSLError. Last good data is kept for 72h. Source paused for 6h, then retried automatically. URL: https://www.metroshoes.com.pk/",
+  "createdAt": "2026-11-21T17:10:28.176175Z",
+  "status": "open"
+ },
+ {
   "id": "al-bank-soneri-failing-202611211512",
   "sourceId": "bank-soneri",
   "kind": "failing",
