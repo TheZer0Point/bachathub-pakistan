@@ -733,7 +733,7 @@ def osm_branches(src: Dict[str, Any], brand_sources: List[Dict[str, Any]]) -> Di
     names = {b["id"]: re.sub(r"\s*(pakistan|pk|official|store|shoes|super ?market|supermarket)\s*$", "", b["name"].split(" (")[0], flags=re.I).strip()
              for b in brand_sources}
     rx = "|".join(re.escape(n) for n in names.values() if len(n) >= 3)
-    q = f'[out:json][timeout:60];(nwr["name"~"{rx}",i]["shop"]({bbox});nwr["brand"~"{rx}",i]({bbox}););out center 400;'
+    q = f'[out:json][timeout:40];(nwr["shop"]["brand"~"{rx}"]({bbox});nwr["shop"]["name"~"{rx}"]({bbox}););out center tags 400;'
     last = ""
     for mirror in OVERPASS_MIRRORS:
         try:
@@ -1145,6 +1145,7 @@ def main() -> int:
 
     sources_cfg = read_json(CONFIG / "sources.json", {"sources": []})
     sources: List[Dict[str, Any]] = normalize_sources(sources_cfg.get("sources", []))
+    all_active_ids = {s["id"] for s in sources}
     curated = read_json(CONFIG / "curated.json", {})
     static = read_json(CONFIG / "static.json", {})
     prev = read_json(PUBLIC / "scraped.json", {"deals": [], "brands": [], "fakeAlerts": [], "bankCards": []})
@@ -1282,6 +1283,37 @@ def main() -> int:
         if fid not in new_fakes and hours_since(f.get("createdAt")) < 24 * 14:
             new_fakes[fid] = f
 
+    # ---- banks
+    for src in [s for s in sources if s["type"] == "bank"]:
+        if health.quarantined(src["id"]) or time_left() < 60:
+            counts["skipped"] += 1
+            continue
+        try:
+            res = scrape_bank(src, heavy)
+            card = bank_card_from_offers(src, res["offers"], res.get("text", ""))
+            old = new_banks.get(card["id"])
+            if old:  # same bank from several pages: keep best real numbers, combine highlights
+                for k in ("diningDiscountPct", "fashionDiscountPct", "groceryDiscountPct", "healthDiscountPct", "maxCapRs", "annualFeeRs"):
+                    card[k] = max(int(old.get(k) or 0), int(card.get(k) or 0))
+                card["partnerHighlights"] = (old.get("partnerHighlights", []) + card["partnerHighlights"])[:8]
+                if old.get("tier") != "Debit / Wallet":
+                    card["tier"] = old["tier"]
+            new_banks[card["id"]] = card
+            for o in res["offers"][:15]:
+                leads.append({"id": f"lead-bank-{short_hash(src['id'] + o['text'])}", "kind": "bank_offer",
+                              "sourceId": src["id"], "sourceName": src["name"], "brandName": card["bankName"],
+                              "brandId": None, "category": o["category"], "title": o["text"][:160],
+                              "detail": f"{card['bankName']} card offer", "url": src["url"],
+                              "discountPercent": o["pct"], "riskyHost": False, "foundAt": NOW_ISO})
+            health.ok(src, res["method"], len(res["offers"]))
+            counts["ok"] += 1
+        except FetchError as e:
+            health.fail(src, str(e))
+            counts["failed"] += 1
+    for cid, c in prev_banks.items():
+        if cid not in new_banks and hours_since(c.get("updatedAt")) < 24 * 7:
+            new_banks[cid] = c
+
     # ---- heavy-run extras: Meta Ad Library keyword search, OpenStreetMap branches, Wayback price history
     osm_cache: Dict[str, Any] = read_json(PUBLIC / "osm_branches.json", {"updatedAt": None, "branches": {}})
     if heavy and BROWSER.ok:
@@ -1355,37 +1387,6 @@ def main() -> int:
                 d["cities"] = ["All Pakistan"] + cities
                 d["shopsCountLabel"] = f"Online + {len(lst)} shops on map"
 
-    # ---- banks
-    for src in [s for s in sources if s["type"] == "bank"]:
-        if health.quarantined(src["id"]) or time_left() < 60:
-            counts["skipped"] += 1
-            continue
-        try:
-            res = scrape_bank(src, heavy)
-            card = bank_card_from_offers(src, res["offers"], res.get("text", ""))
-            old = new_banks.get(card["id"])
-            if old:  # same bank from several pages: keep best real numbers, combine highlights
-                for k in ("diningDiscountPct", "fashionDiscountPct", "groceryDiscountPct", "healthDiscountPct", "maxCapRs", "annualFeeRs"):
-                    card[k] = max(int(old.get(k) or 0), int(card.get(k) or 0))
-                card["partnerHighlights"] = (old.get("partnerHighlights", []) + card["partnerHighlights"])[:8]
-                if old.get("tier") != "Debit / Wallet":
-                    card["tier"] = old["tier"]
-            new_banks[card["id"]] = card
-            for o in res["offers"][:15]:
-                leads.append({"id": f"lead-bank-{short_hash(src['id'] + o['text'])}", "kind": "bank_offer",
-                              "sourceId": src["id"], "sourceName": src["name"], "brandName": card["bankName"],
-                              "brandId": None, "category": o["category"], "title": o["text"][:160],
-                              "detail": f"{card['bankName']} card offer", "url": src["url"],
-                              "discountPercent": o["pct"], "riskyHost": False, "foundAt": NOW_ISO})
-            health.ok(src, res["method"], len(res["offers"]))
-            counts["ok"] += 1
-        except FetchError as e:
-            health.fail(src, str(e))
-            counts["failed"] += 1
-    for cid, c in prev_banks.items():
-        if cid not in new_banks and hours_since(c.get("updatedAt")) < 24 * 7:
-            new_banks[cid] = c
-
     BROWSER.stop()
 
     # ---- pending leads (admin approves in Windows app); drop decided ones, keep 14 days
@@ -1421,6 +1422,7 @@ def main() -> int:
                "fakeAlerts": len(scraped["fakeAlerts"]), "bankCards": len(scraped["bankCards"]),
                "newLeads": len([l for l in leads if l["id"] not in {p['id'] for p in old_pending}]),
                "pending": len(pending), **counts, "seconds": round(time.monotonic() - RUN_STARTED)}
+    status["sources"] = {k: v for k, v in status.get("sources", {}).items() if k in all_active_ids}
     status["lastRunAt"] = NOW_ISO
     status["lastHeavyRunAt"] = NOW_ISO if heavy else status.get("lastHeavyRunAt")
     status["runs"] = ([run_rec] + status.get("runs", []))[:60]

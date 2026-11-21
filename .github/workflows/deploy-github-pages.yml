@@ -1,10 +1,12 @@
-name: BachatHub 100% Pure GitHub Pages Deploy
+name: Customer website (GitHub Pages)
 
 on:
   push:
     branches: ["main"]
     paths-ignore:
       - "data/**"
+      - "scraper/**"
+      - "**.md"
   workflow_dispatch:
 
 permissions:
@@ -17,43 +19,37 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js 20
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: "22"
           cache: "npm"
-
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
-
-      - name: Build BachatHub Pakistan (Static GitHub Pages Mode)
+      - name: Build website (static GitHub data mode)
         env:
           VITE_STATIC_MODE: "true"
           VITE_BASE: "/bachathub-pakistan/"
         run: npm run build
-
-      - name: Bundle public JSON snapshots for fallback distribution
+      - name: Add data snapshot as offline fallback
         run: |
           mkdir -p dist/data/public
-          cp -r data/public/*.json dist/data/public/ 2>/dev/null || true
-
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v4
+          cp data/public/bootstrap.json dist/data/public/ 2>/dev/null || true
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
         with:
-          path: "./dist"
+          path: ./dist
 
-      - name: Deploy directly to GitHub Pages
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

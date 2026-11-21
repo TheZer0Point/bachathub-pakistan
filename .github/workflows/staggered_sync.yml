@@ -2,7 +2,7 @@ name: BachatHub Scraper (every 30 min)
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "7,37 * * * *"   # off the busy :00/:30 marks (GitHub delays/drops runs at those times)
   workflow_dispatch:
     inputs:
       cycle:
