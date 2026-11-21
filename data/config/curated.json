@@ -129,50 +129,8 @@
    "updatedAt": "2026-11-21T20:24:41.248Z"
   },
   {
-   "id": "approved-lead-1366411bfa",
-   "rank": 16,
-   "brandId": "makeupcity-this-is-not-a-drill-makeupcity-s-clearance-",
-   "brandName": "makeupcity: 🚨 THIS IS NOT A DRILL! 🚨 makeupcity’s Clearance ",
-   "brandInitials": "MA",
-   "brandColor": "#008069",
-   "brandVerified": false,
-   "category": "promo",
-   "title": "makeupcity: 🚨 THIS IS NOT A DRILL! 🚨 makeupcity’s Clearance Sale is LIVE with flat 50% and 70% OFF! Grab your favourit",
-   "subtitle": "Approved by admin · source: Meta Ad Library",
-   "discountBadge": "70% OFF",
-   "discountPercent": 70,
-   "badgeTone": "orange",
-   "priceNow": 0,
-   "priceWas": 0,
-   "endsInLabel": "See dates",
-   "expiresAt": "2026-11-28T20:24:57.840Z",
-   "checksPassed": 1,
-   "verificationSources": [
-    {
-     "source": "google_search",
-     "label": "Meta Ad Library",
-     "detail": "https://www.facebook.com/ads/library/?id=1133619692726163",
-     "verified": true,
-     "checkedAgo": "2026-11-21"
-    }
-   ],
-   "channel": "online",
-   "shopsCountLabel": "See source",
-   "cities": [
-    "All Pakistan"
-   ],
-   "areas": [],
-   "nearestShopName": "",
-   "nearestDistanceKm": 0,
-   "cashAccepted": false,
-   "realVotes": 0,
-   "fakeReports": 0,
-   "dealUrl": "https://www.facebook.com/ads/library/?id=1133619692726163",
-   "updatedAt": "2026-11-21T20:24:57.840Z"
-  },
-  {
    "id": "approved-lead-171a9b4bc8",
-   "rank": 17,
+   "rank": 16,
    "brandId": "aspire-beddings-wrap-yourself-in-luxury-this-winter-with",
    "brandName": "Aspire Beddings: 🛏️ Wrap yourself in luxury this winter with",
    "brandInitials": "AS",
@@ -214,7 +172,7 @@
   },
   {
    "id": "approved-lead-bank-5d74a9741d",
-   "rank": 31,
+   "rank": 30,
    "brandId": "standard-chartered",
    "brandName": "Standard Chartered",
    "brandInitials": "ST",
@@ -256,7 +214,7 @@
   },
   {
    "id": "approved-lead-ebf9bbb77c",
-   "rank": 32,
+   "rank": 31,
    "brandId": "mojari-the-sale-you-ve-been-waiting-for-is-live-step-int",
    "brandName": "Mojari: 🔥 The Sale You've Been Waiting For Is LIVE! Step int",
    "brandInitials": "MO",
@@ -298,7 +256,7 @@
   },
   {
    "id": "approved-lead-8ecebe4b9c",
-   "rank": 33,
+   "rank": 32,
    "brandId": "unze-london-pakistan-biggest-sale-of-the-year-blessed-fr",
    "brandName": "Unze London (Pakistan): Biggest Sale of the Year! Blessed Fr",
    "brandInitials": "UN",
@@ -340,7 +298,7 @@
   },
   {
    "id": "approved-lead-1faafd5f0e",
-   "rank": 34,
+   "rank": 33,
    "brandId": "wax-dnm-biggest-shoe-sale-of-the-year-step-up-your-sty",
    "brandName": "WAX DNM: 🔥 BIGGEST SHOE SALE OF THE YEAR! 🔥 Step Up Your Sty",
    "brandInitials": "WA",
@@ -382,7 +340,7 @@
   },
   {
    "id": "approved-lead-d1a288772b",
-   "rank": 35,
+   "rank": 34,
    "brandId": "octagontraders-pk-cod-delivery-pakistan-wide-ramadan",
    "brandName": "OctagonTraders.pk: ✅ COD DELIVERY PAKISTAN-WIDE 🇵🇰 ✅ RAMADAN",
    "brandInitials": "OC",
@@ -424,7 +382,7 @@
   },
   {
    "id": "approved-lead-caf4b6445a",
-   "rank": 36,
+   "rank": 35,
    "brandId": "mova-shoes-blessed-friday-sale-2024-flat-50-off-starts",
    "brandName": "Mova Shoes: 🚨 Blessed Friday Sale 2024 – Flat 50% OFF Starts",
    "brandInitials": "MO",
@@ -466,7 +424,7 @@
   },
   {
    "id": "approved-lead-297cf0e04b",
-   "rank": 37,
+   "rank": 36,
    "brandId": "silai-karhai-enjoy-up-to-50-",
    "brandName": "Silai Karhai: 𝗠𝗜𝗗 𝗦𝗨𝗠𝗠𝗘𝗥 𝗦𝗔𝗟𝗘 𝗜𝗦 𝗟𝗜𝗩𝗘 𝗡𝗢𝗪! • Enjoy up to 50%",
    "brandInitials": "SI",
@@ -508,7 +466,7 @@
   },
   {
    "id": "approved-lead-dfa96c0e5f",
-   "rank": 38,
+   "rank": 37,
    "brandId": "bin-ilyas-summer-savings-are-on-get-flat-25-50-off-on-",
    "brandName": "BIN ILYAS: SUMMER SAVINGS ARE ON! Get FLAT 25% & 50% OFF on ",
    "brandInitials": "BI",
@@ -550,7 +508,7 @@
   },
   {
    "id": "approved-lead-021d6ae005",
-   "rank": 39,
+   "rank": 38,
    "brandId": "js-bank-your-food-cravings-deserve-a-little-extra-love-",
    "brandName": "JS Bank: Your food cravings deserve a little extra love! 🍔☕🍩",
    "brandInitials": "JS",
@@ -592,7 +550,7 @@
   },
   {
    "id": "approved-lead-de6ed4061a",
-   "rank": 40,
+   "rank": 39,
    "brandId": "js-bank-why-wait-for-the-weekend-to-treat-yourself-enjo",
    "brandName": "JS Bank: Why wait for the weekend to treat yourself? 🍽️ Enjo",
    "brandInitials": "JS",
@@ -634,7 +592,7 @@
   },
   {
    "id": "approved-lead-49fcbf34c0",
-   "rank": 41,
+   "rank": 40,
    "brandId": "js-bank-from-middle-eastern-delights-to-hearty-traditional-",
    "brandName": "JS Bank: From Middle Eastern delights to hearty traditional ",
    "brandInitials": "JS",
@@ -676,7 +634,7 @@
   },
   {
    "id": "approved-lead-af8bc9bed6",
-   "rank": 42,
+   "rank": 41,
    "brandId": "js-bank-enjoy-more-for-less-get-up-to-50-off-at-fresh-",
    "brandName": "JS Bank: Enjoy more for less! ✨ Get up to 50% off at Fresh &",
    "brandInitials": "JS",
@@ -718,7 +676,7 @@
   },
   {
    "id": "approved-lead-957a321885",
-   "rank": 43,
+   "rank": 42,
    "brandId": "garden-grill-up-to-50-off-7-days-a-week-enjoy-exclusi",
    "brandName": "Garden Grill: Up to 50% OFF, 7 days a week! 💳✨ Enjoy exclusi",
    "brandInitials": "GA",
@@ -760,7 +718,7 @@
   },
   {
    "id": "approved-lead-fec5d80841",
-   "rank": 44,
+   "rank": 43,
    "brandId": "trifit-trifit-meezan-bank-premium-fitness-now-up-to-50-",
    "brandName": "TriFit: TriFit × Meezan Bank Premium fitness, now up to 50% ",
    "brandInitials": "TR",
@@ -802,7 +760,7 @@
   },
   {
    "id": "approved-lead-2eae10b889",
-   "rank": 45,
+   "rank": 44,
    "brandId": "arcadian-cafe",
    "brandName": "Arcadian Cafe",
    "brandInitials": "AR",
@@ -844,7 +802,7 @@
   },
   {
    "id": "approved-lead-14f3902105",
-   "rank": 46,
+   "rank": 45,
    "brandId": "premo-by-xander-s-up-to-50-off-with-selected-bank-discount",
    "brandName": "Premo by Xander's: Up to 50% off with selected bank discount",
    "brandInitials": "PR",
@@ -886,7 +844,7 @@
   },
   {
    "id": "approved-lead-5c683d9b7a",
-   "rank": 47,
+   "rank": 46,
    "brandId": "js-bank-good-food-great-workouts-and-exclusive-savings-",
    "brandName": "JS Bank: Good food, great workouts, and exclusive savings! 💳",
    "brandInitials": "JS",
@@ -928,7 +886,7 @@
   },
   {
    "id": "approved-lead-fd352ee4ff",
-   "rank": 48,
+   "rank": 47,
    "brandId": "cafe-e-street-enjoy-up-to-50-off-with-your-bank-cards-",
    "brandName": "Cafe E Street: Enjoy Up To 50% OFF With Your Bank Cards! 💳✨ ",
    "brandInitials": "CA",
@@ -970,7 +928,7 @@
   },
   {
    "id": "approved-lead-440b81f3d4",
-   "rank": 49,
+   "rank": 48,
    "brandId": "-1867043501408489-started-running-on-nov-1-2026-platforms-",
    "brandName": ": 1867043501408489 Started running on Nov 1, 2026 Platforms ",
    "brandInitials": ": ",
@@ -1012,7 +970,7 @@
   },
   {
    "id": "approved-lead-cf732b70cd",
-   "rank": 50,
+   "rank": 49,
    "brandId": "-1068292389049600-started-running-on-aug-11-2026-platforms",
    "brandName": ": 1068292389049600 Started running on Aug 11, 2026 Platforms",
    "brandInitials": ": ",
@@ -1054,7 +1012,7 @@
   },
   {
    "id": "approved-lead-0f1fc211eb",
-   "rank": 51,
+   "rank": 50,
    "brandId": "chaaye-khana-mgc-divine-from-breakfast-to-dinner-enjoy-eve",
    "brandName": "Chaaye Khana MGC Divine: From breakfast to dinner, enjoy eve",
    "brandInitials": "CH",
@@ -1096,7 +1054,7 @@
   },
   {
    "id": "approved-lead-518e971a6c",
-   "rank": 52,
+   "rank": 51,
    "brandId": "js-bank-good-food-great-company-and-more-reasons-to-celebr",
    "brandName": "JS Bank: Good food, great company and more reasons to celebr",
    "brandInitials": "JS",
@@ -1138,7 +1096,7 @@
   },
   {
    "id": "approved-lead-dceb79879f",
-   "rank": 53,
+   "rank": 52,
    "brandId": "js-bank-hearty-food-rich-traditions-and-a-deal-worth-savor",
    "brandName": "JS Bank: Hearty food, rich traditions and a deal worth savor",
    "brandInitials": "JS",
@@ -1180,7 +1138,7 @@
   },
   {
    "id": "approved-lead-bb34d6793c",
-   "rank": 54,
+   "rank": 53,
    "brandId": "js-bank-a-mediterranean-feast-tastes-even-better-with-a-gre",
    "brandName": "JS Bank: A Mediterranean feast tastes even better with a gre",
    "brandInitials": "JS",
@@ -1222,7 +1180,7 @@
   },
   {
    "id": "approved-lead-2539ee18ec",
-   "rank": 55,
+   "rank": 54,
    "brandId": "zubaidas-online-blessed-friday-sale-is-here-baby-ge",
    "brandName": "Zubaidas Online: 🎉 BLESSED FRIDAY SALE IS HERE! 🛍️ 👶 Baby Ge",
    "brandInitials": "ZU",
@@ -1264,7 +1222,7 @@
   },
   {
    "id": "approved-lead-39d0b7d02d",
-   "rank": 56,
+   "rank": 55,
    "brandId": "zubaidas-online-11-11-sale-is-here-baby-gear-cl",
    "brandName": "Zubaidas Online: 🎉 11.11 SALE IS HERE! 🛍️ 👶 Baby Gear | 👕 Cl",
    "brandInitials": "ZU",
@@ -1306,7 +1264,7 @@
   },
   {
    "id": "approved-lead-2da6197972",
-   "rank": 57,
+   "rank": 56,
    "brandId": "aik-digital-sushi-ho-ya-rice-bowls-chop-chop-wok-par-aik-d",
    "brandName": "aik Digital: Sushi ho ya rice bowls, Chop Chop Wok par aik D",
    "brandInitials": "AI",
@@ -1348,7 +1306,7 @@
   },
   {
    "id": "approved-lead-6093fb59fe",
-   "rank": 58,
+   "rank": 57,
    "brandId": "js-bank-make-your-weekends-more-rewarding-with-js-cards-",
    "brandName": "JS Bank: Make your weekends more rewarding with JS Cards! 🧡 ",
    "brandInitials": "JS",
@@ -1390,7 +1348,7 @@
   },
   {
    "id": "approved-lead-55c868dc4f",
-   "rank": 63,
+   "rank": 62,
    "brandId": "brand-asimjofa",
    "brandName": "Asim Jofa",
    "brandInitials": "AJ",
@@ -1433,7 +1391,7 @@
   },
   {
    "id": "approved-lead-a70b0eea1b",
-   "rank": 70,
+   "rank": 69,
    "brandId": "the-bare-essence-azadi-sale",
    "brandName": "The Bare Essence: 🇵🇰🚨 Azadi Sale",
    "brandInitials": "TH",
@@ -1475,7 +1433,7 @@
   },
   {
    "id": "approved-lead-321960554e",
-   "rank": 71,
+   "rank": 70,
    "brandId": "the-bare-essence-azadi-sale-is-live-flat-30-off-",
    "brandName": "The Bare Essence: 🇵🇰 AZADI SALE IS LIVE! 💚 🔥 FLAT 30% OFF 💚 ",
    "brandInitials": "TH",
@@ -1517,7 +1475,7 @@
   },
   {
    "id": "approved-lead-bank-522c801bda",
-   "rank": 74,
+   "rank": 73,
    "brandId": "hbl",
    "brandName": "HBL",
    "brandInitials": "HB",
@@ -1559,7 +1517,7 @@
   },
   {
    "id": "approved-lead-brand-naheed-55ef52bc94",
-   "rank": 75,
+   "rank": 74,
    "brandId": "brand-naheed",
    "brandName": "Naheed Supermarket",
    "brandInitials": "NS",
@@ -1602,7 +1560,7 @@
   },
   {
    "id": "approved-lead-421ba54901",
-   "rank": 78,
+   "rank": 77,
    "brandId": "swisse-india-crazy-deals-of-the-month-get-flat-20-o",
    "brandName": "Swisse India: 🚀Crazy Deals Of The Month 🤑🔥 🛍️ Get Flat 20% O",
    "brandInitials": "SW",
@@ -1644,7 +1602,7 @@
   },
   {
    "id": "approved-lead-e5bcbe591d",
-   "rank": 79,
+   "rank": 78,
    "brandId": "brand-saya",
    "brandName": "Saya",
    "brandInitials": "Sa",
@@ -1687,7 +1645,7 @@
   },
   {
    "id": "approved-lead-3eb9bc1c29",
-   "rank": 80,
+   "rank": 79,
    "brandId": "flourish-undergarments-your-comfort-upgrade-starts-now-fin",
    "brandName": "Flourish Undergarments: Your Comfort Upgrade Starts Now! Fin",
    "brandInitials": "FL",
@@ -1729,7 +1687,7 @@
   },
   {
    "id": "approved-lead-brand-wb-hemani-6799b4c0d9",
-   "rank": 81,
+   "rank": 80,
    "brandId": "brand-wb-hemani",
    "brandName": "WB by Hemani",
    "brandInitials": "WB",
@@ -1772,7 +1730,7 @@
   },
   {
    "id": "approved-lead-brand-dvago-b6d969d83c",
-   "rank": 82,
+   "rank": 81,
    "brandId": "brand-dvago",
    "brandName": "Dvago Pharmacy",
    "brandInitials": "DP",
@@ -1815,7 +1773,7 @@
   },
   {
    "id": "approved-lead-d4c195ce4b",
-   "rank": 83,
+   "rank": 82,
    "brandId": "lavishcarepk-11-11-mega-sale-get-flat-15-off-on-all-yo",
    "brandName": "Lavishcarepk: 💥 11.11 MEGA SALE 💥 Get FLAT 15% OFF on all yo",
    "brandInitials": "LA",
@@ -1857,7 +1815,7 @@
   },
   {
    "id": "approved-lead-4192c48fdc",
-   "rank": 85,
+   "rank": 84,
    "brandId": "bostani-pakistan-for-the-first-time-ever-bostani-chocolati",
    "brandName": "Bostani Pakistan: For the first time ever, Bostani Chocolati",
    "brandInitials": "BO",
@@ -2229,6 +2187,6 @@
   "allowNewSignups": true,
   "allowGuestQuickAdd": false
  },
- "updatedAt": "2026-11-21T20:26:50.861Z",
+ "updatedAt": "2026-11-21T20:28:05.888Z",
  "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file."
 }
