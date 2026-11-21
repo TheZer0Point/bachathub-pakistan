@@ -251,17 +251,29 @@ export function AdminDashboardView({
     }
   }, [isAdmin, loadOverview]);
 
+  const [claimedSeen, setClaimedSeen] = useState(false);
   const handleAdminSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setAuthError(null);
     setAuthLoading(true);
     try {
-      const needsClaim = !adminStatus.envConfigured && !adminStatus.claimed;
+      const needsClaim = !adminStatus.envConfigured && !adminStatus.claimed && !claimedSeen;
       const endpoint = needsClaim ? '/api/auth/admin/claim' : '/api/auth/admin/login';
-      const res = await apiRequest<{ token: string }>(endpoint, {
-        method: 'POST',
-        body: { passcode },
-      });
+      let res: { token: string };
+      try {
+        res = await apiRequest<{ token: string }>(endpoint, {
+          method: 'POST',
+          body: { passcode },
+        });
+      } catch (claimErr) {
+        // Passcode was already created earlier (screen was out of date): sign in with it instead.
+        if (needsClaim && claimErr instanceof Error && /already been claimed/i.test(claimErr.message)) {
+          setClaimedSeen(true);
+          res = await apiRequest<{ token: string }>('/api/auth/admin/login', { method: 'POST', body: { passcode } });
+        } else {
+          throw claimErr;
+        }
+      }
       onAdminAuth(res.token);
       setPasscode('');
       onToast(needsClaim ? 'Super Admin passcode securely claimed & encrypted!' : 'Welcome to Super Admin Command Center.');
@@ -318,7 +330,7 @@ export function AdminDashboardView({
   // ADMIN AUTH / FIRST-RUN CLAIM GATE + FORGOT PASSCODE RECOVERY
   // =========================================================================
   if (!isAdmin) {
-    const needsClaim = !adminStatus.envConfigured && !adminStatus.claimed;
+    const needsClaim = !adminStatus.envConfigured && !adminStatus.claimed && !claimedSeen;
     return (
       <div className="min-h-screen bg-[#0F172A] text-white flex items-center justify-center p-4">
         <div className="max-w-md w-full bg-[#1E293B] rounded-3xl border border-slate-700 p-6 space-y-5 shadow-2xl">

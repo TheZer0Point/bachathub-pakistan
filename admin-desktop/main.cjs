@@ -14,9 +14,25 @@ let win = null;
 let tray = null;
 let quitting = false;
 
-if (!app.requestSingleInstanceLock()) {
-  app.quit();
+// Only one copy may run. A second launch just brings the existing window to the front.
+const gotLock = app.requestSingleInstanceLock();
+if (!gotLock) {
+  app.exit(0);
 }
+
+// If the admin server port is already taken (e.g. an older copy still closing), reuse it instead of crashing.
+let portBusy = false;
+process.on('uncaughtException', (err) => {
+  if (err && err.code === 'EADDRINUSE') {
+    portBusy = true;
+    console.warn('Admin server port already in use - connecting to the running server.');
+    return;
+  }
+  console.error(err);
+  try {
+    dialog.showErrorBox('BachatHub Admin', String(err && err.stack ? err.stack : err));
+  } catch (_) {}
+});
 app.setAppUserModelId('pk.bachathub.superadmin.desktop');
 
 function startEmbeddedServer() {
@@ -115,6 +131,7 @@ app.on('second-instance', showWindow);
 app.on('before-quit', () => { quitting = true; });
 
 app.whenReady().then(async () => {
+  if (!gotLock) return;
   try {
     startEmbeddedServer();
     await waitForServer();
