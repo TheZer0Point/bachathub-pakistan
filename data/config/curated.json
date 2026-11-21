@@ -1789,9 +1789,9 @@
    "brandLogoUrl": "https://cdn.shopify.com/s/files/1/0777/5666/2055/files/interwood_favicon.png"
   },
   "auto-brand-telemart": {
-   "title": "50% to 90% off · 685 items on sale",
+   "title": "5% to 90% off · 685 items on sale",
    "discountBadge": "90% OFF",
-   "updatedAt": "2026-11-21T20:49:19.317Z"
+   "updatedAt": "2026-11-21T20:49:39.802Z"
   }
  },
  "manualBrands": [],
@@ -2109,6 +2109,6 @@
   "allowNewSignups": true,
   "allowGuestQuickAdd": false
  },
- "updatedAt": "2026-11-21T20:49:21.528Z",
+ "updatedAt": "2026-11-21T20:49:51.535Z",
  "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file."
 }
