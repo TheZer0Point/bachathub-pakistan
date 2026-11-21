@@ -73,7 +73,9 @@ jobs:
           cache: "npm"
       - name: Build admin web UI + bundle admin server
         run: |
-          npm ci --no-audit --no-fund
+          # lock file was made on Linux; let npm pick the Windows native binaries
+          rm -f package-lock.json
+          npm install --no-audit --no-fund
           npx vite build
           npx esbuild server.ts --bundle --platform=node --target=node20 --format=cjs --outfile=admin-desktop/server.cjs --external:vite --log-level=warning
           rm -rf admin-desktop/web && cp -r dist admin-desktop/web
