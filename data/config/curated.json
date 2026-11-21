@@ -1,252 +1,275 @@
 {
  "manualDeals": [],
- "dealOverrides": {},
+ "dealOverrides": {
+  "auto-brand-unze": {
+   "brandLogoUrl": "https://www.google.com/s2/favicons?domain=unze.com.pk&sz=128"
+  },
+  "auto-brand-stylo": {
+   "brandLogoUrl": "https://stylo.pk/cdn/shop/files/1538479467516-theme_256x256_630ad233-4c1a-4189-9a27-9604d3a8661c_32x32.png?v=1643789719"
+  },
+  "auto-brand-sapphire": {
+   "brandLogoUrl": "https://www.google.com/s2/favicons?domain=pk.sapphireonline.pk&sz=128"
+  },
+  "auto-brand-co-natural": {
+   "brandLogoUrl": "https://www.google.com/s2/favicons?domain=conaturalintl.com&sz=128"
+  },
+  "auto-brand-interwood": {
+   "brandLogoUrl": "https://cdn.shopify.com/s/files/1/0777/5666/2055/files/interwood_favicon.png"
+  }
+ },
  "manualBrands": [],
  "brandOverrides": {
   "brand-alfatah": {
-   "brandingScrapedAt": "2026-11-21T14:20:06.772Z",
+   "brandingScrapedAt": "2026-11-21T20:22:05.930Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-alkaram": {
-   "brandingScrapedAt": "2026-11-21T14:20:02.661Z",
+   "brandingScrapedAt": "2026-11-21T20:22:05.775Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-asimjofa": {
-   "brandingScrapedAt": "2026-11-21T14:20:00.502Z",
+   "brandingScrapedAt": "2026-11-21T20:22:06.090Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-baroque": {
-   "brandingScrapedAt": "2026-11-21T14:19:59.621Z",
+   "brandingScrapedAt": "2026-11-21T20:22:05.916Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-bata": {
-   "brandingScrapedAt": "2026-11-21T14:20:01.746Z",
+   "brandingScrapedAt": "2026-11-21T20:22:06.062Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-beechtree": {
-   "brandingScrapedAt": "2026-11-21T14:20:03.804Z",
+   "brandingScrapedAt": "2026-11-21T20:22:06.034Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-bonanza": {
-   "brandingScrapedAt": "2026-11-21T14:20:03.293Z",
+   "brandingScrapedAt": "2026-11-21T20:22:06.343Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-borjan": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.497Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:06.372Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-breakout": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.499Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:10.102Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-charcoal": {
-   "brandingScrapedAt": "2026-11-21T14:20:03.630Z",
+   "brandingScrapedAt": "2026-11-21T20:22:06.489Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-chaseup": {
-   "brandingScrapedAt": "2026-11-21T14:20:03.502Z",
+   "brandingScrapedAt": "2026-11-21T20:22:06.289Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-chenone": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.504Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:09.588Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-chughtai": {
-   "brandingScrapedAt": "2026-11-21T14:20:01.130Z",
+   "brandingScrapedAt": "2026-11-21T20:22:06.944Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-co-natural": {
    "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.504Z",
-   "brandSecondaryColor": "#19A85B"
+   "brandingScrapedAt": "2026-11-21T20:22:07.033Z",
+   "brandSecondaryColor": "#19A85B",
+   "logoUrl": "https://www.google.com/s2/favicons?domain=conaturalintl.com&sz=128"
   },
   "brand-cougar": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.504Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:09.536Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-crossstitch": {
-   "brandingScrapedAt": "2026-11-21T14:20:01.810Z"
+   "brandingScrapedAt": "2026-11-21T20:22:07.101Z"
   },
   "brand-diners": {
-   "brandingScrapedAt": "2026-11-21T14:20:05.386Z",
+   "brandingScrapedAt": "2026-11-21T20:22:07.201Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-dvago": {
-   "brandingScrapedAt": "2026-11-21T14:20:02.926Z",
+   "brandingScrapedAt": "2026-11-21T20:22:09.456Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-ecs": {
-   "brandingScrapedAt": "2026-11-21T14:20:04.157Z",
+   "brandingScrapedAt": "2026-11-21T20:22:07.329Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-edenrobe": {
-   "brandingScrapedAt": "2026-11-21T14:20:04.914Z",
+   "brandingScrapedAt": "2026-11-21T20:22:07.369Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-engine": {
-   "brandingScrapedAt": "2026-11-21T14:20:05.064Z",
+   "brandingScrapedAt": "2026-11-21T20:22:07.707Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-ethnic": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.509Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:09.635Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-furor": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.511Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:07.518Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-generation": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.511Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:10.433Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-habitt": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.512Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:07.804Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-hushpuppies": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.513Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:07.845Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-gulahmed": {
-   "brandingScrapedAt": "2026-11-21T14:20:03.601Z",
+   "brandingScrapedAt": "2026-11-21T20:22:08.185Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-imtiaz": {
-   "brandingScrapedAt": "2026-11-21T14:20:04.124Z",
+   "brandingScrapedAt": "2026-11-21T20:22:07.701Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-insignia": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.515Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:08.294Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-interwood": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.515Z",
-   "brandSecondaryColor": "#19A85B"
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:08.212Z",
+   "brandSecondaryColor": "#19A85B",
+   "logoUrl": "https://cdn.shopify.com/s/files/1/0777/5666/2055/files/interwood_favicon.png"
   },
   "brand-junaid-jamshed": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.526Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:08.368Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-kayseria": {
-   "brandingScrapedAt": "2026-11-21T14:20:03.526Z",
+   "brandingScrapedAt": "2026-11-21T20:22:08.242Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-khaadi": {
    "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.526Z",
-   "brandSecondaryColor": "#19A85B"
+   "brandingScrapedAt": "2026-11-21T20:22:08.260Z",
+   "brandSecondaryColor": "#19A85B",
+   "logoUrl": "https://www.google.com/s2/favicons?domain=pk.khaadi.com&sz=128"
   },
   "brand-limelight": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.526Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:08.266Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-mariab": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.526Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:10.291Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-metroshoes": {
    "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.526Z",
+   "brandingScrapedAt": "2026-11-21T20:22:08.410Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-monark": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.526Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:08.550Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-naheed": {
    "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.526Z",
+   "brandingScrapedAt": "2026-11-21T20:22:08.851Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-ndure": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.526Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:08.543Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-nishat": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.527Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:08.743Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-outfitters": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.529Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:09.929Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-priceoye": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.529Z"
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:09.813Z"
   },
   "brand-saeedghani": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.530Z"
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:09.011Z"
   },
   "brand-sanasafinaz": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.531Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:10.069Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-sapphire": {
    "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.534Z",
-   "brandSecondaryColor": "#19A85B"
+   "brandingScrapedAt": "2026-11-21T20:22:08.902Z",
+   "brandSecondaryColor": "#19A85B",
+   "logoUrl": "https://www.google.com/s2/favicons?domain=pk.sapphireonline.pk&sz=128"
   },
   "brand-saya": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.535Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:08.987Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-servis": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.536Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:09.893Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-shophive": {
    "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.537Z",
-   "brandSecondaryColor": "#19A85B"
+   "brandingScrapedAt": "2026-11-21T20:22:09.301Z",
+   "brandSecondaryColor": "#19A85B",
+   "logoUrl": "https://www.google.com/s2/favicons?domain=www.shophive.com&sz=128"
   },
   "brand-springs": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.539Z"
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:09.858Z"
   },
   "brand-stylo": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.540Z"
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:09.632Z",
+   "logoUrl": "https://stylo.pk/cdn/shop/files/1538479467516-theme_256x256_630ad233-4c1a-4189-9a27-9604d3a8661c_32x32.png?v=1643789719"
   },
   "brand-telemart": {
    "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.550Z",
+   "brandingScrapedAt": "2026-11-21T20:22:10.730Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-unze": {
    "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.550Z",
-   "brandSecondaryColor": "#19A85B"
+   "brandingScrapedAt": "2026-11-21T20:22:09.956Z",
+   "brandSecondaryColor": "#19A85B",
+   "logoUrl": "https://www.google.com/s2/favicons?domain=unze.com.pk&sz=128"
   },
   "brand-wb-hemani": {
    "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.550Z",
+   "brandingScrapedAt": "2026-11-21T20:22:10.731Z",
    "brandSecondaryColor": "#19A85B"
   },
   "brand-zellbury": {
-   "logoSource": "official_favicon",
-   "brandingScrapedAt": "2026-11-21T14:20:03.551Z",
+   "logoSource": "scraped_html",
+   "brandingScrapedAt": "2026-11-21T20:22:09.887Z",
    "brandSecondaryColor": "#19A85B"
   }
  },
@@ -262,6 +285,6 @@
   "allowNewSignups": false,
   "allowGuestQuickAdd": false
  },
- "updatedAt": "2026-11-21T14:20:22.005Z",
+ "updatedAt": "2026-11-21T20:22:20.739Z",
  "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file."
 }
