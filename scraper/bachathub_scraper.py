@@ -79,6 +79,10 @@ CATEGORY_KEYWORDS = {
 }
 
 BANK_THEMES = {
+    "scb": ("Standard Chartered", "#0473EA", "#38D200", "#E8F3FD"),
+    "soneri": ("Soneri Bank", "#B8860B", "#DAA520", "#FBF5E6"),
+    "sadapay": ("SadaPay", "#FF6A5C", "#FF9A8F", "#FFF0EE"),
+    "nayapay": ("NayaPay", "#5B2D90", "#8A5CC2", "#F3ECFA"),
     "hbl": ("HBL", "#00826B", "#00A08A", "#E6F4F1"),
     "meezan": ("Meezan Bank", "#6E2C6B", "#9C3F96", "#F4E9F3"),
     "alfalah": ("Bank Alfalah", "#B5121B", "#E03A3E", "#FBE9EA"),
@@ -792,6 +796,8 @@ def bank_offers_from_text(text: str) -> List[Dict[str, Any]]:
                 line = f"{merchant}{f' ({cities})' if cities else ''}: {line}"
         if len(line) < 8 or len(line) > 220:
             continue
+        if re.search(r"mark-?up|profit|interest|installment|instalment|\bfee|charges|cash ?back on bills|apr\b", line, re.I):
+            continue
         pct = max_pct(line) or (int(m.group(1)) if (m := re.search(r"(\d{1,2})\s*%", line)) and 5 <= int(m.group(1)) <= 75 else None)
         if not pct:
             continue
@@ -1316,8 +1322,14 @@ def main() -> int:
             health.ok(src, res["method"], len(res["offers"]))
             counts["ok"] += 1
         except FetchError as e:
-            health.fail(src, str(e))
-            counts["failed"] += 1
+            if not heavy and "JS site" in str(e) and "HTTP" not in str(e):
+                st = health.sources.setdefault(src["id"], {})
+                st.update({"name": src["name"], "type": src["type"], "lastCheck": NOW_ISO,
+                           "note": "JavaScript page: checked by the browser in the 6-hourly heavy run"})
+                counts["skipped"] += 1
+            else:
+                health.fail(src, str(e))
+                counts["failed"] += 1
     for cid, c in prev_banks.items():
         if cid not in new_banks and hours_since(c.get("updatedAt")) < 24 * 7:
             new_banks[cid] = c

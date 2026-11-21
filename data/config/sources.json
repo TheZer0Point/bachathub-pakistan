@@ -51,7 +51,8 @@
    "type": "bank",
    "cycleNumber": 1,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false,
+   "note": "Blocks GitHub Actions servers (404 from GitHub, works in normal browser). Paused to respect the block."
   },
   {
    "id": "bank-ubl",
@@ -88,7 +89,8 @@
    "type": "bank",
    "cycleNumber": 1,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false,
+   "note": "HTTP 403 for GitHub servers. Paused."
   },
   {
    "id": "bank-askari",
@@ -97,7 +99,8 @@
    "type": "bank",
    "cycleNumber": 1,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false,
+   "note": "HTTP 403 for GitHub servers. Paused."
   },
   {
    "id": "bank-abl",
@@ -106,7 +109,8 @@
    "type": "bank",
    "cycleNumber": 1,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false,
+   "note": "URL not found (404). Needs a correct URL."
   },
   {
    "id": "bank-js",
@@ -115,7 +119,8 @@
    "type": "bank",
    "cycleNumber": 1,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false,
+   "note": "URL not found (404). Needs a correct URL."
   },
   {
    "id": "bank-islami",
@@ -124,7 +129,8 @@
    "type": "bank",
    "cycleNumber": 1,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false,
+   "note": "URL not found (404). Needs a correct URL."
   },
   {
    "id": "bank-soneri",
@@ -1311,7 +1317,8 @@
    "type": "bank",
    "cycleNumber": 1,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false,
+   "note": "Blocks GitHub Actions servers. Paused."
   },
   {
    "id": "bank-alfalah-fashion",
@@ -1320,7 +1327,8 @@
    "type": "bank",
    "cycleNumber": 1,
    "cityScope": "All Pakistan",
-   "active": true
+   "active": false,
+   "note": "Blocks GitHub Actions servers. Paused."
   }
  ]
 }
