@@ -1,5 +1,35 @@
 [
  {
+  "id": "lead-bank-7dfe44aea2",
+  "kind": "bank_offer",
+  "sourceId": "bank-hbl",
+  "sourceName": "HBL Konnect & card discounts",
+  "brandName": "HBL",
+  "brandId": null,
+  "category": "food",
+  "title": "Discounts up to 20% off at Brand outlets",
+  "detail": "HBL card offer",
+  "url": "https://www.hbl.com/personal/konnect/konnect-account/konnect-debit-card-package",
+  "discountPercent": 20,
+  "riskyHost": false,
+  "foundAt": "2026-11-21T16:41:36.679525Z"
+ },
+ {
+  "id": "lead-bank-06097cb1b7",
+  "kind": "bank_offer",
+  "sourceId": "bank-scb",
+  "sourceName": "Standard Chartered PK Good Life",
+  "brandName": "Standard Chartered",
+  "brandId": null,
+  "category": "food",
+  "title": "Get a cashback of 5% on your grocery, dining and e-commerce transactions",
+  "detail": "Standard Chartered card offer",
+  "url": "https://www.sc.com/pk/credit-cards/the-good-life-privileges/",
+  "discountPercent": 5,
+  "riskyHost": false,
+  "foundAt": "2026-11-21T16:41:36.679525Z"
+ },
+ {
   "id": "lead-brand-priceoye-fd4033f5ca",
   "kind": "deal_lead",
   "sourceId": "brand-priceoye",
@@ -11,21 +41,6 @@
   "detail": "Found in page text only (no old/new prices). Please check the site before approving.",
   "url": "https://priceoye.pk",
   "discountPercent": 79,
-  "riskyHost": false,
-  "foundAt": "2026-11-21T14:24:19.455389Z"
- },
- {
-  "id": "lead-bank-522c801bda",
-  "kind": "bank_offer",
-  "sourceId": "bank-hbl",
-  "sourceName": "HBL Konnect & card discounts",
-  "brandName": "HBL",
-  "brandId": null,
-  "category": "food",
-  "title": "14th Street Pizza (Karachi-Lahore-Islamabad-Faisalabad-Multan): 25% off",
-  "detail": "HBL card offer",
-  "url": "https://www.hbl.com/personal/konnect/konnect-account/konnect-debit-card-package",
-  "discountPercent": 25,
   "riskyHost": false,
   "foundAt": "2026-11-21T14:24:19.455389Z"
  },
@@ -583,21 +598,6 @@
   "discountPercent": 50,
   "riskyHost": false,
   "foundAt": "2026-11-21T14:24:19.455389Z"
- },
- {
-  "id": "lead-bank-5d74a9741d",
-  "kind": "bank_offer",
-  "sourceId": "bank-scb",
-  "sourceName": "Standard Chartered PK Good Life",
-  "brandName": "Standard",
-  "brandId": null,
-  "category": "food",
-  "title": "Avail up to 50% off on dining, retail, & lifestyle merchants",
-  "detail": "Standard card offer",
-  "url": "https://www.sc.com/pk/credit-cards/the-good-life-privileges/",
-  "discountPercent": 50,
-  "riskyHost": false,
-  "foundAt": "2026-11-21T14:11:12.075703Z"
  },
  {
   "id": "lead-brand-khaadi-00a2e2be0c",
