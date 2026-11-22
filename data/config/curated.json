@@ -42,7 +42,9 @@
    "fakeReports": 0,
    "dealUrl": "https://priceoye.pk",
    "updatedAt": "2026-11-21T20:24:11.481Z",
-   "pinnedFirst": true
+   "pinnedFirst": true,
+   "isHero": true,
+   "heroTagline": "PriceOye · 79% OFF"
   },
   {
    "id": "approved-lead-bf77d7660d",
@@ -2721,7 +2723,7 @@
   "allowNewSignups": true,
   "allowGuestQuickAdd": false
  },
- "updatedAt": "2026-11-22T00:11:28.956Z",
+ "updatedAt": "2026-11-22T00:11:39.223Z",
  "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file.",
  "dealOrder": [
   "approved-lead-brand-priceoye-fd4033f5ca",
