@@ -2754,7 +2754,7 @@
   "allowNewSignups": true,
   "allowGuestQuickAdd": false
  },
- "updatedAt": "2026-11-22T00:12:29.012Z",
+ "updatedAt": "2026-11-22T00:12:33.931Z",
  "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file.",
  "dealOrder": [
   "approved-lead-brand-priceoye-fd4033f5ca",
