@@ -1,1 +1,17 @@
-[]
+[
+ {
+  "id": "lead-bdc30282b1",
+  "kind": "deal_lead",
+  "sourceId": "meta-pk-flat-sale",
+  "sourceName": "Meta Ad Library",
+  "brandName": "Breakout",
+  "brandId": "brand-breakout",
+  "category": "clothes",
+  "title": "Breakout Kids: Blessed Friday is here. Flat 30% off on all kids’ styles at Breakout. Shop their favourites before sizes run out. BREAKOUT.COM.PK Girls stra",
+  "detail": "Blessed Friday is here. Flat 30% off on all kids’ styles at Breakout. Shop their favourites before sizes run out. BREAKOUT.COM.PK Girls strappy sandal Shop Now See more System status Ad Library APIAbout ads and data usePrivacyTermsCookies English (US) (ad started 06 Nov 2026)",
+  "url": "https://www.facebook.com/ads/library/?id=2044566119590694",
+  "discountPercent": 30,
+  "riskyHost": false,
+  "foundAt": "2026-11-22T09:16:10.649204Z"
+ }
+]
