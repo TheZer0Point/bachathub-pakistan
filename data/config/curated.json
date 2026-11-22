@@ -1,92 +1,8 @@
 {
  "manualDeals": [
   {
-   "id": "approved-lead-bf77d7660d",
-   "rank": 3,
-   "brandId": "vicinity-vicinity-black-friday-before-gta6-up-to-80-off-",
-   "brandName": "Vicinity: VICINITY BLACK FRIDAY BEFORE GTA6. UP TO 80% OFF. ",
-   "brandInitials": "VI",
-   "brandColor": "#008069",
-   "brandVerified": false,
-   "category": "clothes",
-   "title": "Vicinity: VICINITY BLACK FRIDAY BEFORE GTA6. UP TO 80% OFF. STARTS THIS FRIDAY. VIP SALE: 13TH NOV - 12:00PM CET. (ACCES",
-   "subtitle": "Approved by admin · source: Meta Ad Library",
-   "discountBadge": "80% OFF",
-   "discountPercent": 80,
-   "badgeTone": "orange",
-   "priceNow": 0,
-   "priceWas": 0,
-   "endsInLabel": "See dates",
-   "expiresAt": "2026-11-28T22:17:37.257Z",
-   "checksPassed": 1,
-   "verificationSources": [
-    {
-     "source": "google_search",
-     "label": "Meta Ad Library",
-     "detail": "https://www.facebook.com/ads/library/?id=1828149664993587",
-     "verified": true,
-     "checkedAgo": "2026-11-21"
-    }
-   ],
-   "channel": "online",
-   "shopsCountLabel": "See source",
-   "cities": [
-    "All Pakistan"
-   ],
-   "areas": [],
-   "nearestShopName": "",
-   "nearestDistanceKm": 0,
-   "cashAccepted": false,
-   "realVotes": 0,
-   "fakeReports": 0,
-   "dealUrl": "https://www.facebook.com/ads/library/?id=1828149664993587",
-   "updatedAt": "2026-11-21T22:17:37.257Z"
-  },
-  {
-   "id": "approved-lead-2aff339dcf",
-   "rank": 4,
-   "brandId": "kulud-pharmacy-ads-the-biggest-sale-of-the-year-at-kulud-",
-   "brandName": "Kulud Pharmacy Ads: ✨ The Biggest Sale of the Year at Kulud ",
-   "brandInitials": "KU",
-   "brandColor": "#008069",
-   "brandVerified": false,
-   "category": "health",
-   "title": "Kulud Pharmacy Ads: ✨ The Biggest Sale of the Year at Kulud Pharmacies White Friday deals are here: 🔥 Up to 80% OFF onl",
-   "subtitle": "Approved by admin · source: Meta Ad Library",
-   "discountBadge": "80% OFF",
-   "discountPercent": 80,
-   "badgeTone": "orange",
-   "priceNow": 0,
-   "priceWas": 0,
-   "endsInLabel": "See dates",
-   "expiresAt": "2026-11-28T22:17:53.096Z",
-   "checksPassed": 1,
-   "verificationSources": [
-    {
-     "source": "google_search",
-     "label": "Meta Ad Library",
-     "detail": "https://www.facebook.com/ads/library/?id=2293419147893256",
-     "verified": true,
-     "checkedAgo": "2026-11-21"
-    }
-   ],
-   "channel": "online",
-   "shopsCountLabel": "See source",
-   "cities": [
-    "All Pakistan"
-   ],
-   "areas": [],
-   "nearestShopName": "",
-   "nearestDistanceKm": 0,
-   "cashAccepted": false,
-   "realVotes": 0,
-   "fakeReports": 0,
-   "dealUrl": "https://www.facebook.com/ads/library/?id=2293419147893256",
-   "updatedAt": "2026-11-21T22:17:53.096Z"
-  },
-  {
    "id": "approved-lead-brand-priceoye-fd4033f5ca",
-   "rank": 6,
+   "rank": 1,
    "brandId": "brand-priceoye",
    "brandName": "PriceOye",
    "brandInitials": "Pr",
@@ -125,7 +41,94 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://priceoye.pk",
-   "updatedAt": "2026-11-21T20:24:11.481Z"
+   "updatedAt": "2026-11-21T20:24:11.481Z",
+   "pinnedFirst": true
+  },
+  {
+   "id": "approved-lead-bf77d7660d",
+   "rank": 4,
+   "brandId": "vicinity-vicinity-black-friday-before-gta6-up-to-80-off-",
+   "brandName": "Vicinity: VICINITY BLACK FRIDAY BEFORE GTA6. UP TO 80% OFF. ",
+   "brandInitials": "VI",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "clothes",
+   "title": "Vicinity: VICINITY BLACK FRIDAY BEFORE GTA6. UP TO 80% OFF. STARTS THIS FRIDAY. VIP SALE: 13TH NOV - 12:00PM CET. (ACCES",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "80% OFF",
+   "discountPercent": 80,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T22:17:37.257Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=1828149664993587",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=1828149664993587",
+   "updatedAt": "2026-11-21T22:17:37.257Z",
+   "pinnedFirst": false
+  },
+  {
+   "id": "approved-lead-2aff339dcf",
+   "rank": 5,
+   "brandId": "kulud-pharmacy-ads-the-biggest-sale-of-the-year-at-kulud-",
+   "brandName": "Kulud Pharmacy Ads: ✨ The Biggest Sale of the Year at Kulud ",
+   "brandInitials": "KU",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "health",
+   "title": "Kulud Pharmacy Ads: ✨ The Biggest Sale of the Year at Kulud Pharmacies White Friday deals are here: 🔥 Up to 80% OFF onl",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "80% OFF",
+   "discountPercent": 80,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-11-28T22:17:53.096Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=2293419147893256",
+     "verified": true,
+     "checkedAgo": "2026-11-21"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=2293419147893256",
+   "updatedAt": "2026-11-21T22:17:53.096Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-brand-khaadi-00a2e2be0c",
@@ -168,7 +171,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://pk.khaadi.com/sale",
-   "updatedAt": "2026-11-21T20:24:41.248Z"
+   "updatedAt": "2026-11-21T20:24:41.248Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-7a45371d57",
@@ -210,7 +214,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1676589770541816",
-   "updatedAt": "2026-11-21T22:17:38.377Z"
+   "updatedAt": "2026-11-21T22:17:38.377Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-487ccc03e7",
@@ -252,7 +257,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=2552673861912298",
-   "updatedAt": "2026-11-21T22:17:50.568Z"
+   "updatedAt": "2026-11-21T22:17:50.568Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-cacd4384bf",
@@ -294,7 +300,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1103078115830865",
-   "updatedAt": "2026-11-21T22:17:51.456Z"
+   "updatedAt": "2026-11-21T22:17:51.456Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-bank-5d74a9741d",
@@ -336,7 +343,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.sc.com/pk/credit-cards/the-good-life-privileges/",
-   "updatedAt": "2026-11-21T20:24:09.993Z"
+   "updatedAt": "2026-11-21T20:24:09.993Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-ebf9bbb77c",
@@ -378,7 +386,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=3497902083725224",
-   "updatedAt": "2026-11-21T20:24:12.323Z"
+   "updatedAt": "2026-11-21T20:24:12.323Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-8ecebe4b9c",
@@ -420,7 +429,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1867043501408489",
-   "updatedAt": "2026-11-21T20:24:13.026Z"
+   "updatedAt": "2026-11-21T20:24:13.026Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-1faafd5f0e",
@@ -462,7 +472,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=2243562403047705",
-   "updatedAt": "2026-11-21T20:24:17.609Z"
+   "updatedAt": "2026-11-21T20:24:17.609Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-d1a288772b",
@@ -504,7 +515,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=2012435926293594",
-   "updatedAt": "2026-11-21T20:24:19.465Z"
+   "updatedAt": "2026-11-21T20:24:19.465Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-caf4b6445a",
@@ -546,7 +558,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1405300327889504",
-   "updatedAt": "2026-11-21T20:24:20.128Z"
+   "updatedAt": "2026-11-21T20:24:20.128Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-297cf0e04b",
@@ -588,7 +601,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1975515903098385",
-   "updatedAt": "2026-11-21T20:24:20.745Z"
+   "updatedAt": "2026-11-21T20:24:20.745Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-dfa96c0e5f",
@@ -630,7 +644,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1465414085642520",
-   "updatedAt": "2026-11-21T20:24:27.201Z"
+   "updatedAt": "2026-11-21T20:24:27.201Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-021d6ae005",
@@ -672,7 +687,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1673059434246006",
-   "updatedAt": "2026-11-21T20:24:28.456Z"
+   "updatedAt": "2026-11-21T20:24:28.456Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-de6ed4061a",
@@ -714,7 +730,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1843244580196620",
-   "updatedAt": "2026-11-21T20:24:29.081Z"
+   "updatedAt": "2026-11-21T20:24:29.081Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-49fcbf34c0",
@@ -756,7 +773,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1863149511510057",
-   "updatedAt": "2026-11-21T20:24:29.744Z"
+   "updatedAt": "2026-11-21T20:24:29.744Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-af8bc9bed6",
@@ -798,7 +816,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=953913844126908",
-   "updatedAt": "2026-11-21T20:24:30.528Z"
+   "updatedAt": "2026-11-21T20:24:30.528Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-957a321885",
@@ -840,7 +859,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1191104459990921",
-   "updatedAt": "2026-11-21T20:24:31.225Z"
+   "updatedAt": "2026-11-21T20:24:31.225Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-fec5d80841",
@@ -882,7 +902,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=2918125115229623",
-   "updatedAt": "2026-11-21T20:24:32.776Z"
+   "updatedAt": "2026-11-21T20:24:32.776Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-2eae10b889",
@@ -924,7 +945,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1592361008424530",
-   "updatedAt": "2026-11-21T20:24:33.416Z"
+   "updatedAt": "2026-11-21T20:24:33.416Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-14f3902105",
@@ -966,7 +988,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1383626847067872",
-   "updatedAt": "2026-11-21T20:24:34.233Z"
+   "updatedAt": "2026-11-21T20:24:34.233Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-5c683d9b7a",
@@ -1008,7 +1031,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=2536299810170581",
-   "updatedAt": "2026-11-21T20:24:34.728Z"
+   "updatedAt": "2026-11-21T20:24:34.728Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-fd352ee4ff",
@@ -1050,7 +1074,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1700551874771628",
-   "updatedAt": "2026-11-21T20:24:35.312Z"
+   "updatedAt": "2026-11-21T20:24:35.312Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-440b81f3d4",
@@ -1092,7 +1117,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=flat%20sale%20off&search_type=keyword_unordered",
-   "updatedAt": "2026-11-21T20:24:44.450Z"
+   "updatedAt": "2026-11-21T20:24:44.450Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-cf732b70cd",
@@ -1134,7 +1160,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=bank%20card%20discount%2050%25&search_type=keyword_unordered",
-   "updatedAt": "2026-11-21T20:24:45.057Z"
+   "updatedAt": "2026-11-21T20:24:45.057Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-0f1fc211eb",
@@ -1176,7 +1203,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=2205938600339652",
-   "updatedAt": "2026-11-21T20:24:45.760Z"
+   "updatedAt": "2026-11-21T20:24:45.760Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-518e971a6c",
@@ -1218,7 +1246,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1430360872077978",
-   "updatedAt": "2026-11-21T20:24:47.376Z"
+   "updatedAt": "2026-11-21T20:24:47.376Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-dceb79879f",
@@ -1260,7 +1289,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=2367420344075866",
-   "updatedAt": "2026-11-21T20:24:48.360Z"
+   "updatedAt": "2026-11-21T20:24:48.360Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-bb34d6793c",
@@ -1302,7 +1332,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1834106547582305",
-   "updatedAt": "2026-11-21T20:24:49.049Z"
+   "updatedAt": "2026-11-21T20:24:49.049Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-2539ee18ec",
@@ -1344,7 +1375,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=2179967069308271",
-   "updatedAt": "2026-11-21T20:24:57.216Z"
+   "updatedAt": "2026-11-21T20:24:57.216Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-39d0b7d02d",
@@ -1386,7 +1418,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=2279490765953712",
-   "updatedAt": "2026-11-21T20:24:58.673Z"
+   "updatedAt": "2026-11-21T20:24:58.673Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-2da6197972",
@@ -1428,7 +1461,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1068292389049600",
-   "updatedAt": "2026-11-21T20:25:15.088Z"
+   "updatedAt": "2026-11-21T20:25:15.088Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-6093fb59fe",
@@ -1470,7 +1504,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1376978674286570",
-   "updatedAt": "2026-11-21T20:25:17.056Z"
+   "updatedAt": "2026-11-21T20:25:17.056Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-e3167fd3cb",
@@ -1512,7 +1547,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1175597585136806",
-   "updatedAt": "2026-11-21T22:18:19.744Z"
+   "updatedAt": "2026-11-21T22:18:19.744Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-757490d546",
@@ -1554,7 +1590,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1120410287263469",
-   "updatedAt": "2026-11-21T22:17:52.232Z"
+   "updatedAt": "2026-11-21T22:17:52.232Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-55c868dc4f",
@@ -1597,7 +1634,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=2124928941463851",
-   "updatedAt": "2026-11-21T20:25:11.128Z"
+   "updatedAt": "2026-11-21T20:25:11.128Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-a70b0eea1b",
@@ -1639,7 +1677,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1034662875726191",
-   "updatedAt": "2026-11-21T20:24:14.409Z"
+   "updatedAt": "2026-11-21T20:24:14.409Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-321960554e",
@@ -1681,7 +1720,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1384449303095282",
-   "updatedAt": "2026-11-21T20:25:01.640Z"
+   "updatedAt": "2026-11-21T20:25:01.640Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-bank-522c801bda",
@@ -1723,7 +1763,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.hbl.com/personal/konnect/konnect-account/konnect-debit-card-package",
-   "updatedAt": "2026-11-21T20:24:08.508Z"
+   "updatedAt": "2026-11-21T20:24:08.508Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-brand-naheed-55ef52bc94",
@@ -1766,7 +1807,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.naheed.pk",
-   "updatedAt": "2026-11-21T20:24:43.553Z"
+   "updatedAt": "2026-11-21T20:24:43.553Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-a0cde38a64",
@@ -1808,7 +1850,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1697720905395058",
-   "updatedAt": "2026-11-21T22:17:54.072Z"
+   "updatedAt": "2026-11-21T22:17:54.072Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-421ba54901",
@@ -1850,7 +1893,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1758924191410948",
-   "updatedAt": "2026-11-21T20:24:59.737Z"
+   "updatedAt": "2026-11-21T20:24:59.737Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-e5bcbe591d",
@@ -1893,7 +1937,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=894158260358883",
-   "updatedAt": "2026-11-21T20:25:13.832Z"
+   "updatedAt": "2026-11-21T20:25:13.832Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-bank-7dfe44aea2",
@@ -1935,7 +1980,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.hbl.com/personal/konnect/konnect-account/konnect-debit-card-package",
-   "updatedAt": "2026-11-21T22:17:33.777Z"
+   "updatedAt": "2026-11-21T22:17:33.777Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-3c45c14313",
@@ -1977,7 +2023,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1652256763115384",
-   "updatedAt": "2026-11-21T22:18:18.480Z"
+   "updatedAt": "2026-11-21T22:18:18.480Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-3eb9bc1c29",
@@ -2019,7 +2066,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=907228601628043",
-   "updatedAt": "2026-11-21T20:24:18.224Z"
+   "updatedAt": "2026-11-21T20:24:18.224Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-brand-wb-hemani-6799b4c0d9",
@@ -2062,7 +2110,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.wbhemani.com",
-   "updatedAt": "2026-11-21T20:24:42.320Z"
+   "updatedAt": "2026-11-21T20:24:42.320Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-brand-dvago-b6d969d83c",
@@ -2105,7 +2154,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.dvago.pk",
-   "updatedAt": "2026-11-21T20:24:43.009Z"
+   "updatedAt": "2026-11-21T20:24:43.009Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-d4c195ce4b",
@@ -2147,7 +2197,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=2698997843772527",
-   "updatedAt": "2026-11-21T20:25:11.920Z"
+   "updatedAt": "2026-11-21T20:25:11.920Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-4192c48fdc",
@@ -2189,7 +2240,8 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=2474858146337571",
-   "updatedAt": "2026-11-21T20:25:00.624Z"
+   "updatedAt": "2026-11-21T20:25:00.624Z",
+   "pinnedFirst": false
   },
   {
    "id": "approved-lead-bank-06097cb1b7",
@@ -2231,30 +2283,116 @@
    "realVotes": 0,
    "fakeReports": 0,
    "dealUrl": "https://www.sc.com/pk/credit-cards/the-good-life-privileges/",
-   "updatedAt": "2026-11-21T22:17:35.576Z"
+   "updatedAt": "2026-11-21T22:17:35.576Z",
+   "pinnedFirst": false
   }
  ],
  "dealOverrides": {
   "auto-brand-unze": {
-   "brandLogoUrl": "https://www.google.com/s2/favicons?domain=unze.com.pk&sz=128"
+   "brandLogoUrl": "https://www.google.com/s2/favicons?domain=unze.com.pk&sz=128",
+   "pinnedFirst": false
   },
   "auto-brand-stylo": {
-   "brandLogoUrl": "https://stylo.pk/cdn/shop/files/1538479467516-theme_256x256_630ad233-4c1a-4189-9a27-9604d3a8661c_32x32.png?v=1643789719"
+   "brandLogoUrl": "https://stylo.pk/cdn/shop/files/1538479467516-theme_256x256_630ad233-4c1a-4189-9a27-9604d3a8661c_32x32.png?v=1643789719",
+   "pinnedFirst": false
   },
   "auto-brand-sapphire": {
    "brandLogoUrl": "https://www.google.com/s2/favicons?domain=pk.sapphireonline.pk&sz=128"
   },
   "auto-brand-co-natural": {
-   "brandLogoUrl": "https://www.google.com/s2/favicons?domain=conaturalintl.com&sz=128"
+   "brandLogoUrl": "https://www.google.com/s2/favicons?domain=conaturalintl.com&sz=128",
+   "pinnedFirst": false
   },
   "auto-brand-interwood": {
-   "brandLogoUrl": "https://cdn.shopify.com/s/files/1/0777/5666/2055/files/interwood_favicon.png"
+   "brandLogoUrl": "https://cdn.shopify.com/s/files/1/0777/5666/2055/files/interwood_favicon.png",
+   "pinnedFirst": false
   },
   "auto-brand-telemart": {
    "title": "5% to 90% off · 685 items on sale",
    "discountBadge": "90% OFF",
    "updatedAt": "2026-11-21T20:50:21.599Z",
    "hidden": true
+  },
+  "auto-brand-generation": {
+   "pinnedFirst": false
+  },
+  "auto-brand-furor": {
+   "pinnedFirst": false
+  },
+  "auto-brand-diners": {
+   "pinnedFirst": false
+  },
+  "auto-brand-edenrobe": {
+   "pinnedFirst": false
+  },
+  "auto-brand-saya": {
+   "pinnedFirst": false
+  },
+  "auto-brand-monark": {
+   "pinnedFirst": false
+  },
+  "auto-brand-borjan": {
+   "pinnedFirst": false
+  },
+  "auto-brand-chenone": {
+   "pinnedFirst": false
+  },
+  "auto-brand-bonanza": {
+   "pinnedFirst": false
+  },
+  "auto-brand-mariab": {
+   "pinnedFirst": false
+  },
+  "auto-brand-baroque": {
+   "pinnedFirst": false
+  },
+  "auto-brand-breakout": {
+   "pinnedFirst": false
+  },
+  "auto-brand-charcoal": {
+   "pinnedFirst": false
+  },
+  "auto-brand-engine": {
+   "pinnedFirst": false
+  },
+  "auto-brand-bata": {
+   "pinnedFirst": false
+  },
+  "auto-brand-habitt": {
+   "pinnedFirst": false
+  },
+  "auto-brand-asimjofa": {
+   "pinnedFirst": false
+  },
+  "auto-brand-servis": {
+   "pinnedFirst": false
+  },
+  "auto-brand-saeedghani": {
+   "pinnedFirst": false
+  },
+  "auto-brand-outfitters": {
+   "pinnedFirst": false
+  },
+  "auto-brand-cougar": {
+   "pinnedFirst": false
+  },
+  "auto-brand-ndure": {
+   "pinnedFirst": false
+  },
+  "auto-brand-insignia": {
+   "pinnedFirst": false
+  },
+  "auto-brand-alfatah": {
+   "pinnedFirst": false
+  },
+  "auto-brand-ecs": {
+   "pinnedFirst": false
+  },
+  "auto-brand-nishat": {
+   "pinnedFirst": false
+  },
+  "auto-brand-crossstitch": {
+   "pinnedFirst": false
   }
  },
  "manualBrands": [],
@@ -2583,6 +2721,92 @@
   "allowNewSignups": true,
   "allowGuestQuickAdd": false
  },
- "updatedAt": "2026-11-22T00:10:58.943Z",
- "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file."
+ "updatedAt": "2026-11-22T00:11:28.956Z",
+ "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file.",
+ "dealOrder": [
+  "approved-lead-brand-priceoye-fd4033f5ca",
+  "auto-brand-generation",
+  "auto-brand-furor",
+  "approved-lead-bf77d7660d",
+  "approved-lead-2aff339dcf",
+  "auto-brand-unze",
+  "auto-brand-diners",
+  "auto-brand-edenrobe",
+  "auto-brand-saya",
+  "auto-brand-monark",
+  "auto-brand-borjan",
+  "auto-brand-chenone",
+  "approved-lead-brand-khaadi-00a2e2be0c",
+  "approved-lead-7a45371d57",
+  "auto-brand-bonanza",
+  "auto-brand-mariab",
+  "auto-brand-baroque",
+  "approved-lead-487ccc03e7",
+  "approved-lead-cacd4384bf",
+  "auto-brand-stylo",
+  "auto-brand-breakout",
+  "auto-brand-charcoal",
+  "auto-brand-engine",
+  "auto-brand-bata",
+  "auto-brand-habitt",
+  "approved-lead-bank-5d74a9741d",
+  "approved-lead-ebf9bbb77c",
+  "approved-lead-8ecebe4b9c",
+  "approved-lead-1faafd5f0e",
+  "approved-lead-d1a288772b",
+  "approved-lead-caf4b6445a",
+  "approved-lead-297cf0e04b",
+  "approved-lead-dfa96c0e5f",
+  "approved-lead-021d6ae005",
+  "approved-lead-de6ed4061a",
+  "approved-lead-49fcbf34c0",
+  "approved-lead-af8bc9bed6",
+  "approved-lead-957a321885",
+  "approved-lead-fec5d80841",
+  "approved-lead-2eae10b889",
+  "approved-lead-14f3902105",
+  "approved-lead-5c683d9b7a",
+  "approved-lead-fd352ee4ff",
+  "approved-lead-440b81f3d4",
+  "approved-lead-cf732b70cd",
+  "approved-lead-0f1fc211eb",
+  "approved-lead-518e971a6c",
+  "approved-lead-dceb79879f",
+  "approved-lead-bb34d6793c",
+  "approved-lead-2539ee18ec",
+  "approved-lead-39d0b7d02d",
+  "approved-lead-2da6197972",
+  "approved-lead-6093fb59fe",
+  "approved-lead-e3167fd3cb",
+  "approved-lead-757490d546",
+  "auto-brand-asimjofa",
+  "auto-brand-servis",
+  "auto-brand-co-natural",
+  "approved-lead-55c868dc4f",
+  "auto-brand-saeedghani",
+  "auto-brand-outfitters",
+  "auto-brand-cougar",
+  "auto-brand-ndure",
+  "auto-brand-interwood",
+  "approved-lead-a70b0eea1b",
+  "approved-lead-321960554e",
+  "auto-brand-insignia",
+  "auto-brand-alfatah",
+  "approved-lead-bank-522c801bda",
+  "approved-lead-brand-naheed-55ef52bc94",
+  "approved-lead-a0cde38a64",
+  "auto-brand-ecs",
+  "auto-brand-nishat",
+  "approved-lead-421ba54901",
+  "approved-lead-e5bcbe591d",
+  "approved-lead-bank-7dfe44aea2",
+  "approved-lead-3c45c14313",
+  "approved-lead-3eb9bc1c29",
+  "approved-lead-brand-wb-hemani-6799b4c0d9",
+  "approved-lead-brand-dvago-b6d969d83c",
+  "approved-lead-d4c195ce4b",
+  "auto-brand-crossstitch",
+  "approved-lead-4192c48fdc",
+  "approved-lead-bank-06097cb1b7"
+ ]
 }
