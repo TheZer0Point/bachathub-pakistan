@@ -1,5 +1,15 @@
 [
  {
+  "id": "al-brand-dvago-recovered-202611232017",
+  "sourceId": "brand-dvago",
+  "kind": "recovered",
+  "severity": "low",
+  "title": "Dvago Pharmacy is working again",
+  "description": "Source recovered using method 'html_text'.",
+  "createdAt": "2026-11-23T20:17:31.234043Z",
+  "status": "open"
+ },
+ {
   "id": "al-brand-dvago-failing-202611231405",
   "sourceId": "brand-dvago",
   "kind": "failing",
@@ -7,7 +17,7 @@
   "title": "Scraper: Dvago Pharmacy failed 3 times in a row",
   "description": "All fallback methods failed. Last error: home ReadTimeout; home ReadTimeout. Last good data is kept for 72h. Source paused for 6h, then retried automatically. URL: https://www.dvago.pk/",
   "createdAt": "2026-11-23T14:05:10.705398Z",
-  "status": "open"
+  "status": "resolved"
  },
  {
   "id": "al-bank-mcb-failing-202611212006",
