@@ -1,20 +1,5 @@
 [
  {
-  "id": "lead-brand-naheed-132d0be99d",
-  "kind": "deal_lead",
-  "sourceId": "brand-naheed",
-  "sourceName": "Naheed Supermarket",
-  "brandName": "Naheed Supermarket",
-  "brandId": "brand-naheed",
-  "category": "grocery",
-  "title": "Naheed Supermarket website mentions up to 20% off",
-  "detail": "Found in page text only (no old/new prices). Please check the site before approving.",
-  "url": "https://www.naheed.pk",
-  "discountPercent": 20,
-  "riskyHost": false,
-  "foundAt": "2026-11-23T06:49:24.037880Z"
- },
- {
   "id": "lead-bdc30282b1",
   "kind": "deal_lead",
   "sourceId": "meta-pk-flat-sale",
@@ -27,7 +12,7 @@
   "url": "https://www.facebook.com/ads/library/?id=2044566119590694",
   "discountPercent": 30,
   "riskyHost": false,
-  "foundAt": "2026-11-23T06:49:24.037880Z"
+  "foundAt": "2026-11-23T13:03:26.695175Z"
  },
  {
   "id": "lead-8e5cb731c0",
@@ -41,6 +26,21 @@
   "detail": "Upgrade your footwear game. 👟 From premium daily casuals to stunning statement heels, find the perfect pair crafted for comfort and undeniable style. ✨ Premium Quality 🚚 Delivery across Pakistan 💳 Secure Checkout Shop the latest collection now at cssonlineshop.com 👇 CSSONLINESHOP.COM Clearance Sale ",
   "url": "https://www.facebook.com/ads/library/?id=1139058562001880",
   "discountPercent": 30,
+  "riskyHost": false,
+  "foundAt": "2026-11-23T13:03:26.695175Z"
+ },
+ {
+  "id": "lead-brand-naheed-132d0be99d",
+  "kind": "deal_lead",
+  "sourceId": "brand-naheed",
+  "sourceName": "Naheed Supermarket",
+  "brandName": "Naheed Supermarket",
+  "brandId": "brand-naheed",
+  "category": "grocery",
+  "title": "Naheed Supermarket website mentions up to 20% off",
+  "detail": "Found in page text only (no old/new prices). Please check the site before approving.",
+  "url": "https://www.naheed.pk",
+  "discountPercent": 20,
   "riskyHost": false,
   "foundAt": "2026-11-23T06:49:24.037880Z"
  }
