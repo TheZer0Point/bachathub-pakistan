@@ -4,664 +4,664 @@
    "name": "Google News RSS — Pakistan Brand Sales",
    "type": "news_rss",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "rss",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "0 entries read",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "rss-gnews-karachi": {
    "name": "Google News RSS — Karachi Deals & Buffets",
    "type": "news_rss",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "rss",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "0 entries read",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "rss-gnews-lahore": {
    "name": "Google News RSS — Lahore Mall & Food Deals",
    "type": "news_rss",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "rss",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "6 entries read",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "rss-gnews-islamabad": {
    "name": "Google News RSS — Islamabad & Rawalpindi",
    "type": "news_rss",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "rss",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "1 entries read",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "rss-gnews-multan-lodhran": {
    "name": "Google News RSS — Multan, Lodhran & Bahawalpur",
    "type": "news_rss",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "rss",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "0 entries read",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "rss-gnews-faisalabad": {
    "name": "Google News RSS — Faisalabad Sales",
    "type": "news_rss",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "rss",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "0 entries read",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "rss-gnews-peshawar": {
    "name": "Google News RSS — Peshawar Deals",
    "type": "news_rss",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "rss",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "0 entries read",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-bonanza": {
    "name": "Bonanza Satrangi",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
-   "items": 730,
+   "items": 729,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
-   "note": "730 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "note": "729 sale items",
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-outfitters": {
    "name": "Outfitters",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 750,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "750 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-ethnic": {
    "name": "Ethnic by Outfitters",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "no sale items right now",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-nishat": {
    "name": "Nishat Linen",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 578,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "578 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-zellbury": {
    "name": "Zellbury",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "no sale items right now",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-mariab": {
    "name": "Maria.B",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 502,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "502 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-saya": {
    "name": "Saya",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 463,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "463 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-generation": {
    "name": "Generation",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 732,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "732 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-breakout": {
    "name": "Breakout",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 750,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "750 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-charcoal": {
    "name": "Charcoal",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 615,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "615 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-diners": {
    "name": "Diners",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 654,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "654 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-engine": {
    "name": "Engine",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 750,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "750 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-kayseria": {
    "name": "Kayseria",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "no sale items right now",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-baroque": {
    "name": "Baroque",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 133,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "133 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-asimjofa": {
    "name": "Asim Jofa",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 322,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "322 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-crossstitch": {
    "name": "Cross Stitch",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
-   "items": 709,
+   "items": 705,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
-   "note": "709 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "note": "705 sale items",
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-edenrobe": {
    "name": "Edenrobe",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 750,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "750 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-cougar": {
    "name": "Cougar",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 659,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "659 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-monark": {
    "name": "Monark",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 45,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "45 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-furor": {
    "name": "Furor Jeans",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 750,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "750 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-bata": {
    "name": "Bata Pakistan",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 750,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "750 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-servis": {
    "name": "Servis Shoes",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 750,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "750 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-stylo": {
    "name": "Stylo",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 750,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "750 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-borjan": {
    "name": "Borjan",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 750,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "750 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-ndure": {
    "name": "Ndure",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 750,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "750 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-ecs": {
    "name": "ECS Shoes",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 750,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "750 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-unze": {
    "name": "Unze London PK",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 748,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "748 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-insignia": {
    "name": "Insignia Shoes",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 750,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "750 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-imtiaz": {
    "name": "Imtiaz Super Market",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "html_text",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "no sale items right now",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-naheed": {
    "name": "Naheed Supermarket",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "html_text",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "no sale items right now",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-chaseup": {
    "name": "Chase Up",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "html_text",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "no sale items right now",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-alfatah": {
    "name": "Al-Fatah",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 23,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "23 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-springs": {
    "name": "Springs Store",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "html_text",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "no sale items right now",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-habitt": {
    "name": "Habitt Home",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 618,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "618 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-chenone": {
    "name": "ChenOne",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 275,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "275 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-interwood": {
    "name": "Interwood",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 87,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "87 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-priceoye": {
    "name": "PriceOye",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "html_text",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "no sale items right now",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-shophive": {
    "name": "Shophive",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "html_text",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "no sale items right now",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-telemart": {
    "name": "Telemart",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 689,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "689 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-dvago": {
    "name": "Dvago Pharmacy",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "html_text",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "no sale items right now",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-chughtai": {
    "name": "Chughtai Lab",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "html_text",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "no sale items right now",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-saeedghani": {
    "name": "Saeed Ghani",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 72,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "72 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-co-natural": {
    "name": "Conatural",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "shopify_json",
    "items": 16,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "16 sale items",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "brand-wb-hemani": {
    "name": "WB by Hemani",
    "type": "brand_site",
    "ok": true,
-   "lastOk": "2026-11-24T15:54:00.988956Z",
+   "lastOk": "2026-11-24T16:22:59.360700Z",
    "method": "html_text",
    "items": 0,
    "consecutiveFails": 0,
    "lastError": "",
    "quarantinedUntil": null,
    "note": "no sale items right now",
-   "lastCheck": "2026-11-24T15:54:00.988956Z"
+   "lastCheck": "2026-11-24T16:22:59.360700Z"
   },
   "meta-pk-flat-sale": {
    "name": "Meta Ad Library — PK Flat Sale",
@@ -779,9 +779,23 @@
   "brand-saeedghani": "2026-11-22T02:06:38.319636Z",
   "brand-co-natural": "2026-11-22T02:06:38.319636Z"
  },
- "lastRunAt": "2026-11-24T15:54:00.988956Z",
+ "lastRunAt": "2026-11-24T16:22:59.360700Z",
  "lastHeavyRunAt": "2026-11-24T12:28:21.217478Z",
  "runs": [
+  {
+   "at": "2026-11-24T16:22:59.360700Z",
+   "heavy": false,
+   "deals": 32,
+   "brands": 44,
+   "fakeAlerts": 0,
+   "bankCards": 0,
+   "newLeads": 2,
+   "pending": 5,
+   "ok": 51,
+   "failed": 0,
+   "skipped": 0,
+   "seconds": 168
+  },
   {
    "at": "2026-11-24T15:54:00.988956Z",
    "heavy": false,
@@ -1607,20 +1621,6 @@
    "failed": 0,
    "skipped": 0,
    "seconds": 173
-  },
-  {
-   "at": "2026-11-23T11:38:29.800414Z",
-   "heavy": false,
-   "deals": 32,
-   "brands": 44,
-   "fakeAlerts": 0,
-   "bankCards": 0,
-   "newLeads": 2,
-   "pending": 3,
-   "ok": 51,
-   "failed": 0,
-   "skipped": 0,
-   "seconds": 168
   }
  ],
  "osmCursor": 0
