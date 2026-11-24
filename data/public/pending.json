@@ -1,5 +1,20 @@
 [
  {
+  "id": "lead-brand-dvago-c93455a352",
+  "kind": "deal_lead",
+  "sourceId": "brand-dvago",
+  "sourceName": "Dvago Pharmacy",
+  "brandName": "Dvago Pharmacy",
+  "brandId": "brand-dvago",
+  "category": "health",
+  "title": "Dvago Pharmacy website mentions up to 15% off",
+  "detail": "Found in page text only (no old/new prices). Please check the site before approving.",
+  "url": "https://dvago.pk",
+  "discountPercent": 15,
+  "riskyHost": false,
+  "foundAt": "2026-11-24T07:12:55.008964Z"
+ },
+ {
   "id": "lead-b8d2b9d4fe",
   "kind": "deal_lead",
   "sourceId": "meta-pk-flat-sale",
