@@ -1,5 +1,35 @@
 [
  {
+  "id": "lead-bdc30282b1",
+  "kind": "deal_lead",
+  "sourceId": "meta-pk-flat-sale",
+  "sourceName": "Meta Ad Library",
+  "brandName": "Breakout",
+  "brandId": "brand-breakout",
+  "category": "clothes",
+  "title": "Breakout Kids: Blessed Friday is here. Flat 30% off on all kids’ styles at Breakout. Shop their favourites before sizes run out. BREAKOUT.COM.PK Girls glit",
+  "detail": "Blessed Friday is here. Flat 30% off on all kids’ styles at Breakout. Shop their favourites before sizes run out. BREAKOUT.COM.PK Girls glitter strappy sandal Shop Now See more System status Ad Library APIAbout ads and data usePrivacyTermsCookies English (US) (ad started 06 Nov 2026)",
+  "url": "https://www.facebook.com/ads/library/?id=2044566119590694",
+  "discountPercent": 30,
+  "riskyHost": false,
+  "foundAt": "2026-11-24T07:42:41.032621Z"
+ },
+ {
+  "id": "lead-8e5cb731c0",
+  "kind": "deal_lead",
+  "sourceId": "meta-pk-shoes",
+  "sourceName": "Meta Ad Library",
+  "brandName": "CSS Pakistan: Upgrade your footwear game. 👟 From premium dai",
+  "brandId": null,
+  "category": "shoes",
+  "title": "CSS Pakistan: Upgrade your footwear game. 👟 From premium daily casuals to stunning statement heels, find the perfect pair crafted for comfort and undeniab",
+  "detail": "Upgrade your footwear game. 👟 From premium daily casuals to stunning statement heels, find the perfect pair crafted for comfort and undeniable style. ✨ Premium Quality 🚚 Delivery across Pakistan 💳 Secure Checkout Shop the latest collection now at cssonlineshop.com 👇 CSSONLINESHOP.COM Clearance Sale ",
+  "url": "https://www.facebook.com/ads/library/?id=1139058562001880",
+  "discountPercent": 30,
+  "riskyHost": false,
+  "foundAt": "2026-11-24T07:42:41.032621Z"
+ },
+ {
   "id": "lead-brand-dvago-c93455a352",
   "kind": "deal_lead",
   "sourceId": "brand-dvago",
@@ -13,36 +43,6 @@
   "discountPercent": 15,
   "riskyHost": false,
   "foundAt": "2026-11-24T07:12:55.008964Z"
- },
- {
-  "id": "lead-b8d2b9d4fe",
-  "kind": "deal_lead",
-  "sourceId": "meta-pk-flat-sale",
-  "sourceName": "Meta Ad Library",
-  "brandName": "Unze London (Pakistan): 🔥 FLAT 50% OFF EVERYTHING! 🔥Yes, EVE",
-  "brandId": null,
-  "category": "clothes",
-  "title": "Unze London (Pakistan): 🔥 FLAT 50% OFF EVERYTHING! 🔥Yes, EVERYTHING at HALF THE PRICE! The BIGGEST Blessed Friday Sale is here. Shop an incredible collection of",
-  "detail": "🔥 FLAT 50% OFF EVERYTHING! 🔥Yes, EVERYTHING at HALF THE PRICE! The BIGGEST Blessed Friday Sale is here. Shop an incredible collection of Men's, Women's & Kids' Shoes, Bags and Apparel. Shop Online https://unze.com.pk/ Stores https:https://unze.com.pk/pages/stores Call us @ 042 111118693 Text/WhatsAp",
-  "url": "https://www.facebook.com/ads/library/?id=1112701501355563",
-  "discountPercent": 50,
-  "riskyHost": false,
-  "foundAt": "2026-11-24T01:28:12.651733Z"
- },
- {
-  "id": "lead-bdc30282b1",
-  "kind": "deal_lead",
-  "sourceId": "meta-pk-flat-sale",
-  "sourceName": "Meta Ad Library",
-  "brandName": "Breakout",
-  "brandId": "brand-breakout",
-  "category": "clothes",
-  "title": "Breakout Kids: Blessed Friday is here. Flat 30% off on all kids’ styles at Breakout. Shop their favourites before sizes run out. BREAKOUT.COM.PK Girls stra",
-  "detail": "Blessed Friday is here. Flat 30% off on all kids’ styles at Breakout. Shop their favourites before sizes run out. BREAKOUT.COM.PK Girls strappy sandal Shop Now See more System status Ad Library APIAbout ads and data usePrivacyTermsCookies English (US) (ad started 06 Nov 2026)",
-  "url": "https://www.facebook.com/ads/library/?id=2044566119590694",
-  "discountPercent": 30,
-  "riskyHost": false,
-  "foundAt": "2026-11-24T01:28:12.651733Z"
  },
  {
   "id": "lead-brand-naheed-132d0be99d",
