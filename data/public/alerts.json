@@ -1,5 +1,15 @@
 [
  {
+  "id": "al-meta-pk-multan-failing-202611250704",
+  "sourceId": "meta-pk-multan",
+  "kind": "failing",
+  "severity": "low",
+  "title": "Scraper: Meta Ad Library — Multan & South Punjab failed 3 times in a row",
+  "description": "All fallback methods failed. Last error: no ads visible (login wall or empty). Last good data is kept for 72h. Source paused for 6h, then retried automatically. URL: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=multan%20bahawalpur%20lodhran%20sale&search_type=keyword_unordered",
+  "createdAt": "2026-11-25T07:04:17.998812Z",
+  "status": "open"
+ },
+ {
   "id": "al-brand-dvago-recovered-202611232017",
   "sourceId": "brand-dvago",
   "kind": "recovered",
