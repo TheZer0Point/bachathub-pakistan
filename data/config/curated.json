@@ -2744,7 +2744,8 @@
   "lead-487ccc03e7": "approved",
   "lead-a0cde38a64": "approved",
   "lead-3c45c14313": "approved",
-  "lead-e3167fd3cb": "approved"
+  "lead-e3167fd3cb": "approved",
+  "lead-bdc30282b1": "more_info"
  },
  "resolvedAlerts": {
   "al-brand-dvago-failing-202611231405": "2026-11-26T07:12:54.900Z"
@@ -2756,7 +2757,7 @@
   "allowNewSignups": true,
   "allowGuestQuickAdd": false
  },
- "updatedAt": "2026-11-26T07:12:54.903Z",
+ "updatedAt": "2026-11-26T07:14:39.966Z",
  "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file.",
  "dealOrder": [
   "approved-lead-brand-priceoye-fd4033f5ca",
