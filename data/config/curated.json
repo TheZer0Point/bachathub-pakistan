@@ -2289,50 +2289,8 @@
    "pinnedFirst": false
   },
   {
-   "id": "approved-lead-d9863e4d5b",
-   "rank": 85,
-   "brandId": "bank-al-habib-limited-a-november-to-remember-from-exquisit",
-   "brandName": "Bank AL Habib Limited: A November to Remember! From exquisit",
-   "brandInitials": "BA",
-   "brandColor": "#008069",
-   "brandVerified": false,
-   "category": "food",
-   "title": "Bank AL Habib Limited: A November to Remember! From exquisite flavours to unforgettable moments, make your dining experi",
-   "subtitle": "Approved by admin · source: Meta Ad Library",
-   "discountBadge": "50% OFF",
-   "discountPercent": 50,
-   "badgeTone": "orange",
-   "priceNow": 0,
-   "priceWas": 0,
-   "endsInLabel": "See dates",
-   "expiresAt": "2026-12-03T07:14:52.158Z",
-   "checksPassed": 1,
-   "verificationSources": [
-    {
-     "source": "google_search",
-     "label": "Meta Ad Library",
-     "detail": "https://www.facebook.com/ads/library/?id=2212159110182417",
-     "verified": true,
-     "checkedAgo": "2026-11-26"
-    }
-   ],
-   "channel": "online",
-   "shopsCountLabel": "See source",
-   "cities": [
-    "All Pakistan"
-   ],
-   "areas": [],
-   "nearestShopName": "",
-   "nearestDistanceKm": 0,
-   "cashAccepted": false,
-   "realVotes": 0,
-   "fakeReports": 0,
-   "dealUrl": "https://www.facebook.com/ads/library/?id=2212159110182417",
-   "updatedAt": "2026-11-26T07:14:52.158Z"
-  },
-  {
    "id": "approved-lead-01e81df78a",
-   "rank": 86,
+   "rank": 85,
    "brandId": "zubaidas-mothershop-little-outfits-endless-cuteness-giv",
    "brandName": "Zubaidas Mothershop: Little outfits, endless cuteness! 💕 Giv",
    "brandInitials": "ZU",
@@ -2371,6 +2329,48 @@
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=1656611195862008",
    "updatedAt": "2026-11-26T07:14:54.731Z"
+  },
+  {
+   "id": "approved-lead-d9863e4d5b",
+   "rank": 86,
+   "brandId": "bank-al-habib-limited-a-november-to-remember-from-exquisit",
+   "brandName": "Bank AL Habib Limited: A November to Remember! From exquisit",
+   "brandInitials": "BA",
+   "brandColor": "#008069",
+   "brandVerified": false,
+   "category": "food",
+   "title": "Bank AL Habib Limited: A November to Remember! From exquisite flavours to unforgettable moments, make your dining experi",
+   "subtitle": "Approved by admin · source: Meta Ad Library",
+   "discountBadge": "50% OFF",
+   "discountPercent": 50,
+   "badgeTone": "orange",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-12-03T07:14:52.158Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Meta Ad Library",
+     "detail": "https://www.facebook.com/ads/library/?id=2212159110182417",
+     "verified": true,
+     "checkedAgo": "2026-11-26"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.facebook.com/ads/library/?id=2212159110182417",
+   "updatedAt": "2026-11-26T07:14:52.158Z"
   }
  ],
  "dealOverrides": {
@@ -2843,7 +2843,7 @@
   "allowNewSignups": true,
   "allowGuestQuickAdd": false
  },
- "updatedAt": "2026-11-26T07:14:54.976Z",
+ "updatedAt": "2026-11-26T07:15:09.998Z",
  "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file.",
  "dealOrder": [
   "approved-lead-brand-priceoye-fd4033f5ca",
