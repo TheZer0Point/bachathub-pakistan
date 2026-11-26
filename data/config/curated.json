@@ -2371,6 +2371,92 @@
    "fakeReports": 0,
    "dealUrl": "https://www.facebook.com/ads/library/?id=2212159110182417",
    "updatedAt": "2026-11-26T07:14:52.158Z"
+  },
+  {
+   "id": "approved-lead-brand-naheed-132d0be99d",
+   "rank": 87,
+   "brandId": "brand-naheed",
+   "brandName": "Naheed Supermarket",
+   "brandInitials": "NS",
+   "brandColor": "#BE123C",
+   "brandLogoUrl": "https://media.naheed.pk/favicon/stores/1/F-App-Iconcopm_1.png",
+   "brandVerified": true,
+   "category": "grocery",
+   "title": "Naheed Supermarket website mentions up to 20% off",
+   "subtitle": "Approved by admin · source: Naheed Supermarket",
+   "discountBadge": "20% OFF",
+   "discountPercent": 20,
+   "badgeTone": "green",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-12-03T07:21:49.044Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Naheed Supermarket",
+     "detail": "https://www.naheed.pk",
+     "verified": true,
+     "checkedAgo": "2026-11-23"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://www.naheed.pk",
+   "updatedAt": "2026-11-26T07:21:49.044Z"
+  },
+  {
+   "id": "approved-lead-brand-dvago-c93455a352",
+   "rank": 88,
+   "brandId": "brand-dvago",
+   "brandName": "Dvago Pharmacy",
+   "brandInitials": "DP",
+   "brandColor": "#1D4ED8",
+   "brandLogoUrl": "https://www.google.com/s2/favicons?domain=www.dvago.pk&sz=128",
+   "brandVerified": true,
+   "category": "health",
+   "title": "Dvago Pharmacy website mentions up to 15% off",
+   "subtitle": "Approved by admin · source: Dvago Pharmacy",
+   "discountBadge": "15% OFF",
+   "discountPercent": 15,
+   "badgeTone": "green",
+   "priceNow": 0,
+   "priceWas": 0,
+   "endsInLabel": "See dates",
+   "expiresAt": "2026-12-03T07:21:51.746Z",
+   "checksPassed": 1,
+   "verificationSources": [
+    {
+     "source": "google_search",
+     "label": "Dvago Pharmacy",
+     "detail": "https://dvago.pk",
+     "verified": true,
+     "checkedAgo": "2026-11-24"
+    }
+   ],
+   "channel": "online",
+   "shopsCountLabel": "See source",
+   "cities": [
+    "All Pakistan"
+   ],
+   "areas": [],
+   "nearestShopName": "",
+   "nearestDistanceKm": 0,
+   "cashAccepted": false,
+   "realVotes": 0,
+   "fakeReports": 0,
+   "dealUrl": "https://dvago.pk",
+   "updatedAt": "2026-11-26T07:21:51.746Z"
   }
  ],
  "dealOverrides": {
@@ -2831,7 +2917,9 @@
   "lead-e3167fd3cb": "approved",
   "lead-bdc30282b1": "more_info",
   "lead-01e81df78a": "approved",
-  "lead-d9863e4d5b": "approved"
+  "lead-d9863e4d5b": "approved",
+  "lead-brand-dvago-c93455a352": "approved",
+  "lead-brand-naheed-132d0be99d": "approved"
  },
  "resolvedAlerts": {
   "al-brand-dvago-failing-202611231405": "2026-11-26T07:12:54.900Z"
@@ -2843,7 +2931,7 @@
   "allowNewSignups": true,
   "allowGuestQuickAdd": false
  },
- "updatedAt": "2026-11-26T07:15:09.998Z",
+ "updatedAt": "2026-11-26T07:21:55.420Z",
  "_help": "Owned by the Windows Admin app. Admin edits (approved leads, hidden/edited deals, manual deals, flags) live here. Scraper never writes this file.",
  "dealOrder": [
   "approved-lead-brand-priceoye-fd4033f5ca",
