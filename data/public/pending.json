@@ -1,20 +1,5 @@
 [
  {
-  "id": "lead-brand-naheed-5499a76c38",
-  "kind": "deal_lead",
-  "sourceId": "brand-naheed",
-  "sourceName": "Naheed Supermarket",
-  "brandName": "Naheed Supermarket",
-  "brandId": "brand-naheed",
-  "category": "grocery",
-  "title": "Naheed Supermarket website mentions up to 40% off",
-  "detail": "Found in page text only (no old/new prices). Please check the site before approving.",
-  "url": "https://www.naheed.pk",
-  "discountPercent": 40,
-  "riskyHost": false,
-  "foundAt": "2026-11-26T20:51:41.367932Z"
- },
- {
   "id": "lead-b8d2b9d4fe",
   "kind": "deal_lead",
   "sourceId": "meta-pk-flat-sale",
@@ -27,7 +12,7 @@
   "url": "https://www.facebook.com/ads/library/?id=1112701501355563",
   "discountPercent": 50,
   "riskyHost": false,
-  "foundAt": "2026-11-26T20:51:41.367932Z"
+  "foundAt": "2026-11-27T03:03:54.477813Z"
  },
  {
   "id": "lead-ddb92e619a",
@@ -41,6 +26,21 @@
   "detail": "Little outfits, endless cuteness! 💕 Give your little ones a fresh new look with adorable styles from Zubaidas Kids Collection. From everyday essentials to charming outfits, find their favourite looks at prices you'll love! 🛍️ Clearance 60% OFF. ✨ Limited-time sale – Shop now before their favourites ",
   "url": "https://www.facebook.com/ads/library/?id=1051645484615065",
   "discountPercent": 60,
+  "riskyHost": false,
+  "foundAt": "2026-11-27T03:03:54.477813Z"
+ },
+ {
+  "id": "lead-brand-naheed-5499a76c38",
+  "kind": "deal_lead",
+  "sourceId": "brand-naheed",
+  "sourceName": "Naheed Supermarket",
+  "brandName": "Naheed Supermarket",
+  "brandId": "brand-naheed",
+  "category": "grocery",
+  "title": "Naheed Supermarket website mentions up to 40% off",
+  "detail": "Found in page text only (no old/new prices). Please check the site before approving.",
+  "url": "https://www.naheed.pk",
+  "discountPercent": 40,
   "riskyHost": false,
   "foundAt": "2026-11-26T20:51:41.367932Z"
  }
