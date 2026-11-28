@@ -88,15 +88,5 @@
   "description": "All fallback methods failed. Last error: html HTTP 403; html: no offers in page (JS site?). Last good data is kept for 72h. Source paused for 6h, then retried automatically. URL: https://www.soneribank.com/personal-banking/cards/discounts/",
   "createdAt": "2026-11-21T15:12:30.067143Z",
   "status": "open"
- },
- {
-  "id": "al-meta-pk-buffet-failing-202611211424",
-  "sourceId": "meta-pk-buffet",
-  "kind": "failing",
-  "severity": "low",
-  "title": "Scraper: Meta Ad Library — PK Buffet Deals failed 3 times in a row",
-  "description": "All fallback methods failed. Last error: no ads visible (login wall or empty). Last good data is kept for 72h. Source paused for 6h, then retried automatically. URL: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=PK&q=buffet%20discount%20karachi%20lahore&search_type=keyword_unordered",
-  "createdAt": "2026-11-21T14:24:19.455389Z",
-  "status": "open"
  }
 ]
